@@ -4,7 +4,7 @@
   networking.wireless.enable = false;
   boot.loader.grub.enable = true;
   boot.loader.grub.version = 2;
-  boot.loader.grub.device = "/dev/sdb"
+  boot.loader.grub.device = "/dev/sdb";
   networking.useDHCP = false;
   networking.interfaces.eno1.useDHCP = true;
   networking.interfaces.eno2.useDHCP = true;
@@ -27,4 +27,4 @@
     git
     vim
   ];
-};
+}
