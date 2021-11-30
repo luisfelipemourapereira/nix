@@ -4,14 +4,9 @@
   imports =
     [
       ./hardware-configuration.nix
+      ./enableFlakes.nix
     ];
   
-  nix = {
-    package = pkgs.nixFlakes;
-    extraOptions = ''
-      experimental-features = nix-command flakes
-    '';
-  };
   boot.loader.grub.enable = true;
   boot.loader.grub.version = 2;
   boot.loader.grub.device = "/dev/sdb"; # or "nodev" for efi only
