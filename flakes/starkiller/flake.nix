@@ -14,7 +14,7 @@
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            # home-manager.users.luis = import ./home.nix;
+            home-manager.users.luis = import ./home.nix;
           }
         ];
       };
