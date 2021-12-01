@@ -6,6 +6,8 @@
 
   # zsh
   programs.zsh.enable = true;
+  programs.zsh.enableAutosuggestions = true;
+  programs.zsh.enableCompletion = true;
   programs.zsh.prezto.enable = true;
 
   home.username = "luis"; 
