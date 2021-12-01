@@ -28,6 +28,7 @@
 
   # neovim configuration
   programs.neovim.enable = true;
+  programs.neovim.package = pkgs.neovim-nightly;
   programs.neovim.viAlias = true;
   programs.neovim.vimAlias = true;
   programs.neovim.vimdiffAlias = true;
