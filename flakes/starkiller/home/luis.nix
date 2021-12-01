@@ -13,11 +13,12 @@
 
   # user packages
   home.packages = with pkgs; [
-    jq
     # neovim
     ripgrep
   ];
   
+  # jq
+  programs.jq.enable = true;
   # neovim configuration
   programs.neovim.enable = true;
   programs.neovim.viAlias = true;
