@@ -51,11 +51,12 @@
   };
 
   # obtain nightly neovim build
-  #nixpkgs.overlays = [
-  #  (import (builtins.fetchTarball {
-  #    url = https://github.com/nix-community/neovim-nightly-overlay/archive/master.tar.gz;
-  #  }))
-  #];
+  nixpkgs.overlays = [
+    (import (builtins.fetchTarball {
+      url = https://github.com/nix-community/neovim-nightly-overlay/archive/master.tar.gz;
+      sha256 = "03ayjfrxrv4hiy7z491gzaqx0382nn04bw7wlvin02xppwdhra4z";
+    }))
+  ];
 
   # assign hostname
   networking.hostName = "starkiller";

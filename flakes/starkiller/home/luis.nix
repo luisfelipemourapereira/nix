@@ -1,4 +1,4 @@
-{ config, pkgs, ... }: { 
+{ config, pkgs, nixpkgs, ... }: { 
   # nixpkgs overlay for neovim
   nixpkgs.overlays = [
     (import (builtins.fetchTarball {
