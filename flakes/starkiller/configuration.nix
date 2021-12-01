@@ -177,11 +177,11 @@
     firefox
     pciutils
     alacritty
-    lutris-free
+    # lutris-free
     google-chrome
     gnome.gnome-tweaks
-    wineWowPackages.staging
-    (winetricks.override { wine = wineWowPackages.staging; })
+    # wineWowPackages.staging
+    # (winetricks.override { wine = wineWowPackages.staging; })
   ];
 
   # set terminal envvar
