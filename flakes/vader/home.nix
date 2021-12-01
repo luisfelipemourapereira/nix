@@ -1,3 +1,1 @@
-{config, pkgs, ...}: rec {
-  home.username = "luis";
-}
+{ config, pkgs, ... }: rec { home.username = "luis"; }
