@@ -10,4 +10,5 @@
     EDITOR = "neovim";
   };
   home.stateVersion = "21.11";
+  home-manager.enable = true;
 }
