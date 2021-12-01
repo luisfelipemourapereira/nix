@@ -8,6 +8,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      ./enableFlakes.nix
     ];
 
   # exclude extra gnome packages
@@ -17,13 +18,13 @@
     pkgs.gnome.gnome-terminal
     pkgs.gnome.gnome-contacts
     pkgs.gnome.gnome-calendar
-    pkgs.gnome.gnome-music
     pkgs.gnome.gnome-clocks
-    pkgs.gnome.gnome-maps
-    pkgs.gnome.cheese
+    pkgs.gnome.gnome-music
     pkgs.gnome.simple-scan
-    pkgs.gnome-photos
+    pkgs.gnome.gnome-maps
     pkgs.gnome.gnome-logs
+    pkgs.gnome.cheese
+    pkgs.gnome-photos
     pkgs.gnome.atomix
     pkgs.gnome.hitori
     pkgs.gnome.gedit
@@ -50,11 +51,11 @@
   };
 
   # obtain nightly neovim build
-  nixpkgs.overlays = [
-    (import (builtins.fetchTarball {
-      url = https://github.com/nix-community/neovim-nightly-overlay/archive/master.tar.gz;
-    }))
-  ];
+  #nixpkgs.overlays = [
+  #  (import (builtins.fetchTarball {
+  #    url = https://github.com/nix-community/neovim-nightly-overlay/archive/master.tar.gz;
+  #  }))
+  #];
 
   # assign hostname
   networking.hostName = "starkiller";
