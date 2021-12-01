@@ -1,6 +1,9 @@
 { config, pkgs, ... }: { 
   programs.home-manager.enable = true;
   
+  # alacritty
+  programs.alacritty.enable = true;
+
   # zsh
   programs.zsh.enable = true;
   programs.zsh.prezto.enable = true;
