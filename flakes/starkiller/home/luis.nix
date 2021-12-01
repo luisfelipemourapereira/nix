@@ -19,6 +19,10 @@
   
   # jq
   programs.jq.enable = true;
+
+  # rg
+  programs.ripgrep.enable = true;
+
   # neovim configuration
   programs.neovim.enable = true;
   programs.neovim.viAlias = true;
