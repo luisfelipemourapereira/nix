@@ -15,6 +15,7 @@
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.users.luis = import ./home/luis.nix;
+            home-manager.enable = true;
           }
         ];
       };
