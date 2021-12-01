@@ -1,4 +1,4 @@
-{ config, pkgs, ... }: rec { 
+{ config, pkgs, ... }: { 
   programs.home-manager.enable = true;
   home.username = "luis"; 
   home.homeDirectory = "/home/luis"; 
