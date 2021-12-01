@@ -1,6 +1,25 @@
 { config, pkgs, ... }: { 
+  # home-manager manage itself
   programs.home-manager.enable = true;
+
+  # home configuration
+  home.username = "luis"; 
+  home.homeDirectory = "/home/luis"; 
   
+  # session variables
+  home.sessionVariables = {
+    EDITOR = "neovim";
+  };
+
+  # user packages
+  home.packages = with pkgs; [
+    jq
+    # neovim
+    ripgrep
+  ];
+  
+  # neovim configuration
+  programs.neovim.enable = true;
   # starship command prompt
   programs.starship.enable = true;
 
@@ -13,20 +32,5 @@
   programs.zsh.enableCompletion = true;
   programs.zsh.prezto.enable = true;
 
-  # home configuration
-  home.username = "luis"; 
-  home.homeDirectory = "/home/luis"; 
-
-  # user packages
-  home.packages = with pkgs; [
-    jq
-    neovim
-    ripgrep
-  ];
-  
-  # session variables
-  home.sessionVariables = {
-    EDITOR = "neovim";
-  };
   home.stateVersion = "21.11";
 }
