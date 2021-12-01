@@ -1,11 +1,4 @@
 { config, pkgs, nixpkgs, ... }: { 
-  # nixpkgs overlay for neovim
-  nixpkgs.overlays = [
-    (import (builtins.fetchTarball {
-      url = https://github.com/nix-community/neovim-nightly-overlay/archive/master.tar.gz;
-    }))
-  ];
-
   # home-manager manage itself
   programs.home-manager.enable = true;
 
