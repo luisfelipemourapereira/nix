@@ -103,13 +103,18 @@
   #   keyMap = "us";
   # };
 
+  hardware.nvidia.prime = {
+    sync.enable = true;
+    nvidiaBusId = "PCI:1:0:0";
+    intelBusId = "PCI:0:2:0";
+  };
   # hardware.nvidia.modesetting.enable = true;
   # Enable the X11 windowing system.
   services.xserver = {
     enable = true;
     layout = "us";
     xkbOptions = "caps:escape";
-    videoDrivers = ["nvidia"];
+    videoDrivers = ["intel" "nvidia"];
     desktopManager = {
       gnome.enable = true;
       plasma5 = {
