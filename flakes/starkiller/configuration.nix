@@ -108,7 +108,7 @@
   services.xserver = {
     enable = true;
     xkbOptions = "caps:escape";
-    # videoDrivers = ["nvidia"];
+    videoDrivers = ["nvidia"];
     desktopManager = {
       gnome.enable = true;
       plasma5 = {
