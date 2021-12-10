@@ -1,21 +1,17 @@
-{ config, pkgs, nixpkgs, ... }: { 
+{ config, pkgs, nixpkgs, ... }: {
   # home-manager manage itself
   programs.home-manager.enable = true;
 
   # home configuration
-  home.username = "luis"; 
-  home.homeDirectory = "/home/luis"; 
-  
+  home.username = "luis";
+  home.homeDirectory = "/home/luis";
+
   # session variables
-  home.sessionVariables = {
-    EDITOR = "neovim";
-  };
+  home.sessionVariables = { EDITOR = "neovim"; };
 
   # user packages
-  home.packages = with pkgs; [
-    ripgrep
-  ];
-  
+  home.packages = with pkgs; [ ripgrep ];
+
   # jq
   programs.jq.enable = true;
 
