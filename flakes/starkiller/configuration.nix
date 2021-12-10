@@ -51,11 +51,12 @@
   };
 
   # obtain nightly neovim build
-  #nixpkgs.overlays = [
-  #  (import (builtins.fetchTarball {
-  #    url = https://github.com/nix-community/neovim-nightly-overlay/archive/master.tar.gz;
-  #  }))
-  #];
+  nixpkgs.overlays = [
+    (import (builtins.fetchTarball {
+      url = https://github.com/nix-community/neovim-nightly-overlay/archive/master.tar.gz;
+      sha256 = "03ayjfrxrv4hiy7z491gzaqx0382nn04bw7wlvin02xppwdhra4z";
+    }))
+  ];
 
   # assign hostname
   networking.hostName = "starkiller";
@@ -102,12 +103,18 @@
   #   keyMap = "us";
   # };
 
+  hardware.nvidia.prime = {
+    sync.enable = true;
+    nvidiaBusId = "PCI:1:0:0";
+    intelBusId = "PCI:0:2:0";
+  };
   # hardware.nvidia.modesetting.enable = true;
   # Enable the X11 windowing system.
   services.xserver = {
     enable = true;
+    layout = "us";
     xkbOptions = "caps:escape";
-    # videoDrivers = ["nvidia"];
+    videoDrivers = ["intel" "nvidia"];
     desktopManager = {
       gnome.enable = true;
       plasma5 = {
@@ -136,10 +143,6 @@
       #];
     };
   };
-
-  # Configure keymap in X11
-  # services.xserver.layout = "us";
-  # services.xserver.xkbOptions = "eurosign:e";
 
   # Enable CUPS to print documents.
   # services.printing.enable = true;

@@ -1,4 +1,4 @@
-{ config, pkgs, ... }: { 
+{ config, pkgs, nixpkgs, ... }: { 
   # home-manager manage itself
   programs.home-manager.enable = true;
 
@@ -21,6 +21,7 @@
 
   # neovim configuration
   programs.neovim.enable = true;
+  # programs.neovim.package = pkgs.neovim-nightly;
   programs.neovim.viAlias = true;
   programs.neovim.vimAlias = true;
   programs.neovim.vimdiffAlias = true;
