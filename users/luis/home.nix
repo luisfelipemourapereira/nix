@@ -104,7 +104,7 @@
       disabled = false;
       conflicted = "⚔️ ";
       untracked = ''
-        🛤️${count}
+        🛤️\${count}
       '';
       # diverged = "🔱 🏎️ 💨 ×${ahead_count} 🐢 ×${behind_count}";
       # modified = "📝 ×${count}";
