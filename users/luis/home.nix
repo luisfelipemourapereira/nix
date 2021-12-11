@@ -39,7 +39,7 @@
       ];
       scan_timeout = 10;
       character = {
-        success_symbol = "whaaaaaaaaaa";
+        success_symbol = "➜";
         error_symbol = "➜";
       };
     }
