@@ -103,7 +103,9 @@
     git_status = {
       disabled = false;
       conflicted = "⚔️ ";
-      # untracked = 🛤️  ×${count}";
+      untracked = ''
+      🛤️${count}
+      ''
       # diverged = "🔱 🏎️ 💨 ×${ahead_count} 🐢 ×${behind_count}";
       # modified = "📝 ×${count}";
       # stashed = "📦 ";
