@@ -28,7 +28,7 @@
   # starship command prompt
   programs.starship.enable = true;
   programs.starship.enableZshIntegration = true;
-  programs.starship.settings = literalExpression ''
+  programs.starship.settings = ''
     {
       add_newline = false;
       format = lib.concatStrings [
