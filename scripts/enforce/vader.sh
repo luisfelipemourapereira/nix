@@ -1,2 +1,2 @@
 #!/usr/bin/env sh
-nixox-rebuild switch --flake '.#vader'
+nixos-rebuild switch --flake '.#vader'
