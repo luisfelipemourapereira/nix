@@ -48,10 +48,44 @@
         "type": "github"
       }
     },
+    "nixpkgs_3": {
+      "locked": {
+        "lastModified": 1639147144,
+        "narHash": "sha256-JjM0OzN1tfPU3Vh67EJ6i6Hbax6qj0o5O6Ov8wiUGo8=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "91ca3ab15fb7800fd48b84a9940e2432db778d1f",
+        "type": "github"
+      },
+      "original": {
+        "id": "nixpkgs",
+        "type": "indirect"
+      }
+    },
     "root": {
       "inputs": {
         "home-manager": "home-manager",
-        "nixpkgs": "nixpkgs_2"
+        "nixpkgs": "nixpkgs_2",
+        "secrets": "secrets"
+      }
+    },
+    "secrets": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_3"
+      },
+      "locked": {
+        "lastModified": 1639183106,
+        "narHash": "sha256-nO7aSCdKiwbNbkOmTfe+dFQdRFi8Zanah40XB4/rUA8=",
+        "ref": "main",
+        "rev": "6ee37d8cf11a18ee08b94f6cf3441eab7a364d7f",
+        "revCount": 2,
+        "type": "git",
+        "url": "ssh://git@github.com/luisfelipemourapereira/nix-secrets.git"
+      },
+      "original": {
+        "ref": "main",
+        "type": "git",
+        "url": "ssh://git@github.com/luisfelipemourapereira/nix-secrets.git"
       }
     }
   },
