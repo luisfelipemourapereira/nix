@@ -123,7 +123,7 @@
       disabled = false;
     };
     directory = {
-      truncated_length = 2;
+      truncation_length = 2;
       format = "[$path]($style)[$lock_symbol]($lock_style)";
       disabled = false;
       style = "bold dimmed green";
