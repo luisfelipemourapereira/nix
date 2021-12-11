@@ -3,7 +3,7 @@
 
   inputs.nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
   inputs.home-manager.url = "github:nix-community/home-manager";
-  inputs.users.path = "../users/luis";
+  inputs.users.url = "path:../users/luis";
 
   outputs = { nixpkgs, home-manager, ... }: {
     nixosConfigurations = {
