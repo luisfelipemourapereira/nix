@@ -4,7 +4,7 @@
   inputs.nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
   inputs.home-manager.url = "github:nix-community/home-manager";
   inputs.secrets.url =
-    "git+ssh://git@github.com/luisfelipemourapereira/nix-secrets.git";
+    "git+ssh://git@github.com/luisfelipemourapereira/nix-secrets.git/main";
   # inputs.users.flake = false;
 
   outputs = { nixpkgs, home-manager, ... }: {
