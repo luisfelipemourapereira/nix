@@ -27,6 +27,7 @@
 
   # starship command prompt
   programs.starship.enable = true;
+  programs.starship.enableZshIntegration = true;
 
   # alacritty terminal
   programs.alacritty.enable = true;
