@@ -151,9 +151,14 @@
   programs.zsh.enable = true;
   programs.zsh.enableAutosuggestions = true;
   programs.zsh.enableCompletion = true;
+  programs.zsh.enableSyntaxHighlighting = true;
+  programs.zsh.defaultKeymap = "vi";
+  programs.zsh.autocd = false;
+  programs.zsh.cdpath = true;
+  programs.zsh.dotDir = ".config/zsh";
   programs.zsh.prezto.enable = true;
-  programs.zsh.history.size = 100000;
-  programs.zsh.history.save = 100000;
+  programs.zsh.history.size = 1000000;
+  programs.zsh.history.save = 1000000;
 
   home.stateVersion = "21.11";
 }
