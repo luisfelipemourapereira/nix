@@ -1,4 +1,4 @@
-{ config, pkgs, nixpkgs, ... }: {
+{ config, pkgs, nixpkgs, lib, ... }: {
   # home-manager manage itself
   programs.home-manager.enable = true;
 
