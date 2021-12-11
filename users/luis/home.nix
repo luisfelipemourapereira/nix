@@ -152,6 +152,8 @@
   programs.zsh.enableAutosuggestions = true;
   programs.zsh.enableCompletion = true;
   programs.zsh.prezto.enable = true;
+  programs.zsh.historyModule.size = 100000;
+  programs.zsh.historyModule.save = 100000;
 
   home.stateVersion = "21.11";
 }
