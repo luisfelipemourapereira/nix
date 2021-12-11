@@ -28,16 +28,34 @@
   # starship command prompt
   programs.starship.enable = true;
   programs.starship.enableZshIntegration = true;
+  # your traditional configuration
   programs.starship.settings = {
     add_newline = false;
-    format =
-      lib.concatStrings [ "$line_break" "$package" "$line_break" "$character" ];
-    scan_timeout = 10;
+    format = ''
+      [┌───────────────────>](bold blue)
+      [│](bold blue)$hostname
+      [│](bold blue)$directory
+      [│](bold blue)$git_branch
+      [└─>](bold blue)$character
+          '';
     character = {
-      success_symbol = "➜";
-      error_symbol = "➜";
+      success_symbol = "[>](bold blue)";
+      error_symbol = "[✖](bold red) ";
+      vicmd_symbol = "[#](bold green)";
+      disabled = false;
     };
   };
+  # default configuration
+  # programs.starship.settings = {
+  # add_newline = false;
+  # format =
+  # lib.concatStrings [ "$line_break" "$package" "$line_break" "$character" ];
+  # scan_timeout = 10;
+  # character = {
+  # success_symbol = "➜";
+  # error_symbol = "➜";
+  # };
+  # };
 
   # alacritty terminal
   # programs.alacritty.enable = true;
