@@ -154,7 +154,6 @@
   programs.zsh.enableSyntaxHighlighting = true;
   programs.zsh.defaultKeymap = "vi";
   programs.zsh.autocd = false;
-  programs.zsh.cdpath = true;
   programs.zsh.dotDir = ".config/zsh";
   programs.zsh.prezto.enable = true;
   programs.zsh.history.size = 1000000;
