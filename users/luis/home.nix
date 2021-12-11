@@ -152,7 +152,7 @@
   programs.zsh.enableAutosuggestions = true;
   programs.zsh.enableCompletion = true;
   programs.zsh.enableSyntaxHighlighting = true;
-  programs.zsh.defaultKeymap = "vi";
+  programs.zsh.defaultKeymap = "viins";
   programs.zsh.autocd = false;
   programs.zsh.dotDir = ".config/zsh";
   programs.zsh.prezto.enable = true;
