@@ -1,5 +1,5 @@
 {
-  description = "home user setup";
+  description = "Nix Systems";
 
   inputs.nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
   inputs.home-manager.url = "github:nix-community/home-manager";
