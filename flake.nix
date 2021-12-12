@@ -6,7 +6,7 @@
   inputs.secrets.url =
     "git+ssh://git@github.com/luisfelipemourapereira/nix-secrets.git?ref=main";
 
-  outputs = { }: {
+  outputs = { nixpkgs }: {
     nixosConfigurations = {
       vader = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
