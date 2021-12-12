@@ -1,9 +1,10 @@
-{ config, pkgs, nixpkgs, lib, ... }: {
+{ config, pkgs, nixpkgs, lib, ... }: 
+with programs.starship; {
   # starship command prompt
-  programs.starship.enable = true;
-  programs.starship.enableZshIntegration = true;
+  enable = true;
+  enableZshIntegration = true;
   # your traditional configuration
-  programs.starship.settings = {
+  settings = {
     add_newline = false;
     format = ''
       [┌───────────────────>](bold blue)
