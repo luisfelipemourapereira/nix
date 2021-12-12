@@ -1,4 +1,4 @@
-{ config, pkgs, nixpkgs, lib, ... }:
+{ config, pkgs, nixpkgs, lib, programs, ... }:
 with programs; {
   neovim.enable = true;
   neovim.viAlias = true;
