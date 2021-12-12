@@ -1,4 +1,4 @@
-{ config, pkgs, nixpkgs, lib, ... }: 
+{ config, pkgs, nixpkgs, lib, ... }:
 with programs.starship; {
   # starship command prompt
   enable = true;
