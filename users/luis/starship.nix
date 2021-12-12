@@ -1,1 +1,1 @@
-{ config, pkgs, nixpkgs, lib, ... }: with programs.starship; { }
+{ config, pkgs, nixpkgs, lib, ... }: { }
