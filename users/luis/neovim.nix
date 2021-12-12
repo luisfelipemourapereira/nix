@@ -1,4 +1,4 @@
-{ config, lib, specialArgs, options }:
+{ config, lib, specialArgs, options, modulesPath }:
 {
   # programs.neovim.enable = true;
   # programs.neovim.viAlias = true;
