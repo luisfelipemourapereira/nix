@@ -1,6 +1,7 @@
 { config, pkgs, nixpkgs, lib, ... }: {
-  imports = [ ./packages.nix ./environment.nix ./zsh.nix ./starship.nix ];
+  # imports = [ ./packages.nix ./environment.nix ./zsh.nix ./starship.nix ];
   # imports = [ ./packages.nix ./environment.nix ./zsh.nix ];
+  imports = [ ./packages.nix ./environment.nix ./neovim.nix ];
 
   # home-manager manage itself
   programs.home-manager.enable = true;
