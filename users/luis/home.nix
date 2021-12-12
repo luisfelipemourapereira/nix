@@ -1,5 +1,5 @@
 { config, pkgs, nixpkgs, lib, ... }: {
-  imports = [ ./packages.nix ./environment.nix ./starship.nix ./zsh.nix ];
+  imports = [ ./packages.nix ./environment.nix ./zsh.nix ./starship.nix ];
   # imports = [ ./packages.nix ./environment.nix ./zsh.nix ];
 
   # home-manager manage itself
