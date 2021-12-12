@@ -1,4 +1,4 @@
-{ config, lib, specialArgs, options, modulesPath, nixosConfig }:
+{ config, lib, specialArgs, options, modulesPath, nixosConfig, osConfig }:
 {
   # programs.neovim.enable = true;
   # programs.neovim.viAlias = true;
