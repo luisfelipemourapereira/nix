@@ -1,4 +1,4 @@
-{ config, pkgs, nixpkgs, lib }:
+{ config, pkgs, nixpkgs, lib, specialArgs }:
 {
   # imports = [ ./packages.nix ./environment.nix ./zsh.nix ./starship.nix ];
   # imports = [ ./packages.nix ./environment.nix ./zsh.nix ];
