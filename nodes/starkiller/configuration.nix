@@ -5,11 +5,10 @@
 { config, pkgs, ... }:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-      ./enableFlakes.nix
-    ];
+  imports = [ # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+    ./enableFlakes.nix
+  ];
 
   # exclude extra gnome packages
   environment.gnome.excludePackages = [
@@ -53,7 +52,8 @@
   # obtain nightly neovim build
   nixpkgs.overlays = [
     (import (builtins.fetchTarball {
-      url = https://github.com/nix-community/neovim-nightly-overlay/archive/master.tar.gz;
+      url =
+        "https://github.com/nix-community/neovim-nightly-overlay/archive/master.tar.gz";
       sha256 = "03ayjfrxrv4hiy7z491gzaqx0382nn04bw7wlvin02xppwdhra4z";
     }))
   ];
@@ -66,10 +66,11 @@
 
   # enable wireless via wpa_supplicant
   networking.wireless.enable = true;
-  networking.wireless.interfaces = ["wlp0s20f3"];
+  networking.wireless.interfaces = [ "wlp0s20f3" ];
   networking.wireless.networks = {
     Drizzlin = {
-      pskRaw = "d937d8e5b4e5593b19962c83b4b3e2407be3b2073ec6ca5ea64fe1efe8c52d47";
+      pskRaw =
+        "d937d8e5b4e5593b19962c83b4b3e2407be3b2073ec6ca5ea64fe1efe8c52d47";
       priority = 0;
     };
   };
@@ -80,7 +81,6 @@
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-
 
   # Set your time zone.
   # time.timeZone = "Unset";
@@ -114,12 +114,10 @@
     enable = true;
     layout = "us";
     xkbOptions = "caps:escape";
-    videoDrivers = ["intel" "nvidia"];
+    videoDrivers = [ "intel" "nvidia" ];
     desktopManager = {
       gnome.enable = true;
-      plasma5 = {
-        enable = false;
-      };
+      plasma5 = { enable = false; };
       xterm.enable = false;
     };
     displayManager = {
@@ -157,7 +155,7 @@
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.luis = {
     openssh.authorizedKeys.keys = [
-    "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDLhg86QwXk4y65DsabycSWIaa6dA2ArRnOLuMwtXnG/RyHYp7KbyESHtMmidE7wACHShYbN7kUU9RxOwq1jS73ClEEe2WtsSz4T5lcVl0/mSCSg1auPNaGUI2HQ3unG50adVpNh4WHfxJR12jGuwLxa4ZINtz8V5qN5mH2cnqaMkY7fm7/R7ik6S8bFK4B10hFHjdyDTGS+xJWEknNlfn7vtuvj1QSJt2xB1PHvsCS4NZdYGPkOESK9H2RQNnXN6Soi+ySIJlpO+z9ovIeGJd0kASg6Lyq9GuyYAOv/RQFHKCtCe/ow10AwuirUk2guQpo88ORNLj06KTknkzjMHQMb4mB6fTPvhE2dm0EByeglIJIATWAwCbAyisY5pk7Effc98b/hs5x+OR5XO1Tjo6v+doL0rTHB79Q7/oxr3WK+JjlLpSRJVR0A4RqYQEUic/a7GFFE5ZBxF9pdcnLneW8CkNbztCY7QxsxnMOfwZCLTAIj95iKeXLvvABB2iSXy8= luis@ani"
+      "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDLhg86QwXk4y65DsabycSWIaa6dA2ArRnOLuMwtXnG/RyHYp7KbyESHtMmidE7wACHShYbN7kUU9RxOwq1jS73ClEEe2WtsSz4T5lcVl0/mSCSg1auPNaGUI2HQ3unG50adVpNh4WHfxJR12jGuwLxa4ZINtz8V5qN5mH2cnqaMkY7fm7/R7ik6S8bFK4B10hFHjdyDTGS+xJWEknNlfn7vtuvj1QSJt2xB1PHvsCS4NZdYGPkOESK9H2RQNnXN6Soi+ySIJlpO+z9ovIeGJd0kASg6Lyq9GuyYAOv/RQFHKCtCe/ow10AwuirUk2guQpo88ORNLj06KTknkzjMHQMb4mB6fTPvhE2dm0EByeglIJIATWAwCbAyisY5pk7Effc98b/hs5x+OR5XO1Tjo6v+doL0rTHB79Q7/oxr3WK+JjlLpSRJVR0A4RqYQEUic/a7GFFE5ZBxF9pdcnLneW8CkNbztCY7QxsxnMOfwZCLTAIj95iKeXLvvABB2iSXy8= luis@ani"
     ];
     isNormalUser = true;
     extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.

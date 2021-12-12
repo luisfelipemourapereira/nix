@@ -1,4 +1,4 @@
-{ config, pkgs, nixpkgs, lib, ... }: {
+{ config, pkgs, nixpkgs, lib, ... }: { home.packages = with pkgs; [ ripgrep ]; }
   imports = [ ./packages.nix ];
 
   # home-manager manage itself
