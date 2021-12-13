@@ -4,7 +4,7 @@
   # imports = [ ./packages.nix ./environment.nix ./zsh.nix ./starship.nix ];
   # imports = [ ./packages.nix ./environment.nix ./zsh.nix ];
   # imports = [ ./packages.nix ./environment.nix ./neovim.nix ];
-  imports = [ ./packages.nix ];
+  imports = [ ./packages.nix ./environment.nix ];
 
   home.username = "luis";
   home.homeDirectory = "/home/luis";
