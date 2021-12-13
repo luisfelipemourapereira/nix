@@ -1,5 +1,4 @@
-{ config, lib, specialArgs, options, modulesPath, nixosConfig, osConfig }: {
-  # zsh shell
+{ lib, config, specialArgs, options, modulesPath, nixosConfig, osConfig }: {
   programs.zsh.enable = true;
   programs.zsh.enableAutosuggestions = true;
   programs.zsh.enableCompletion = true;
