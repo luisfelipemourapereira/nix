@@ -6,9 +6,8 @@
   # imports = [ ./packages.nix ./environment.nix ./neovim.nix ];
   imports = [ ./packages.nix ];
 
-  # home configuration
-  # home.username = "luis";
-  # home.homeDirectory = "/home/luis";
+  home.username = "luis";
+  home.homeDirectory = "/home/luis";
 
-  # home.stateVersion = "21.11";
+  home.stateVersion = "21.11";
 }
