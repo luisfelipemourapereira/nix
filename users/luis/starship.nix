@@ -1,7 +1,7 @@
 { config, pkgs, nixpkgs, lib, specialArgs, options, modulesPath, nixosConfig
 , osConfig }: {
   programs.starship.enable = true;
-  settings = {
+  programs.starship.settings = {
     add_newline = false;
     format = ''
       [┌───────────────────>](bold blue)
