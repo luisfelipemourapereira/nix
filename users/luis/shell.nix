@@ -7,6 +7,6 @@
   programs.zsh.autocd = false;
   programs.zsh.dotDir = ".config/zsh";
   programs.zsh.prezto.enable = true;
-  programs.zsh.history.size = 1000000;
-  programs.zsh.history.save = 1000000;
+  programs.zsh.history.size = 10000000;
+  programs.zsh.history.save = 10000000;
 }
