@@ -1,3 +1,3 @@
-{ config, pkgs, nixpkgs, lib, ... }: {
+{ lib, config, specialArgs, options, modulesPath, nixosConfig, osConfig }: {
   home.sessionVariables = { EDITOR = "neovim"; };
 }
