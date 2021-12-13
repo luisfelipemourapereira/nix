@@ -1,5 +1,4 @@
-{ config, pkgs, nixpkgs, lib, specialArgs, options, modulesPath, nixosConfig
-, osConfig }: {
+{ config, lib, specialArgs, options, modulesPath, nixosConfig, osConfig }: {
   programs.starship.enable = true;
   programs.starship.settings = {
     add_newline = false;
