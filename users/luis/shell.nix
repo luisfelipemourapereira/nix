@@ -1,5 +1,4 @@
-{ config, pkgs, nixpkgs, lib, specialArgs, options, modulesPath, nixosConfig
-, osConfig }: {
+{ config, lib, specialArgs, options, modulesPath, nixosConfig, osConfig }: {
   # zsh shell
   programs.zsh.enable = true;
   programs.zsh.enableAutosuggestions = true;
