@@ -102,5 +102,5 @@
       disabled = false;
       style = "bold dimmed green";
     };
-  }
+  };
 }
