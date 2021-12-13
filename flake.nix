@@ -1,10 +1,10 @@
 {
   description = "Here be systems!";
 
-  inputs.nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-  inputs.home-manager.url = "github:nix-community/home-manager";
-  inputs.secrets.url =
-    "git+ssh://git@github.com/luisfelipemourapereira/nix-secrets.git?ref=main";
+  inputs.nixpkgs.url = "github:luisfelipemourapereira/nixpkgs";
+  inputs.home-manager.url = "github:luisfelipemourapereira/home-manager";
+  # inputs.secrets.url =
+  # "git+ssh://git@github.com/luisfelipemourapereira/nix-secrets.git?ref=main";
 
   outputs = { nixpkgs, home-manager, self, secrets }: {
     nixosConfigurations = {
