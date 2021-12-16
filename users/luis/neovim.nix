@@ -6,4 +6,10 @@
   programs.neovim.withNodeJs = true;
   programs.neovim.withRuby = true;
   programs.neovim.withPython3 = true;
+  programs.neovim.extraPackages = [
+    unstable.tree-sitter
+    pkgs.rnix-lsp
+    unstable.nodePackages.typescript
+    unstable.nodePackages.typescript-language-server
+  ];
 }
