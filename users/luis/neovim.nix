@@ -9,7 +9,7 @@
   programs.neovim.withPython3 = true;
   # programs.neovim.configure.extraConfig = "";
 
-  programs.neovim.plugins = [ pkgs.vimPlugins.sensible ];
+  programs.neovim.plugins = [ pkgs.vimPlugins.sensible pkgs.vimPlugins.zig ];
   # programs.neovim.extraPackages = [
   # pkgs.tree-sitter
   # pkgs.rnix-lsp
