@@ -9,8 +9,11 @@
   programs.neovim.withPython3 = true;
   # programs.neovim.configure.extraConfig = "";
 
-  programs.neovim.plugins =
-    [ pkgs.vimPlugins.sensible pkgs.vimPlugins.solarized ];
+  programs.neovim.plugins = [
+    pkgs.vimPlugins.sensible
+    pkgs.vimPlugins.solarized
+    pkgs.vimPlugins.commentary
+  ];
   # programs.neovim.extraPackages = [
   # pkgs.tree-sitter
   # pkgs.rnix-lsp
