@@ -7,9 +7,9 @@
   programs.neovim.withRuby = true;
   programs.neovim.withPython3 = true;
   programs.neovim.extraPackages = [
-    unstable.tree-sitter
+    pkgs.tree-sitter
     pkgs.rnix-lsp
-    unstable.nodePackages.typescript
-    unstable.nodePackages.typescript-language-server
+    pkgs.nodePackages.typescript
+    pkgs.nodePackages.typescript-language-server
   ];
 }
