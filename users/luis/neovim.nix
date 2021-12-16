@@ -6,10 +6,11 @@
   programs.neovim.withNodeJs = true;
   programs.neovim.withRuby = true;
   programs.neovim.withPython3 = true;
-  /* programs.neovim.extraPackages = [ */
-  /*   pkgs.tree-sitter */
-  /*   pkgs.rnix-lsp */
-  /*   pkgs.nodePackages.typescript */
-  /*   pkgs.nodePackages.typescript-language-server */
-  /* ]; */
+  programs.neovim.customRC = "";
+  # programs.neovim.extraPackages = [
+  # pkgs.tree-sitter
+  # pkgs.rnix-lsp
+  # pkgs.nodePackages.typescript
+  # pkgs.nodePackages.typescript-language-server
+  # ];
 }
