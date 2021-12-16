@@ -6,7 +6,7 @@
   programs.neovim.withNodeJs = true;
   programs.neovim.withRuby = true;
   programs.neovim.withPython3 = true;
-  programs.neovim.configure.customRC = "";
+  programs.neovim.configure.extraConfig = "";
   # programs.neovim.extraPackages = [
   # pkgs.tree-sitter
   # pkgs.rnix-lsp
