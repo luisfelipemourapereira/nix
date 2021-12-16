@@ -6,8 +6,9 @@
   programs.neovim.withNodeJs = true;
   programs.neovim.withRuby = true;
   programs.neovim.withPython3 = true;
-  /* programs.neovim.configure.extraConfig = ""; */
-  programs.neovim.plugins = [ ];
+  # programs.neovim.configure.extraConfig = "";
+
+  programs.neovim.plugins = [ pkgs.vimPlugins.sensible ];
   # programs.neovim.extraPackages = [
   # pkgs.tree-sitter
   # pkgs.rnix-lsp
