@@ -1,8 +1,8 @@
 {
   description = "Here be systems!";
 
-  inputs.nixpkgs.url = "github:luisfelipemourapereira/nixpkgs";
-  inputs.home-manager.url = "github:luisfelipemourapereira/home-manager";
+  # inputs.nixpkgs.url = "github:luisfelipemourapereira/nixpkgs";
+  # inputs.home-manager.url = "github:luisfelipemourapereira/home-manager";
   # inputs.secrets.url =
   # "git+ssh://git@github.com/luisfelipemourapereira/nix-secrets.git?ref=main";
 
