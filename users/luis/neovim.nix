@@ -8,7 +8,6 @@
   programs.neovim.withRuby = true;
   programs.neovim.withPython3 = true;
   programs.neovim.extraPackages = [ pkgs.shfmt ];
-  # programs.neovim.configure.extraConfig = "";
 
   programs.neovim.plugins = [
     pkgs.vimPlugins.sensible
