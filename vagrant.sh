@@ -6,4 +6,4 @@ sudo nixos-rebuild switch --upgrade
 [ -f custom-configuration.nix ] && 
   sudo cp custom-configuration.nix /etc/nixos/custom-configuration.nix
 sudo nixos-rebuild switch --upgrade
-sudo /vagrant/scripts/enforce/vader.sh
+# sudo /vagrant/scripts/enforce/vader.sh
