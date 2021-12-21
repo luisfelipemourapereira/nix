@@ -4,7 +4,7 @@
     "code/self/ltk".source = builtins.fetchGit {
       url = "ssh://git@github.com/luisfelipemourapereira/ltk.git";
       ref = "master";
-      rev = "1173bd1";
+      rev = "6ed0f0328a68f38b5ce099156121bcf09cd762cd";
       # owner = "k3rni";
       # repo = "foggy";
       # rev = "fd76b28";
