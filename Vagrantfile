@@ -25,6 +25,7 @@ Vagrant.configure('2') do |config|
   #   THIS_SHELL: 'zsh'
   # }
   config.vm.synced_folder '.', '/vagrant', disabled: false
+  config.vm.synced_folder 'config/nix', '/etc/nix', disabled: false
   config.vm.synced_folder '~/.ssh', '/root/.ssh', disabled: false
   config.vm.provider :libvirt do |libvirt|
     libvirt.memory = '4096'
