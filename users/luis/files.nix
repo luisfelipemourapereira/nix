@@ -1,4 +1,5 @@
-{ lib, config, specialArgs, options, modulesPath, nixosConfig, osConfig }: {
+{ pkgs, lib, config, specialArgs, options, modulesPath, nixosConfig, osConfig
+}: {
   home.files = {
     "code/self/ltk".source = pkgs.fetchFromGitHub {
       owner = "luisfelipemourapereira";
