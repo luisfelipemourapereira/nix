@@ -8,7 +8,7 @@
     };
     "code/pub/consul".source = builtins.fetchGit {
       url = "ssh://git@github.com/hashicorp/consul";
-      ref = "master";
+      ref = "main";
       rev = "09cc3338d4807b5777486aea3ff4d95431ab3abf";
     };
   };
