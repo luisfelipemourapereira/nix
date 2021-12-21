@@ -1,6 +1,5 @@
-{ lib, config, specialArgs, options, modulesPath, nixosConfig, osConfig }:
-{
-  # programs.zsh.enable = true;
+{ lib, config, specialArgs, options, modulesPath, nixosConfig, osConfig }: {
+  programs.zsh.enable = true;
   # programs.zsh.enableAutosuggestions = true;
   # programs.zsh.enableCompletion = true;
   # programs.zsh.enableSyntaxHighlighting = true;
