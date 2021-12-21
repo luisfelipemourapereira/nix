@@ -1,1 +1,0 @@
-{"rsync":{"/root/.ssh":{"disabled":false,"guestpath":"/root/.ssh","hostpath":"/home/luis/.ssh","__vagrantfile":true,"owner":"vagrant","group":"vagrant"}}}
