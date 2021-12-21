@@ -1,5 +1,5 @@
 { config, lib, specialArgs, options, modulesPath, nixosConfig, osConfig }: {
-  programs.starship.enable = true;
+  programs.starship.enable = false;
   programs.starship.settings = {
     add_newline = false;
     format = ''
