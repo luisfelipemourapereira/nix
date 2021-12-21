@@ -3,7 +3,7 @@
   home.file = {
     "code/self/ltk".source = builtins.fetchGit {
       url = "ssh://git@github.com/luisfelipemourapereira/ltk.git";
-      rev = "master";
+      ref = "master";
       # owner = "k3rni";
       # repo = "foggy";
       # rev = "fd76b28";
