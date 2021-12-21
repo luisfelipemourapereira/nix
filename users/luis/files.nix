@@ -10,6 +10,6 @@
       url = "ssh://git@github.com/hashicorp/consul.git";
       ref = "master";
       rev = "09cc3338d4807b5777486aea3ff4d95431ab3abf";
-    }
+    };
   };
 }
