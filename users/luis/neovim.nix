@@ -1,5 +1,6 @@
-{ pkgs, lib, config, specialArgs, options, modulesPath, nixosConfig, osConfig }:
-{
+{ pkgs, lib, config, specialArgs, options, modulesPath, nixosConfig, osConfig
+}: {
+  programs.vim.enable = false;
   # programs.neovim.enable = true;
   # programs.neovim.viAlias = true;
   # programs.neovim.vimAlias = true;
