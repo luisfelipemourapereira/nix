@@ -1,7 +1,7 @@
 { pkgs, lib, config, specialArgs, options, modulesPath, nixosConfig, osConfig
 }: {
   home.file = {
-    "code/self/ltk".source = pkgs.fetchgitPrivate {
+    "code/self/ltk".source = pkgs.fetchGit {
       url = "ssh://git@github.com/luisfelipemourapereira/ltk.git";
       # owner = "k3rni";
       # repo = "foggy";
