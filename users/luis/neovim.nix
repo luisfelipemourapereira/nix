@@ -7,13 +7,13 @@
   programs.neovim.withNodeJs = true;
   programs.neovim.withRuby = true;
   programs.neovim.withPython3 = true;
-  programs.neovim.extraPackages = [ pkgs.shfmt ];
+  # programs.neovim.extraPackages = [ pkgs.shfmt ];
 
-  programs.neovim.plugins = [
-    pkgs.vimPlugins.sensible
-    pkgs.vimPlugins.solarized
-    pkgs.vimPlugins.commentary
-  ];
+  # programs.neovim.plugins = [
+  # pkgs.vimPlugins.sensible
+  # pkgs.vimPlugins.solarized
+  # pkgs.vimPlugins.commentary
+  # ];
 
   # programs.neovim.extraPackages = [
   # pkgs.tree-sitter

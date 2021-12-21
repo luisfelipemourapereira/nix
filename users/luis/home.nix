@@ -7,6 +7,7 @@
     ./starship.nix
     ./shell.nix
     ./neovim.nix
+    ./files.nix
   ];
   home.username = "luis";
   home.homeDirectory = "/home/luis";
