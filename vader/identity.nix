@@ -13,8 +13,8 @@
   users.defaultUserShell = pkgs.zsh;
   security.sudo.wheelNeedsPassword = false;
   services.openssh.enable = true;
-  services.openssh.passwordAuthentication = true;
-  services.openssh.permitRootLogin = "yes";
+  services.openssh.passwordAuthentication = false;
+  services.openssh.permitRootLogin = "no";
   users.users.luis = {
     openssh.authorizedKeys.keys = [''
       ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDLhg86QwXk4y65DsabycSWIaa6dA2ArRnOLuMwtXnG/RyHYp7KbyESHtMmidE
