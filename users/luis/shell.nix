@@ -1,6 +1,6 @@
 { lib, config, specialArgs, options, modulesPath, nixosConfig, osConfig }: {
   programs.zsh.enable = true;
-  programs.zsh.prezto.enable = false;
+  programs.zsh.prezto.enable = true;
   # programs.zsh.enableAutosuggestions = true;
   # programs.zsh.enableCompletion = true;
   # programs.zsh.enableSyntaxHighlighting = true;
