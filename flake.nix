@@ -8,6 +8,18 @@
 
   outputs = { nixpkgs, home-manager, self }: {
     nixosConfigurations = {
+      starkiller = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        modules = [
+          ./starkiller/configuration.nix
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.users.luis = import ./users/luis/home.nix;
+          }
+        ];
+      };
       vader = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
