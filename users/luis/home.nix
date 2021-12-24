@@ -1,12 +1,12 @@
 { config, pkgs, nixpkgs, lib, specialArgs, options, modulesPath, nixosConfig
 , osConfig }: {
   imports = [
-    ./packages.nix
     ./environment.nix
+    ./packages.nix
     ./starship.nix
+    ./neovim.nix
     ./files.nix
     ./shell.nix
-    ./neovim.nix
   ];
   programs.home-manager.enable = true;
   home.username = "luis";

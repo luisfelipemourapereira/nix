@@ -7,7 +7,7 @@
       name = "neovim";
       builder = "${bash}/bin/bash";
       args = [ ./builder.sh ];
-      system = builtins.currentSystem;
+      system = "x86_64-linux";
     }
   ];
   # jq
