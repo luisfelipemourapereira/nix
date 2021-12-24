@@ -1,5 +1,6 @@
 { pkgs, lib, config, specialArgs, options, modulesPath, nixosConfig, osConfig
 }: {
+  asdfljal
   home.packages = with pkgs; [
     ripgrep
     xsel
