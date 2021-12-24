@@ -1,5 +1,5 @@
-{ pkgs, lib, config, specialArgs, options, modulesPath, nixosConfig, osConfig
-}: {
+{ builtins, pkgs, lib, config, specialArgs, options, modulesPath, nixosConfig
+, osConfig }: {
   home.packages = with pkgs; [
     ripgrep
     xsel
@@ -7,7 +7,7 @@
       name = "neovim";
       builder = "${bash}/bin/bash";
       args = [ ./builder.sh ];
-      system = "x86_64-linux";
+      system = builtins.currentSystem;
     }
   ];
   # jq
