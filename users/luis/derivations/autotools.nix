@@ -7,13 +7,17 @@ let
     baseInputs = [
       binutils-unwrapped
       coreutils
+      pkg-config
       gnumake
       gnugrep
       gnutar
       gnused
+      cmake
+      bash
       gzip
-      gcc
       gawk
+      gcc
+      lua
     ];
     system = builtins.currentSystem;
   };
