@@ -1,5 +1,8 @@
 { config, pkgs, nixpkgs, lib, specialArgs, options, modulesPath, nixosConfig
-, osConfig }: {
+, osConfig, services }: {
+
+  home.stateVersion = "21.11";
+
   imports = [
     ./environment.nix
     ./packages.nix
@@ -9,10 +12,15 @@
     ./shell.nix
     ./alacritty.nix
   ];
+
   programs.home-manager.enable = true;
   home.username = "luis";
-  #home.homeDirectory = "/home/luis";
-  home.stateVersion = "21.11";
+
   # direnv
   programs.direnv.enable = true;
+
+  # keyboard settings
+  home.keyboard.options = [
+    "caps:escape"
+  ];
 }

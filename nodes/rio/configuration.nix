@@ -65,7 +65,7 @@
 
   # Enable the X11 windowing system.
   services.xserver.enable = true;
-  services.xserver.xkbOptions = "caps:escape";
+  # services.xserver.xkbOptions = "caps:escape";
 
 
   # Enable the GNOME Desktop Environment.
