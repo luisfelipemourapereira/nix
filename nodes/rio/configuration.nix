@@ -23,8 +23,18 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  # networking.hostName = "nixos"; # Define your hostname.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
+  networking.hostName = "rio"; # Define your hostname.
+  # Enables wireless support via wpa_supplicant.
+  # enable if you are not using network-manager
+  #networking.wireless.enable = true;
+  #networking.wireless.interfaces = [ "wlp0s20f3" ];
+  #networking.wireless.networks = {
+  #  Drizzlin = {
+  #    pskRaw =
+  #      "d937d8e5b4e5593b19962c83b4b3e2407be3b2073ec6ca5ea64fe1efe8c52d47";
+  #    priority = 0;
+  #  };
+  #};
 
   # Set your time zone.
   # time.timeZone = "Europe/Amsterdam";
@@ -49,7 +59,7 @@
 
   # Enable the X11 windowing system.
   services.xserver.enable = true;
-  services.xserver.xkbOptions = "caps:swapescape";
+  services.xserver.xkbOptions = "caps:escape";
 
 
   # Enable the GNOME Desktop Environment.
