@@ -1,8 +1,8 @@
 {
   description = "Here be systems!";
 
-  inputs.nixpkgs.url = "github:luisfelipemourapereira/nixpkgs";
-  inputs.home-manager.url = "github:luisfelipemourapereira/home-manager";
+  inputs.nixpkgs.url = "github:NixOS/nixpkgs";
+  inputs.home-manager.url = "github:nix-community/home-manager";
   # inputs.secrets.url =
   # "git+ssh://git@github.com/luisfelipemourapereira/nix-secrets.git?ref=main";
 
@@ -11,7 +11,7 @@
       rio = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
-	  ./rio/configuration.nix
+	  ./nodes/rio/configuration.nix
           home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;

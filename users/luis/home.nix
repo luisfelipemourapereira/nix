@@ -7,9 +7,12 @@
     ./neovim.nix
     ./files.nix
     ./shell.nix
+    ./alacritty.nix
   ];
   programs.home-manager.enable = true;
   home.username = "luis";
   #home.homeDirectory = "/home/luis";
   home.stateVersion = "21.11";
+  # direnv
+  programs.direnv.enable = true;
 }

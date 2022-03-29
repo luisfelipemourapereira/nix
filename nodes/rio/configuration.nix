@@ -16,6 +16,9 @@
       experimental-features = nix-command flakes
     '';
   };
+  
+  # zsh as the default shell
+  users.defaultUserShell = pkgs.zsh;
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -71,7 +74,6 @@
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.luis = {
     isNormalUser = true;
-    #password = "Ilosepens1";
     hashedPassword = "$6$4k6ZEsBqkvd5CM86$dDm8optLRzThRk5VBobPWsMh5YmG1ep2n.myvA06a9R22DwyKZr4hxRCO5KghxazAzRPjTvfNK9c4d4VEKoWR/"; 
     extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
   };
