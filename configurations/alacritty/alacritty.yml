@@ -11,7 +11,7 @@ cursor:
 env:
   STARSHIP_SHELL: ""
 shell:
-  program: /usr/bin/zsh
+  program: /etc/profiles/per-user/luis/bin/zsh
   args:
     - --login
 scrolling:

@@ -36,6 +36,12 @@
   #  };
   #};
 
+  # fonts
+  fonts.fonts = with pkgs; [
+    fira-code
+    fira-code-symbols
+  ];
+
   # Set your time zone.
   # time.timeZone = "Europe/Amsterdam";
 
@@ -98,23 +104,24 @@
      git
      firefox
   ];
+
   # if you start from desktop nixOS these will be installed by default
   # remove them if they exist.
   environment.gnome.excludePackages = [
-    pkgs.gnome.cheese
-    pkgs.gnome-photos
-    pkgs.gnome.gnome-music
+    pkgs.gnome.gnome-characters
     pkgs.gnome.gnome-terminal
-    pkgs.gnome.gedit
+    pkgs.gnome.gnome-music
     pkgs.gnome.epiphany
     pkgs.gnome.evince
-    pkgs.gnome.gnome-characters
-    pkgs.gnome.totem
-    pkgs.gnome.tali
-    pkgs.gnome.iagno
+    pkgs.gnome.cheese
+    pkgs.gnome-photos
     pkgs.gnome.hitori
     pkgs.gnome.atomix
+    pkgs.gnome.gedit
+    pkgs.gnome.totem
+    pkgs.gnome.iagno
     pkgs.gnome.geary
+    pkgs.gnome.tali
     pkgs.gnome-tour
   ];
 
