@@ -17,4 +17,8 @@
   programs.zsh.profileExtra = ''
 eval "$(direnv hook zsh)"
 '';
+  programs.zsh.zplug.enable = true;
+  programs.zsh.zplug.plugins = [
+    { name = "jeffreytse/zsh-vi-mode"; }
+  ];
 }

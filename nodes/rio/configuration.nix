@@ -49,6 +49,7 @@
 
   # Enable the X11 windowing system.
   services.xserver.enable = true;
+  services.xserver.xkbOptions = "caps:swapescape";
 
 
   # Enable the GNOME Desktop Environment.
@@ -86,6 +87,25 @@
      curl
      git
      firefox
+  ];
+  # if you start from desktop nixOS these will be installed by default
+  # remove them if they exist.
+  environment.gnome.excludePackages = [
+    pkgs.gnome.cheese
+    pkgs.gnome-photos
+    pkgs.gnome.gnome-music
+    pkgs.gnome.gnome-terminal
+    pkgs.gnome.gedit
+    pkgs.gnome.epiphany
+    pkgs.gnome.evince
+    pkgs.gnome.gnome-characters
+    pkgs.gnome.totem
+    pkgs.gnome.tali
+    pkgs.gnome.iagno
+    pkgs.gnome.hitori
+    pkgs.gnome.atomix
+    pkgs.gnome.geary
+    pkgs.gnome-tour
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
