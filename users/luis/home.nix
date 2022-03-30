@@ -19,8 +19,13 @@
   # direnv
   programs.direnv.enable = true;
 
+  xsession.enable = false;
   # keyboard settings
   home.keyboard.options = [
     "caps:escape"
   ];
+
+  wayland.windowManager.sway = {
+    enable = true;
+  };
 }

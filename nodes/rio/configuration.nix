@@ -34,15 +34,16 @@
   networking.hostName = "rio"; # Define your hostname.
   # Enables wireless support via wpa_supplicant.
   # enable if you are not using network-manager
-  #networking.wireless.enable = true;
-  #networking.wireless.interfaces = [ "wlp0s20f3" ];
-  #networking.wireless.networks = {
-  #  Drizzlin = {
-  #    pskRaw =
-  #      "d937d8e5b4e5593b19962c83b4b3e2407be3b2073ec6ca5ea64fe1efe8c52d47";
-  #    priority = 0;
-  #  };
-  #};
+  networking.wireless.enable = false;
+  networking.wireless.interfaces = [ "wlp0s20f3" ];
+  networking.wireless.networks = {
+    Drizzlin = {
+      pskRaw =
+        "d937d8e5b4e5593b19962c83b4b3e2407be3b2073ec6ca5ea64fe1efe8c52d47";
+      priority = 0;
+    };
+  };
+  networking.networkmanager.enable = true;
 
   # fonts
   fonts.fonts = with pkgs; [
@@ -73,12 +74,30 @@
 
   # Enable the X11 windowing system.
   services.xserver.enable = true;
-  # services.xserver.xkbOptions = "caps:escape";
+  services.xserver.xkbOptions = "caps:escape";
+
+  # gnome
+  services.xserver.layout = "us";
+  services.xserver.displayManager.gdm.enable = true;
+  services.xserver.displayManager.gdm.wayland = false;
+  services.xserver.desktopManager.gnome.enable = true;
+
+  # i3
+  #services.xserver.desktopManager.xterm.enable = false;
+  #services.xserver.displayManager.defaultSession = "none+i3";
+  #services.xserver.windowManager.i3.enable = true;
+  #services.xserver.windowManager.i3.extraPackages = with pkgs; [
+  #  dmenu
+  #  i3status
+  #  i3lock
+  #  i3blocks
+  #];
+  #services.xserver.libinput.enable = true;
 
 
   # Enable the GNOME Desktop Environment.
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
+  #services.xserver.displayManager.gdm.enable = false;
+  #services.xserver.desktopManager.gnome.enable = false;
   
 
   # Configure keymap in X11
@@ -120,7 +139,7 @@
 
   # session variables
   # # turn on wayland for slack
-  environment.sessionVariables.NIXOS_OZONE_WL = "1";
+  #environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
   # turn on screensharing for slack
   xdg = {

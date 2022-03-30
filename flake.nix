@@ -11,7 +11,7 @@
       rio = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
-	  ./users/luis/services.nix
+	  #./users/luis/services.nix
 	  ./nodes/rio/configuration.nix
           home-manager.nixosModules.home-manager
           {
