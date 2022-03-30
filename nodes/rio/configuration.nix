@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 {
   imports =
@@ -16,6 +16,14 @@
       experimental-features = nix-command flakes
     '';
   };
+
+  nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
+    "1password"
+    "1password-cli"
+    "slack"
+    "spotify"
+    "spotify-unwrapped"
+  ];
   
   # zsh as the default shell
   users.defaultUserShell = pkgs.zsh;
@@ -98,12 +106,32 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
+     firefox
+     _1password
+     _1password-gui
      vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
      wget
      curl
      git
-     firefox
+     slack
+     spotify
   ];
+
+  # session variables
+  # # turn on wayland for slack
+  environment.sessionVariables.NIXOS_OZONE_WL = "1";
+
+  # turn on screensharing for slack
+  xdg = {
+    portal = {
+      enable = true;
+      extraPortals = with pkgs; [
+        xdg-desktop-portal-wlr
+        #xdg-desktop-portal-gtk
+      ];
+      gtkUsePortal = true;
+    };
+  };
 
   # if you start from desktop nixOS these will be installed by default
   # remove them if they exist.
