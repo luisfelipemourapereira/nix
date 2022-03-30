@@ -12,7 +12,7 @@
   programs.zsh.shellAliases = {
     pbcopy = "xsel --clipboard --input";
     pbpaste = "xsel --clipboard --output";
-    vim = "nvim";
+    vim = "nvim -u ~/.config/nvim/init.lua";
   };
   programs.zsh.profileExtra = ''
 eval "$(direnv hook zsh)"
