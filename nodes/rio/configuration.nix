@@ -23,6 +23,7 @@
     "slack"
     "spotify"
     "spotify-unwrapped"
+    "zoom"
   ];
   
   # zsh as the default shell
@@ -125,6 +126,8 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
+     stylua
+     nodePackages.prettier
      gcc
      firefox
      gnumake
@@ -136,6 +139,7 @@
      curl
      git
      slack
+     zoom-us
      spotify
      beekeeper-studio
   ];
