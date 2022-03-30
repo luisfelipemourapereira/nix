@@ -133,6 +133,8 @@
      gnumake
      _1password
      _1password-gui
+     sumneko-lua-language-server
+     solargraph
      vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
      wget
      unzip
