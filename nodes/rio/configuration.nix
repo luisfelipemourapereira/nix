@@ -115,6 +115,7 @@
      git
      slack
      spotify
+     beekeeper-studio
   ];
 
   # session variables
