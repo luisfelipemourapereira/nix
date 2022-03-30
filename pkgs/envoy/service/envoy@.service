@@ -1,0 +1,19 @@
+[Unit]
+Description=Envoy reverse proxy and load balancer %i
+Requires=network-online.target
+After=network-online.target
+
+[Service]
+Type=simple
+User=envoy
+Group=envoy
+ExecStart=/opt/getenvoy/bin/hot-restarter.py /opt/getenvoy/bin/bin_envoy.sh
+ExecReload=/bin/kill -HUP $MAINPID
+ExecStop=/bin/kill -TERM $MAINPID
+Restart=always
+LimitNOFILE=100000
+AmbientCapabilities=CAP_NET_BIND_SERVICE
+CapabilityBoundingSet=CAP_NET_BIND_SERVICE
+
+[Install]
+WantedBy=multi-user.target

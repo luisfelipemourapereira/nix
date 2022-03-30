@@ -1,0 +1,16 @@
+add_newline = false
+format = """
+$hostname@$directory$git_branch$git_status
+$character
+"""
+
+[directory]
+truncation_length = 1
+truncate_to_repo = true
+style = "bold blue"
+
+[git_branch]
+style = "bold blue"
+
+[hostname]
+ssh_only = false
