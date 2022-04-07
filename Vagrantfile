@@ -1,9 +1,7 @@
 # frozen_string_literal: true
 
 ###############################################################################
-# ubuntu 20.04
-###############################################################################
-
+# ubuntu 20.04 ##############################################################################
 # https://app.vagrantup.com/boxes/search?order=desc&page=1&provider=libvirt&q=ubuntu&sort=created&utf8=%E2%9C%93
 # libvirt ubuntu
 
