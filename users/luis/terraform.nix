@@ -1,0 +1,3 @@
+{}: {
+  programs.terraform.enable = true;
+}
