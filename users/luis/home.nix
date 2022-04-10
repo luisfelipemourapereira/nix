@@ -11,7 +11,7 @@
     ./files.nix
     ./shell.nix
     ./alacritty.nix
-    ./terraform.nix
+    # ./terraform.nix
   ];
 
   programs.home-manager.enable = true;

@@ -1,8 +1,8 @@
 {
-  description = "Here be systems!";
+  description = "top level nix!";
 
   inputs.nixpkgs.url = "github:NixOS/nixpkgs";
-  inputs.home-manager.url = "github:nix-community/home-manager";
+  # inputs.home-manager.url = "github:nix-community/home-manager";
   # inputs.secrets.url =
   # "git+ssh://git@github.com/luisfelipemourapereira/nix-secrets.git?ref=main";
 

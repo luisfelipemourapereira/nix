@@ -1,11 +1,11 @@
 { lib, config, specialArgs, options, modulesPath, nixosConfig, osConfig }: {
-  programs.zsh.enable = true;
+  programs.zsh.enable = false;
   programs.zsh.prezto.enable = true;
-  programs.zsh.dotDir = ".config/zsh";
+  # programs.zsh.dotDir = ".config/zsh";
   programs.zsh.enableAutosuggestions = true;
   programs.zsh.enableCompletion = true;
   programs.zsh.enableSyntaxHighlighting = true;
-  programs.zsh.defaultKeymap = "viins";
+  programs.zsh.defaultKeymap = "vicmd";
   programs.zsh.autocd = false;
   programs.zsh.history.size = 10000000;
   programs.zsh.history.save = 10000000;
@@ -14,11 +14,13 @@
     pbpaste = "xsel --clipboard --output";
     vim = "nvim -u ~/.config/nvim/init.lua";
   };
-  programs.zsh.profileExtra = ''
-eval "$(direnv hook zsh)"
-'';
+  # programs.zsh.profileExtra = builtins.readFile ./zsh_config.sh;
+#    programs.zsh.profileExtra = ''
+# eval "$(direnv hook zsh)"
+# bindkey -v
+# '';
   programs.zsh.zplug.enable = true;
-  programs.zsh.zplug.plugins = [
-    { name = "jeffreytse/zsh-vi-mode"; }
-  ];
+  # programs.zsh.zplug.plugins = [
+  #   { name = "jeffreytse/zsh-vi-mode"; }
+  # ];
 }
