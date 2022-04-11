@@ -14,7 +14,7 @@
     pbpaste = "xsel --clipboard --output";
     vim = "nvim -u ~/.config/nvim/init.lua";
   };
-  programs.zsh.profileExtra = builtins.readFile ./zsh_config.sh;
+  # programs.zsh.profileExtra = builtins.readFile ./zsh_config.sh;
   programs.zsh.zplug.enable = true;
   # programs.zsh.zplug.plugins = [
   #   { name = "jeffreytse/zsh-vi-mode"; }
