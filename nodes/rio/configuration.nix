@@ -6,17 +6,20 @@
 
 {
   imports =
-    [ # Include the results of the hardware scan.
+    [
+      # Include the results of the hardware scan.
       ./hardware-configuration.nix
     ];
 
   nix = {
+    # enable nix flakes commands to be run on nixos
     package = pkgs.nixFlakes;
     extraOptions = ''
       experimental-features = nix-command flakes
     '';
   };
 
+  # does not install unfree packages, this is a permission set
   nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
     "1password"
     "1password-cli"
@@ -25,9 +28,9 @@
     "spotify-unwrapped"
     "zoom"
   ];
-  
+
   # zsh as the default shell
-  # users.defaultUserShell = pkgs.zsh;
+  users.defaultUserShell = pkgs.zsh;
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -99,7 +102,7 @@
   # Enable the GNOME Desktop Environment.
   #services.xserver.displayManager.gdm.enable = false;
   #services.xserver.desktopManager.gnome.enable = false;
-  
+
 
   # Configure keymap in X11
   # services.xserver.layout = "us";
@@ -119,31 +122,31 @@
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.luis = {
     isNormalUser = true;
-    hashedPassword = "$6$4k6ZEsBqkvd5CM86$dDm8optLRzThRk5VBobPWsMh5YmG1ep2n.myvA06a9R22DwyKZr4hxRCO5KghxazAzRPjTvfNK9c4d4VEKoWR/"; 
+    hashedPassword = "$6$4k6ZEsBqkvd5CM86$dDm8optLRzThRk5VBobPWsMh5YmG1ep2n.myvA06a9R22DwyKZr4hxRCO5KghxazAzRPjTvfNK9c4d4VEKoWR/";
     extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
   };
-  
+
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-     stylua
-     nodePackages.prettier
-     gcc
-     firefox
-     gnumake
-     _1password
-     _1password-gui
-     sumneko-lua-language-server
-     solargraph
-     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-     wget
-     unzip
-     curl
-     git
-     slack
-     zoom-us
-     spotify
-     beekeeper-studio
+    stylua
+    nodePackages.prettier
+    gcc
+    firefox
+    gnumake
+    _1password
+    _1password-gui
+    sumneko-lua-language-server
+    solargraph
+    vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+    wget
+    unzip
+    curl
+    git
+    slack
+    zoom-us
+    spotify
+    beekeeper-studio
   ];
 
   # session variables

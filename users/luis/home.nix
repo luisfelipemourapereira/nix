@@ -1,5 +1,13 @@
-{ config, pkgs, nixpkgs, lib, specialArgs, options, modulesPath, nixosConfig
-, osConfig}: {
+{ config
+, pkgs
+, nixpkgs
+, lib
+, specialArgs
+, options
+, modulesPath
+, nixosConfig
+, osConfig
+}: {
 
   home.stateVersion = "21.11";
 
