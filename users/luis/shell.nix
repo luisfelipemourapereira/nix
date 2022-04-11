@@ -13,6 +13,8 @@
     vim = "nvim -u ~/.config/nvim/init.lua";
   };
 
+  programs.zsh.profileExtra = builtins.readFile ./zprofile.sh;
+
   programs.zsh.prezto.enable = false;
 
   programs.zsh.zplug.enable = false;
