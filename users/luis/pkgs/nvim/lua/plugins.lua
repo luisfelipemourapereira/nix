@@ -192,6 +192,9 @@ function M.setup()
 			end,
 		})
 
+		-- nix syntax
+		use({ "LnL7/vim-nix" })
+
 		-- make sure packer is installed
 		if packer_bootstrap then
 			print("Restart Neovim required after installation")
