@@ -129,7 +129,7 @@ function M.setup()
 		--})
 
 		-- lsp extra features
-		use({ "t3rro/null-ls.nvim" })
+		use({ "jose-elias-alvarez/null-ls.nvim" })
 
 		-- completion
 		use({

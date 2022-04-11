@@ -6,8 +6,9 @@ function M.setup()
 		nls.builtins.formatting.stylua,
 		nls.builtins.formatting.shfmt,
 		nls.builtins.formatting.prettier,
+		nls.builtins.completion.spell,
 	}
-	nls.setup({ sources = sources })
+	nls.setup({ sources = sources, debug = true })
 end
 
 return M
