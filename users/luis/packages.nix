@@ -7,7 +7,14 @@
 , nixosConfig
 , osConfig
 }: {
-  home.packages = with pkgs; [ nodejs ripgrep xsel fzf cargo ];
+  home.packages = with pkgs; [
+    nodejs
+    gnome3.gnome-tweaks
+    ripgrep
+    xsel
+    fzf
+    cargo
+  ];
 
   programs.jq.enable = true;
 }
