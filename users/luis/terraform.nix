@@ -8,5 +8,5 @@
 , nixosConfig
 , osConfig
 }: {
-  programs.terraform.enable = true;
+  # programs.terraform.enable = true;
 }

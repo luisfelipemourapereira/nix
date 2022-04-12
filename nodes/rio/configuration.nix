@@ -130,24 +130,26 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    stylua
+    sumneko-lua-language-server
     nodePackages.prettier
-    gcc
+    beekeeper-studio
+    _1password-gui
+    _1password
+    solargraph
+    terraform
+    tfswitch
     firefox
     gnumake
-    _1password
-    _1password-gui
-    sumneko-lua-language-server
-    solargraph
-    vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-    wget
-    unzip
-    curl
-    git
-    slack
-    zoom-us
     spotify
-    beekeeper-studio
+    zoom-us
+    stylua
+    unzip
+    slack
+    wget
+    curl
+    gcc
+    vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+    git
   ];
 
   # session variables
