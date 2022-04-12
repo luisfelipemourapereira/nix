@@ -83,6 +83,7 @@
   # gnome
   services.xserver.layout = "us";
   services.xserver.displayManager.gdm.enable = true;
+  # alacritty has visual issues with wayland
   services.xserver.displayManager.gdm.wayland = false;
   services.xserver.desktopManager.gnome.enable = true;
 
