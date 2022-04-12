@@ -7,6 +7,4 @@
 , modulesPath
 , nixosConfig
 , osConfig
-}: {
-  # programs.terraform.enable = true;
-}
+}: { }
