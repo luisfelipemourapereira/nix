@@ -48,6 +48,12 @@
     };
   };
   networking.networkmanager.enable = true;
+  networking.networkmanager.dns = "dnsmasq";
+  services.dnsmasq.enable = true;
+  services.dnsmasq.servers = [
+    "8.8.8.8"
+    "8.8.4.4"
+  ];
 
   # fonts
   fonts.fonts = with pkgs; [
@@ -135,21 +141,23 @@
     beekeeper-studio
     _1password-gui
     _1password
-    solargraph
     terraform
     tfswitch
     firefox
     gnumake
     spotify
+    dnsmasq
     zoom-us
     stylua
     unzip
     slack
+    nmap
     wget
     curl
     gcc
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     git
+    dig
   ];
 
   # session variables
