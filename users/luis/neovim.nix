@@ -5,24 +5,12 @@
     source = ./pkgs/nvim;
     recursive = true;
   };
-  #programs.neovim.viAlias = true;
-  #programs.neovim.vimAlias = true;
-  #programs.neovim.vimdiffAlias = true;
-  #programs.neovim.withNodeJs = true;
-  #programs.neovim.withRuby = true;
-  #programs.neovim.withPython3 = true;
-  #programs.neovim.extraPackages = [ pkgs.shfmt ];
-
-  # programs.neovim.plugins = [
-  # pkgs.vimPlugins.sensible
-  # pkgs.vimPlugins.solarized
-  # pkgs.vimPlugins.commentary
-  # ];
-
-  # programs.neovim.extraPackages = [
-  # pkgs.tree-sitter
-  # pkgs.rnix-lsp
-  # pkgs.nodePackages.typescript
-  # pkgs.nodePackages.typescript-language-server
-  # ];
+  # controlled currently by zsh configuration
+  programs.neovim.viAlias = false;
+  programs.neovim.vimAlias = false;
+  programs.neovim.vimdiffAlias = true;
+  programs.neovim.withNodeJs = true;
+  programs.neovim.withRuby = true;
+  programs.neovim.withPython3 = true;
+  programs.neovim.extraPackages = [ pkgs.shfmt ];
 }

@@ -8,10 +8,8 @@
 , nixosConfig
 , osConfig
 }: {
-
-  home.stateVersion = "21.11";
-
   imports = [
+    ./home-manager.nix
     ./environment.nix
     ./packages.nix
     ./starship.nix
@@ -19,22 +17,7 @@
     ./files.nix
     ./shell.nix
     ./alacritty.nix
-    # ./terraform.nix
+    ./terraform.nix
+    ./direnv.nix
   ];
-
-  programs.home-manager.enable = true;
-  home.username = "luis";
-
-  # direnv
-  programs.direnv.enable = true;
-
-  # xsession.enable = false;
-  # keyboard settings
-  # home.keyboard.options = [
-  #   "caps:escape"
-  # ];
-
-  # wayland.windowManager.sway = {
-  #   enable = true;
-  # };
 }

@@ -8,5 +8,7 @@
 , nixosConfig
 , osConfig
 }: {
-  programs.terraform.enable = true;
+  programs.home-manager.enable = true;
+  home.stateVersion = "21.11";
+  home.username = "luis";
 }

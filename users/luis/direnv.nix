@@ -8,5 +8,6 @@
 , nixosConfig
 , osConfig
 }: {
-  programs.terraform.enable = true;
+  # direnv
+  programs.direnv.enable = true;
 }
