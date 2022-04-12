@@ -5,15 +5,6 @@
 # https://app.vagrantup.com/boxes/search?order=desc&page=1&provider=libvirt&q=ubuntu&sort=created&utf8=%E2%9C%93
 # libvirt ubuntu
 
-# box               = 'voegelas/geerlingguy-ubuntu2004'
-# user              = :solange
-# system            = :ubuntu2004
-# dotfiles          = 'git@github.com:luisfelipemourapereira/dotfiles.git'
-# scripts           = 'scripts'
-# root_script       = "#{scripts}/entry-point.sh"
-# user_script       = "#{scripts}/user-entry-point.sh"
-# user_script_dest  = '/tmp/user-entry-point.sh'
-
 Vagrant.configure('2') do |config|
   config.ssh.insert_key = false
   config.vm.box = 'esselius/nixos'
@@ -21,13 +12,7 @@ Vagrant.configure('2') do |config|
                       source: './vagrantbox/essius/nix/configuration.nix',
                       destination: 'custom-configuration.nix'
   config.vm.provision :shell, path: 'vagrant.sh'
-  # config.vm.provision :shell, path: 'vagrant.sh', env: {
-  #   THIS_USER: user,
-  #   THIS_SHELL: 'zsh'
-  # }
-  # config.vm.synced_folder '.', '/vagrant', disabled: false
-  # config.vm.synced_folder 'config/nix', '/etc/nix', disabled: false
-  # config.vm.synced_folder '~/.ssh', '/root/.ssh', disabled: false
+  config.vm.synced_folder '.', '/vagrant', disabled: true
   config.vm.provider :libvirt do |libvirt|
     libvirt.memory = '4096'
     # rubocop:disable Metrics/LineLength
