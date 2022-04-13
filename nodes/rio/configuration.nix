@@ -136,6 +136,8 @@
     zoom-us
     stylua
     unzip
+    nomad
+    vault
     slack
     nmap
     wget
