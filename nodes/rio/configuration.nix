@@ -135,6 +135,7 @@
     dnsmasq
     zoom-us
     stylua
+    zellij
     unzip
     nomad
     vault
