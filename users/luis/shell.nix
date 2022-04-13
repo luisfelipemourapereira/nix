@@ -11,7 +11,7 @@
     pbcopy = "xsel --clipboard --input";
     pbpaste = "xsel --clipboard --output";
     vim = "nvim -u ~/.config/nvim/init.lua";
-    tfswitch = "sudo tfswitch -b /run/current-system/sw/bin/terraform";
+    # tfswitch = "tfswitch -b /run/current-system/sw/bin/terraform";
   };
 
   programs.zsh.initExtra = builtins.readFile ./zprofile.sh;
