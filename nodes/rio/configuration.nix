@@ -127,6 +127,7 @@
     beekeeper-studio
     _1password-gui
     _1password
+    solargraph
     terraform
     tfswitch
     firefox

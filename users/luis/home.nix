@@ -14,6 +14,7 @@
     ./packages.nix
     ./starship.nix
     ./neovim.nix
+    ./tmux.nix
     ./files.nix
     ./shell.nix
     ./alacritty.nix
