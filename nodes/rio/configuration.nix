@@ -139,6 +139,7 @@
     nomad
     vault
     slack
+    tmux
     nmap
     wget
     curl
