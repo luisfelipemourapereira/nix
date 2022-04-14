@@ -143,6 +143,7 @@
     slack
     tmux
     nmap
+    ruby
     wget
     curl
     gcc
