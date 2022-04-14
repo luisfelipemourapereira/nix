@@ -11,6 +11,7 @@ cursor:
 env:
   STARSHIP_SHELL: ""
   TERM: "xterm-256color"
+  WAYLAND_DISPLAY: "alacritty"
 shell:
   program: /etc/profiles/per-user/luis/bin/zsh
   args:
