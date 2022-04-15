@@ -138,6 +138,7 @@
     zoom-us
     stylua
     zellij
+    awscli
     unzip
     nomad
     vault
