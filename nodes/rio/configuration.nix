@@ -29,10 +29,7 @@
     "zoom"
     "nvidia-x11"
     "nvidia-settings"
-  ];
-
-  # zsh as the default shell
-  users.defaultUserShell = pkgs.zsh;
+  ]; # zsh as the default shell users.defaultUserShell = pkgs.zsh;
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -86,8 +83,8 @@
   hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.stable;
   hardware.nvidia.prime = {
     offload.enable = true;
-    intelBusId = "PCI:0:2.0";
-    nvidiaBusId = "PCI:1:0.0";
+    intelBusId = "PCI:00:02.0";
+    nvidiaBusId = "PCI:01:00.0";
   };
 
   # Enable the X11 windowing system.
