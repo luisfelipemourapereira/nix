@@ -9,7 +9,7 @@
   inputs.nixpkgs.url = "github:NixOS/nixpkgs";
   inputs.local.url = "path:./derivations";
   inputs.home-manager.url = "github:nix-community/home-manager";
-  outputs = { nixpkgs, home-manager, self }: {
+  outputs = { nixpkgs, home-manager, self, local }: {
     nixosConfigurations = {
       rio = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
