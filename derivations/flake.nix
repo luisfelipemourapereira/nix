@@ -13,10 +13,10 @@
     in
     {
       # Generate a user-friendly version number
-      version = builtins.substring 0 8 self.lastModifiedDate;
+      # version = builtins.substring 0 8 self.lastModifiedDate;
 
       # systems to support
-      supportedSystems = [ "x86_64-linux" ];
+      # supportedSystems = [ "x86_64-linux" ];
       packages.x86_64-linux.autorandr-rs = pkgs.callPackage ./autorandr-rs/default.nix { };
 
       # exposed packages
