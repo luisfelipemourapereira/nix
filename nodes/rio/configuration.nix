@@ -145,6 +145,7 @@
     slack
     tmux
     nmap
+    stow
     ruby
     wget
     curl

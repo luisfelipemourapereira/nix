@@ -1,6 +1,6 @@
 { pkgs, lib, config, specialArgs, options, modulesPath, nixosConfig, osConfig }:
 {
-  xdg.configFile.aws = {
+  home.file.aws = {
     source = ./pkgs/aws;
     recursive = true;
   };
