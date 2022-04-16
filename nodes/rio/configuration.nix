@@ -5,7 +5,7 @@
 { config, pkgs, lib, ... }:
 let
 
-  autorandr-rs = pkgs.callPackage ./derivations/pkgs/autorandr-rs/default.nix { };
+  autorandr-rs = pkgs.callPackage ../../derivations/pkgs/autorandr-rs/default.nix { };
 in
 {
   imports =
