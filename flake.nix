@@ -7,7 +7,7 @@
 {
   description = "Use like: nixos-rebuild switch --flake '.#rio'";
   inputs.nixpkgs.url = "github:NixOS/nixpkgs";
-  inputs.lunixpkgs.url = "github:luisfelipemourapereira/lunixpkgs";
+  inputs.local.url = "path:./derivations";
   inputs.home-manager.url = "github:nix-community/home-manager";
   outputs = { nixpkgs, home-manager, self }: {
     nixosConfigurations = {
