@@ -138,6 +138,7 @@
     solargraph
     terraform
     tfswitch
+    pciutils
     firefox
     gnumake
     spotify
