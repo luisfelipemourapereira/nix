@@ -84,6 +84,11 @@
   services.xserver.videoDrivers = [ "nvidia" ];
   hardware.opengl.enable = true;
   hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.stable;
+  hardware.nvidia.prime = {
+    offload.enable = true;
+    intelBusId = "PCI:0:2.0";
+    nvidiaBusId = "PCI:1:0.0";
+  };
 
   # Enable the X11 windowing system.
   services.xserver.enable = true;
