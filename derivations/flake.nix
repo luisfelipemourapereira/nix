@@ -17,7 +17,7 @@
 
       # systems to support
       supportedSystems = [ "x86_64-linux" ];
-      packages.x86_64-linux.autorandr-rs = pkgs.callPackage ./derivations/autorandr-rs/default.nix { };
+      packages.x86_64-linux.autorandr-rs = pkgs.callPackage ./autorandr-rs/default.nix { };
 
       # exposed packages
       # packages = {
