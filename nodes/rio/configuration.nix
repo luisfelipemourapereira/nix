@@ -27,6 +27,8 @@
     "spotify"
     "spotify-unwrapped"
     "zoom"
+    "nvidia-x11"
+    "nvidia-settings"
   ];
 
   # zsh as the default shell
@@ -77,6 +79,11 @@
     font = "Lat2-Terminus16";
     keyMap = "us";
   };
+
+  # use nvidia
+  services.xserver.videoDrivers = [ "nvidia" ];
+  hardware.opengl.enable = true;
+  hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.stable;
 
   # Enable the X11 windowing system.
   services.xserver.enable = true;
