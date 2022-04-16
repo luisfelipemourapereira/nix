@@ -1,7 +1,5 @@
 ###############################################################################
-# multiple system identities here
-#
-# .#rio = laptop
+# expose your local packages via a flake
 ###############################################################################
 
 {
@@ -9,22 +7,19 @@
   inputs.nixpkgs.url = "github:NixOS/nixpkgs";
   inputs.utils.url = "github:numtide/flake-utils";
   outputs = { self, nixpkgs, utils, ... }: {
-    packages.x86_64-linux.lua = import ./awsconfig/default.nix { };
-    # let
-    #   pkgsFor = system: import nixpkgs {
-    #     inherit system;
-    #   };
-    # in
-    # {
-    #   overlay = final: prev: {
-    #     lua = prev.callPackage ./awsconfig { };
-    #   };
-    # } // utils.lib.eachDefaultSystem (system:
-    #   let pkgs = pkgsFor system;
-    #   in
-    #   {
-    #     packages.system.lua = pkgs.lua;
-    #   }
-    # );
+    # Generate a user-friendly version number
+    version = builtins.substring 0 8 self.lastModifiedDate;
+
+    # systems to support
+    supportedSystems = [ "x86_64-linux" ];
+
+    # exposed packages
+    packages = {
+      x86_64-linux =
+        with import nixpkgs { system = "x86_64-linux"; };
+        stdenv.mkDerivation {
+          name = "hello";
+        };
+    };
   };
 }
