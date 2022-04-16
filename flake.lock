@@ -18,20 +18,6 @@
         "type": "github"
       }
     },
-    "local": {
-      "inputs": {
-        "nixpkgs": "nixpkgs_2"
-      },
-      "locked": {
-        "narHash": "sha256-IK7MbMhjvMI4mMC2o10PnznOpLji6uC14iB4abAl/+c=",
-        "path": "./derivations",
-        "type": "path"
-      },
-      "original": {
-        "path": "./derivations",
-        "type": "path"
-      }
-    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1639147144,
@@ -47,21 +33,6 @@
       }
     },
     "nixpkgs_2": {
-      "locked": {
-        "lastModified": 1650086478,
-        "narHash": "sha256-NmpvSlHlKjHw4zswCg0y0Cghd3R2Rd4k8nQ9UqAYMdk=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "4f0ec2c783fe2637daed9139b3069d265acd54ee",
-        "type": "github"
-      },
-      "original": {
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
-    "nixpkgs_3": {
       "locked": {
         "lastModified": 1648466084,
         "narHash": "sha256-rFghVNg32CDKbOd1byfaMtAShJmVqdtUMdy7OWr+FMw=",
@@ -79,8 +50,7 @@
     "root": {
       "inputs": {
         "home-manager": "home-manager",
-        "local": "local",
-        "nixpkgs": "nixpkgs_3"
+        "nixpkgs": "nixpkgs_2"
       }
     }
   },

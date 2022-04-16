@@ -2,8 +2,11 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, lib, local, ... }:
+{ config, pkgs, lib, ... }:
+let
 
+  autorandr-rs = pkgs.callPackage ./derivations/pkgs/autorandr-rs/default.nix { };
+in
 {
   imports =
     [
@@ -137,6 +140,7 @@
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
+
   environment.systemPackages = with pkgs; [
     sumneko-lua-language-server
     nodePackages.prettier
@@ -145,6 +149,7 @@
     _1password
     solargraph
     terraform
+    autorandr-rs
     tfswitch
     pciutils
     firefox
@@ -169,7 +174,6 @@
     vim
     git
     dig
-    local.autorandr-rs
   ];
 
   # turn on screensharing for slack
