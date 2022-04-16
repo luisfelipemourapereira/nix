@@ -10,6 +10,7 @@ cursor:
   style: Block
 env:
   STARSHIP_SHELL: ""
+  TERM: "xterm-256color"
 shell:
   program: /etc/profiles/per-user/luis/bin/zsh
   args:

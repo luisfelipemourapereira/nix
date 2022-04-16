@@ -1,4 +1,11 @@
-{ pkgs, lib, config, specialArgs, options, modulesPath, nixosConfig, osConfig
+{ pkgs
+, lib
+, config
+, specialArgs
+, options
+, modulesPath
+, nixosConfig
+, osConfig
 }: {
   home.file = {
     "code/self/ltk".source = builtins.fetchGit {

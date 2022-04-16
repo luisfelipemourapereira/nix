@@ -129,7 +129,7 @@ function M.setup()
 		--})
 
 		-- lsp extra features
-		use({ "t3rro/null-ls.nvim" })
+		use({ "jose-elias-alvarez/null-ls.nvim" })
 
 		-- completion
 		use({
@@ -191,6 +191,9 @@ function M.setup()
 				require("config.dap").setup()
 			end,
 		})
+
+		-- nix syntax
+		use({ "LnL7/vim-nix" })
 
 		-- make sure packer is installed
 		if packer_bootstrap then
