@@ -20,5 +20,6 @@
     ./alacritty.nix
     ./terraform.nix
     ./direnv.nix
+    ./aws.nix
   ];
 }
