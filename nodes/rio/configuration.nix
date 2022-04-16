@@ -79,9 +79,10 @@
 
   # use nvidia
   # services.xserver.videoDrivers = [ "nvidia" "intel" ];
-  services.xserver.videoDrivers = [ "intel" ];
+  # services.xserver.videoDrivers = [ "intel" ];
   hardware.opengl.enable = true;
   hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.stable;
+  # breaks things so far
   #hardware.nvidia.prime = {
   #  offload.enable = true;
   #  intelBusId = "PCI:00:02.0";
