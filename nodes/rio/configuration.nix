@@ -157,6 +157,7 @@ in
     spotify
     dnsmasq
     zoom-us
+    bundix
     stylua
     zellij
     awscli
