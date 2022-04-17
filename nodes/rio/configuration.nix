@@ -176,6 +176,9 @@ in
     dig
   ];
 
+  # docker
+  virtualisation.docker.enable = true;
+
   # turn on screensharing for slack
   xdg = {
     portal = {
