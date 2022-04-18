@@ -6,11 +6,11 @@
         "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1650259749,
-        "narHash": "sha256-aC9F6Pqr1T+271/EXzjMyXMDDIVmTHOAOrLR8yVh6RI=",
+        "lastModified": 1650264282,
+        "narHash": "sha256-62uw1pw1o4nNatpVGwdMqaE27irGiqkM93EtnLhA4g0=",
         "ref": "main",
-        "rev": "f45ea760b44427223bbcc39b4562efe4f485aa98",
-        "revCount": 110,
+        "rev": "916bef5dca558afff1e967798137f08b1679d992",
+        "revCount": 112,
         "type": "git",
         "url": "ssh://git@github.com/luisfelipemourapereira/cauda"
       },
@@ -56,11 +56,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1650154256,
-        "narHash": "sha256-+/peS6npS7dbIPEHemDhNPdoK4HndqGYpU3+W+brVh0=",
+        "lastModified": 1650258430,
+        "narHash": "sha256-6+rirXwrXHpfv5Nmb75y6oiun+TX6r1wwhHgjyR5NcM=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "3f6f378eaadc996a3206dd4fe166878bb8a72e73",
+        "rev": "fad2f3353c1916b45e2d6936cf8ebf30bbd95b9c",
         "type": "github"
       },
       "original": {
