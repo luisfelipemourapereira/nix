@@ -21,5 +21,7 @@
     ./terraform.nix
     ./direnv.nix
     ./aws.nix
+    ./private_gem_credentials.nix
   ];
 }
+
