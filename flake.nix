@@ -6,7 +6,6 @@
 
 {
   description = "Use like: nixos-rebuild switch --flake '.#rio'";
-  # inputs.nixpkgs.url = "github:NixOS/nixpkgs?ref=release-21.05";
   inputs.nixpkgs.url = "github:NixOS/nixpkgs?ref=6140c314d5850406dddc78e55dcc8716ea111ee4";
   inputs.home-manager.url = "github:nix-community/home-manager";
   inputs.cauda.url = "git+ssh://git@github.com/luisfelipemourapereira/cauda?ref=main";
