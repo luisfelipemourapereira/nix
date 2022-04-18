@@ -2,9 +2,8 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, lib, ... }:
+{ config, pkgs, lib, cauda, ... }:
 let
-
   autorandr-rs = pkgs.callPackage ../../derivations/pkgs/autorandr-rs/default.nix { };
 in
 {
@@ -161,6 +160,7 @@ in
     stylua
     zellij
     awscli
+    cauda
     unzip
     nomad
     vault

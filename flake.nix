@@ -8,10 +8,12 @@
   description = "Use like: nixos-rebuild switch --flake '.#rio'";
   inputs.nixpkgs.url = "github:NixOS/nixpkgs";
   inputs.home-manager.url = "github:nix-community/home-manager";
-  outputs = { nixpkgs, home-manager, self }: {
+  inputs.cauda.url = "git+ssh://git@github.com/luisfelipemourapereira/cauda?ref=main";
+  outputs = { nixpkgs, home-manager, self, cauda }: {
     nixosConfigurations = {
       rio = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
+        specialArgs = { inherit cauda; };
         modules = [
           ./nodes/rio/configuration.nix
           home-manager.nixosModules.home-manager
