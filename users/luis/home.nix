@@ -21,7 +21,11 @@
     ./terraform.nix
     ./direnv.nix
     ./aws.nix
-    ./private_gem_credentials.nix
+    # NOTE TODO 
+    # want to place this but cannot because gem wants 0600
+    # and nix places into store with different permissions
+    # not matter what it seems.
+    # ./private_gem_credentials.nix
   ];
 }
 
