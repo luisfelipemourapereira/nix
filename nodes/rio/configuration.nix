@@ -160,11 +160,11 @@ in
     stylua
     zellij
     awscli
-    cauda
     unzip
     nomad
     vault
     slack
+    cauda
     tmux
     nmap
     stow
