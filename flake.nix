@@ -9,9 +9,9 @@
   inputs.nixpkgs.url = "github:NixOS/nixpkgs?ref=6140c314d5850406dddc78e55dcc8716ea111ee4";
   inputs.home-manager.url = "github:nix-community/home-manager?ref=742c6cb3e9d866e095c629162fe5faf519adeb26";
   inputs.cauda.url = "git+ssh://git@github.com/luisfelipemourapereira/cauda?ref=main";
-  outputs = { nixpkgs, home-manager, self, cauda }: {
-    nixosConfigurations = {
-      rio = nixpkgs.lib.nixosSystem {
+  outputs = { nixpkgs, home-manager, self, cauda }: rec {
+    nixosConfigurations = rec {
+      rio = nixpkgs.lib.nixosSystem rec {
         system = "x86_64-linux";
         specialArgs = { inherit cauda; };
         modules = [
