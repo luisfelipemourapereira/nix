@@ -162,12 +162,15 @@ in
     awscli
     unzip
     nomad
+    libmaxminddb
     vault
     slack
     cauda
     tmux
     nmap
     stow
+    zlib
+    pkgconfig
     ruby
     wget
     curl

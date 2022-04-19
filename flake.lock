@@ -6,11 +6,11 @@
         "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1650264282,
-        "narHash": "sha256-62uw1pw1o4nNatpVGwdMqaE27irGiqkM93EtnLhA4g0=",
+        "lastModified": 1650326405,
+        "narHash": "sha256-Eq8EweZPBWftKsSjwowLMC7J0+xZ0uu9wEFFnmAcm40=",
         "ref": "main",
-        "rev": "916bef5dca558afff1e967798137f08b1679d992",
-        "revCount": 112,
+        "rev": "dcac11a33fa78bc076af18f34ce1f7010b6b6925",
+        "revCount": 118,
         "type": "git",
         "url": "ssh://git@github.com/luisfelipemourapereira/cauda"
       },
@@ -54,6 +54,45 @@
         "type": "github"
       }
     },
+    "home-manager_2": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_3"
+      },
+      "locked": {
+        "lastModified": 1650234580,
+        "narHash": "sha256-wTmlRedCrDl+XYJom65GMfI3RgA3eZE/w03lD28Txoc=",
+        "owner": "nix-community",
+        "repo": "home-manager",
+        "rev": "742c6cb3e9d866e095c629162fe5faf519adeb26",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "ref": "742c6cb3e9d866e095c629162fe5faf519adeb26",
+        "repo": "home-manager",
+        "type": "github"
+      }
+    },
+    "nix-secrets": {
+      "inputs": {
+        "home-manager": "home-manager_2",
+        "nixpkgs": "nixpkgs_4"
+      },
+      "locked": {
+        "lastModified": 1650339184,
+        "narHash": "sha256-KNapdg0E8nRiJsTX4zBETsCy4BqPbFzgMvw/4oW9ALI=",
+        "ref": "main",
+        "rev": "c44595535e89e906d76aacfc5597b359cd7789c9",
+        "revCount": 6,
+        "type": "git",
+        "url": "ssh://git@github.com/luisfelipemourapereira/nix-secrets"
+      },
+      "original": {
+        "ref": "main",
+        "type": "git",
+        "url": "ssh://git@github.com/luisfelipemourapereira/nix-secrets"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1650258430,
@@ -85,6 +124,34 @@
     },
     "nixpkgs_3": {
       "locked": {
+        "lastModified": 1650194139,
+        "narHash": "sha256-kurZsqeOw5fpqA/Ig+8tHvbjwzs5P9AE6WUKOX1m6qM=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "bd4dffcdb7c577d74745bd1eff6230172bd176d5",
+        "type": "github"
+      },
+      "original": {
+        "id": "nixpkgs",
+        "type": "indirect"
+      }
+    },
+    "nixpkgs_4": {
+      "locked": {
+        "lastModified": 1650194139,
+        "narHash": "sha256-kurZsqeOw5fpqA/Ig+8tHvbjwzs5P9AE6WUKOX1m6qM=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "bd4dffcdb7c577d74745bd1eff6230172bd176d5",
+        "type": "github"
+      },
+      "original": {
+        "id": "nixpkgs",
+        "type": "indirect"
+      }
+    },
+    "nixpkgs_5": {
+      "locked": {
         "lastModified": 1650167080,
         "narHash": "sha256-sSFOXf1YtX6EIHG5HAh64y6EqJ1/5epcCSq1c8wxCi4=",
         "owner": "NixOS",
@@ -103,7 +170,8 @@
       "inputs": {
         "cauda": "cauda",
         "home-manager": "home-manager",
-        "nixpkgs": "nixpkgs_3"
+        "nix-secrets": "nix-secrets",
+        "nixpkgs": "nixpkgs_5"
       }
     }
   },
