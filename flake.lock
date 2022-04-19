@@ -79,11 +79,11 @@
         "nixpkgs": "nixpkgs_4"
       },
       "locked": {
-        "lastModified": 1650339184,
-        "narHash": "sha256-KNapdg0E8nRiJsTX4zBETsCy4BqPbFzgMvw/4oW9ALI=",
+        "lastModified": 1650339793,
+        "narHash": "sha256-BSydL3k5UxIIo3RqDhySRbvC9A9d+m+THAku/PUvGQk=",
         "ref": "main",
-        "rev": "c44595535e89e906d76aacfc5597b359cd7789c9",
-        "revCount": 6,
+        "rev": "28384ada549e953829c6cacfeeddf2a256c91895",
+        "revCount": 9,
         "type": "git",
         "url": "ssh://git@github.com/luisfelipemourapereira/nix-secrets"
       },

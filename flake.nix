@@ -23,6 +23,7 @@
             home-manager.useUserPackages = true;
             home-manager.users.luis = import ./users/luis/home.nix;
           }
+          nix-secrets.nixosModule
         ];
       };
     };
