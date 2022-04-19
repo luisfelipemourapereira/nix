@@ -130,11 +130,10 @@ in
 
   users.mutableUsers = false;
 
-  # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.luis = {
     isNormalUser = true;
     hashedPassword = "$6$4k6ZEsBqkvd5CM86$dDm8optLRzThRk5VBobPWsMh5YmG1ep2n.myvA06a9R22DwyKZr4hxRCO5KghxazAzRPjTvfNK9c4d4VEKoWR/";
-    extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
+    extraGroups = [ "wheel" "docker" ];
   };
 
   # List packages installed in system profile. To search, run:
