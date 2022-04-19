@@ -20,7 +20,6 @@
     ./alacritty.nix
     ./terraform.nix
     ./direnv.nix
-    ./aws.nix
     # NOTE TODO 
     # want to place this but cannot because gem wants 0600
     # and nix places into store with different permissions
