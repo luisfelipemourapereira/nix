@@ -161,6 +161,7 @@ in
     awscli
     unzip
     nomad
+    fractal
     libmaxminddb
     vault
     slack
