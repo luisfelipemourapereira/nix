@@ -1,2 +1,4 @@
 #!/usr/bin/env sh
-./scripts/enforce/rio.sh
+sudo \
+	nixos-rebuild switch \
+	--flake '.#rio'
