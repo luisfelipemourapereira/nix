@@ -167,6 +167,7 @@ in
     vault
     slack
     htop
+    gnupg
     cauda
     tmux
     nmap
