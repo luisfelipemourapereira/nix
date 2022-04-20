@@ -163,8 +163,10 @@ in
     nomad
     fractal
     libmaxminddb
+    weechat
     vault
     slack
+    htop
     cauda
     tmux
     nmap
