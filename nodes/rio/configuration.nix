@@ -55,7 +55,7 @@ in
     "8.8.8.8"
     "8.8.4.4"
   ];
-  services.dnsmasq.extraConfig = "cache-size=10000";
+  services.dnsmasq.extraConfig = "cache-size=1000";
 
   # fonts
   fonts.fonts = with pkgs; [
@@ -144,13 +144,18 @@ in
     nodePackages.prettier
     beekeeper-studio
     _1password-gui
+    autorandr-rs
+    libmaxminddb
     _1password
     solargraph
     terraform
-    autorandr-rs
+    pkgconfig
+    nix-index
     tfswitch
     pciutils
     firefox
+    fractal
+    weechat
     gnumake
     spotify
     dnsmasq
@@ -161,20 +166,15 @@ in
     awscli
     unzip
     nomad
-    fractal
-    libmaxminddb
-    weechat
     vault
     slack
-    htop
     gnupg
     cauda
+    htop
     tmux
     nmap
     stow
     zlib
-    pkgconfig
-    ruby
     wget
     curl
     gcc
@@ -182,6 +182,8 @@ in
     git
     dig
   ];
+  # excluded packages
+  # ruby
 
   # docker
   virtualisation.docker.enable = true;
