@@ -6,7 +6,8 @@
 
 {
   description = "Use like: nixos-rebuild switch --flake '.#rio'";
-  inputs.nixpkgs.url = "github:NixOS/nixpkgs?ref=6140c314d5850406dddc78e55dcc8716ea111ee4";
+  # has ruby-2.4.4
+  inputs.nixpkgs.url = "github:luisfelipemourapereira/nixpkgs?ref=2fbe71019a1fd7c616586499051c95721c700777";
   inputs.home-manager.url = "github:nix-community/home-manager?ref=742c6cb3e9d866e095c629162fe5faf519adeb26";
   inputs.cauda.url = "git+ssh://git@github.com/luisfelipemourapereira/cauda?ref=main";
   inputs.nix-secrets.url = "git+ssh://git@github.com/luisfelipemourapereira/nix-secrets?ref=main";
