@@ -8,11 +8,14 @@ Build nodes without having to download the repository
 
 
    ```
-   nixos-rebuild switch --flake 'github:luisfelipemourapereira/nix#{NODE}'
+   nixos-rebuild switch --flake 'github:luisfelipemourapereira/nix#plo'
    ```
-   where {NODE} is |plo|rai
-
    ```
-   darwin-rebuild switch --flake 'github:luisfelipemourapereira/nix#{NODE}'
+   nixos-rebuild switch --flake 'github:luisfelipemourapereira/nix#rai'
    ```
-   where {NODE} is |cid|ani
+   ```
+   nixos-rebuild switch --flake 'github:luisfelipemourapereira/nix#cid'
+   ```
+   ```
+   nixos-rebuild switch --flake 'github:luisfelipemourapereira/nix#ani'
+   ```
