@@ -4,15 +4,8 @@
 
 Build nodes without having to download the repository
 
+
    ```
-   nixos-rebuild switch --flake 'github:luisfelipemourapereira/nix#ani'
-   ```
-   ```
-   nixos-rebuild switch --flake 'github:luisfelipemourapereira/nix#plo'
-   ```
-   ```
-   nixos-rebuild switch --flake 'github:luisfelipemourapereira/nix#rai'
-   ```
-   ```
-   nixos-rebuild switch --flake 'github:luisfelipemourapereira/nix#cid'
+   nixos-rebuild switch --flake 'github:luisfelipemourapereira/nix#{NODE}'
+   # where NODE is |plo|rai|cid|ani
    ```
