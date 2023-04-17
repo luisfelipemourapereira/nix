@@ -5,6 +5,8 @@
 Build nodes without having to download the repository
 
 
+
+
    ```
    nixos-rebuild switch --flake 'github:luisfelipemourapereira/nix#{NODE}'
    ```
