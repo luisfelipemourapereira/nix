@@ -9,8 +9,9 @@ Build nodes without having to download the repository
    nixos-rebuild switch --flake 'github:luisfelipemourapereira/nix#{NODE}'
    # where NODE is |plo|rai
    ```
+   where NODE is |cid|ani
 
    ```
    darwin-rebuild switch --flake 'github:luisfelipemourapereira/nix#{NODE}'
-   # where NODE is |cid|ani
    ```
+   where NODE is |cid|ani
