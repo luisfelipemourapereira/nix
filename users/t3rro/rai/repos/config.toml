@@ -1,0 +1,19 @@
+[[repositories]]
+  subdir = "Misterio77/nix-config"
+  url = "https://github.com/Misterio77/nix-config.git"
+  branch = "main"
+
+[[repositories]]
+  subdir = "luisfelipemourapereira/nix"
+  url = "git@github.com:luisfelipemourapereira/nix.git"
+  branch = "main"
+
+[[repositories]]
+  subdir = "t3rro/t3-blog"
+  url = "git@github.com:t3rro/t3-blog.git"
+  branch = "main"
+
+[[repositories]]
+  subdir = "luisfelipemourapereira/t3-blog"
+  url = "git@github.com:luisfelipemourapereira/t3-blog.git"
+  branch = "main"

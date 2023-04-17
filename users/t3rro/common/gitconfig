@@ -1,0 +1,12 @@
+[user]
+  email = t3rro@protonmail.com
+  name = t3rro
+
+[merge]
+  default = merge
+
+[core]
+  pager = delta --dark --line-numbers
+
+[delta]
+  side-by-side = true

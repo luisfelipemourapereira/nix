@@ -1,0 +1,70 @@
+local M = {}
+
+function M.setup()
+	-- require("orgmode").setup({
+	-- 	org_agenda_files = { "~/Documents/org/*" },
+	-- 	org_default_notes_file = "~/Documents/org/notes.org",
+	-- 	org_hide_leading_stars = true,
+	-- 	org_indent_mode = "indent",
+	-- 	org_list_allow_alphabetical = true,
+	-- 	org_list_item_bullets = { "-" },
+	-- 	org_todo_keywords = { "TODO", "WAITING", "DONE" },
+	-- 	org_todo_keyword_faces = {
+	-- 		WAITING = ":color grey",
+	-- 		DONE = ":color green",
+	-- 	},
+	-- })
+	--
+	-- -- Set up keybindings for orgmode navigation and tasks.
+	-- vim.api.nvim_set_keymap(
+	-- 	'n',
+	-- 	'<Leader>o',
+	-- 	'<Cmd>lua require("orgmode").action("capture")<CR>',
+	-- 	{ noremap = true }
+	-- )
+	--
+	-- vim.api.nvim_set_keymap(
+	-- 	'n',
+	-- 	'<Leader>oc',
+	-- 	'<Cmd>lua require("orgmode").action("agenda")<CR>',
+	-- 	{ noremap = true }
+	-- )
+	--
+	-- vim.api.nvim_set_keymap(
+	-- 	'n',
+	-- 	'<Leader>oa',
+	-- 	'<Cmd>lua require("orgmode").action("todo")<CR>',
+	-- 	{ noremap = true }
+	-- )
+	--
+	-- vim.api.nvim_set_keymap(
+	-- 	'n',
+	-- 	'<Leader>ot',
+	-- 	'<Cmd>lua require("orgmode").action("tags")<CR>',
+	-- 	{ noremap = true }
+	-- )
+	--
+	-- -- Set up keybindings for folding and cycling.
+	-- vim.api.nvim_set_keymap(
+	-- 	'n',
+	-- 	'<Tab>',
+	-- 	'<Cmd>lua require("orgmode").cycle(1)<CR>',
+	-- 	{ noremap = true }
+	-- )
+	--
+	-- vim.api.nvim_set_keymap(
+	-- 	'n',
+	-- 	'<S-Tab>',
+	-- 	'<Cmd>lua require("orgmode").cycle(-1)<CR>',
+	-- 	{ noremap = true }
+	-- )
+	--
+	-- vim.api.nvim_set_keymap(
+	-- 	'n',
+	-- 	'<Leader>z',
+	-- 	'<Cmd>lua require("orgmode").toggle_fold()<CR>',
+	-- 	{ noremap = true }
+	-- )
+end
+
+return M

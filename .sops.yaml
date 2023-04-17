@@ -1,0 +1,16 @@
+keys:
+  - &rai age12ar4w5sv7r0agxcemvjq97r90qnarqnr289axlf6aqyhckyyp92q3tf8k2
+
+creation_rules:
+  - path_regex: secrets/[^/]+\.yaml$
+    key_groups:
+      - age:
+        - *rai
+  - path_regex: secrets/luis/[^/]+\.yaml$
+    key_groups:
+      - age:
+        - *rai
+  - path_regex: secrets/t3rro/[^/]+\.yaml$
+    key_groups:
+      - age:
+        - *rai
