@@ -1,10 +1,11 @@
 { config, lib, ... }:
 with lib;
 let
-  # module scope
+  # establish module scope
   cfg = config.blackmatter.envrc;
 
   # if a directory exists place an .envrc
+  # in the directory
   envrc = directory: envrc-path:
     if builtins.pathExists directory && (
       builtins.exec
@@ -30,4 +31,6 @@ let
   # wrap the module up
   module = { config = actions; };
 in
+
+# return the module
 module

@@ -152,6 +152,7 @@
       blackmatter.programs.nvim.enable = true;
       blackmatter.shell.enable = true;
       blackmatter.desktop.alacritty.enable = true;
+      blackmatter.envrc.enable = true;
 
       # stop a dumb bug
       # https://github.com/nix-community/home-manager/issues/3342
