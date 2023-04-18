@@ -71,7 +71,6 @@ in
           rustcat
           xrandr
           pipenv
-          docker
           httpie
           zoxide
           nodejs
@@ -94,6 +93,7 @@ in
           sheldon
           fcitx5
           julia
+          docker
         ];
     })
   ];

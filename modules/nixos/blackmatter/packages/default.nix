@@ -33,7 +33,7 @@ in
           with inputs;
           [
 						fcitx5-configtool
-            docker-client
+            # docker-client
             traceroute
             terraform
             # comes up as undefined
