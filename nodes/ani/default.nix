@@ -84,8 +84,8 @@
     with pkgs;
     with inputs;
     [
-      docker-client
-      docker
+      # docker-client
+      # docker
       terraform
       # comes up as undefined
       # pkgconfig
