@@ -12,6 +12,7 @@ in
     ./tools
     ./zsh
     ./fzf
+    ./envrc
     ./tmux
   ];
 

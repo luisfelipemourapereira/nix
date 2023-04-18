@@ -23,13 +23,24 @@ let
         }
     else null;
 
+  options = {
+    blackmatter = {
+      envrc = {
+        enable = mkEnableOption "blackmatter envrc";
+      };
+    };
+  };
+
   # module actions
   actions = mkMerge [
-    (envrc ~/code/t3rro/camelot ./camelot-envrc)
+    (mkIf cfg.enable { })
   ];
 
   # wrap the module up
-  module = { config = actions; };
+  module = {
+    inherit options;
+    config = actions;
+  };
 in
 
 # return the module
