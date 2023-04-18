@@ -41,7 +41,7 @@ in
           fd
           sd
           youtube-dl
-          docker-compose
+          # docker-compose
           rust-analyzer
           transmission
           tree-sitter
