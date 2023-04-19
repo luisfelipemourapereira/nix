@@ -5,6 +5,7 @@ function M.setup()
 		overrides = {
 			literal = {
 				direnvrc = "sh";
+				dockerfile = "dockerfile";
 				Berksfile = "ruby";
 				Capfile = "ruby";
 				Vagrantfile = "ruby";
