@@ -6,6 +6,8 @@ local M = {}
 
 -- control what languages are on
 M["enabled_languages"] = {
+	"docker-compose-language-server",
+	"dockerfile-language-server",
 	"rust_analyzer",
 	"solargraph",
 	"tsserver",
