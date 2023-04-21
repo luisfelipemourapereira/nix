@@ -31,7 +31,7 @@ in
           resizeAmount = 1;
           secureSocket = false;
           sensibleOnTop = false;
-          shell = "zsh";
+          shell = "/bin/zsh";
           tmuxinator = { enable = false; };
           tmuxp = { enable = false; };
           # extraConfig = builtins.readFile ./tmux.conf;
