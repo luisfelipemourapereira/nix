@@ -39,9 +39,9 @@ in
           };
           tmuxp = { enable = false; };
           # extraConfig = builtins.readFile ./tmux.conf;
-        } ++ lib.optionalAttrs isLinux {
+        } // lib.optionalAttrs isLinux {
           shell = "/usr/bin/zsh";
-        } ++ lib.optionalAttrs isDarwin {
+        } // lib.optionalAttrs isDarwin {
           shell = "/bin/zsh";
         };
       };
