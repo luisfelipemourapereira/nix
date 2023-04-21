@@ -2,6 +2,7 @@
 with lib;
 let
   cfg = config.blackmatter;
+  inherit (pkgs.stdenv.hostPlatform) isLinux isDarwin;
 in
 {
   options = {
@@ -31,11 +32,17 @@ in
           resizeAmount = 1;
           secureSocket = false;
           sensibleOnTop = false;
-          shell = "${builtins.trim (builtins.readFile (builtins.runCommand "which-zsh" { args = [ "which" "zsh" ]; }).stdout)}";
 
-          tmuxinator = { enable = false; };
+
+          tmuxinator = {
+            enable = false;
+          };
           tmuxp = { enable = false; };
           # extraConfig = builtins.readFile ./tmux.conf;
+        } ++ lib.optionalAttrs isLinux {
+          shell = "/usr/bin/zsh";
+        } ++ lib.optionalAttrs isDarwin {
+          shell = "/bin/zsh";
         };
       };
     })

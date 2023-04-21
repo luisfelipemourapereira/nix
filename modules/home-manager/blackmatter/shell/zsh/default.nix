@@ -37,12 +37,12 @@ in
   	programs.zsh.history.size = 10000000;
   	programs.zsh.history.save = 10000000;
   	programs.zsh.shellAliases = {
-  	  pbpaste = "xsel --clipboard --output";
   	  vim = "nvim -u ~/.config/nvim/init.lua";
   	  vimdiff = "nvim -d -u ~/.config/nvim/init.lua";
 	  cat = "bat";
   	} // lib.optionalAttrs isLinux {
   	  pbcopy = "xsel --clipboard --input";
+  	  pbpaste = "xsel --clipboard --output";
 	};
   	programs.zsh.initExtra = builtins.readFile ./zprofile.sh;
   	programs.zsh.prezto.enable = false;
