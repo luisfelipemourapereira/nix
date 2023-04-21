@@ -8,7 +8,6 @@ local M = {}
 M["enabled_languages"] = {
 	-- "docker-compose-language-server",
 	"rust_analyzer",
-	"terraform_lsp",
 	"terraformls",
 	"solargraph",
 	"tsserver",
@@ -23,6 +22,7 @@ M["enabled_languages"] = {
 -- languages that exist but are not automatically installed
 M["autoinstalled_langauges_disabled"] = {
 	"bashls",
+	"terraform_lsp",
 	"eslint",
 	"pylsp",
 	"clangd",
@@ -101,7 +101,6 @@ M["autoinstalled_langauges_disabled"] = {
 	"verible",
 	"taplo",
 	"tailwindcss",
-	"terraformls",
 	"tflint",
 	"tsserver",
 	"vimls",
