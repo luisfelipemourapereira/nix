@@ -16,25 +16,25 @@ in
         tmux = {
           enable = true;
           terminal = "alacritty";
-          aggressiveResize = true;
+          aggressiveResize = false;
           baseIndex = 1;
-          clock24 = true;
-          customPaneNavigationAndResize = true;
-          disableConfirmationPrompt = true;
+          clock24 = false;
+          customPaneNavigationAndResize = false;
+          disableConfirmationPrompt = false;
           escapeTime = 1;
           historyLimit = 1000000;
           keyMode = "vi";
-          newSession = true;
-          plugins = with pkgs.tmuxPlugins; [ better-mouse-mode ];
+          newSession = false;
+          # plugins = with pkgs.tmuxPlugins; [ better-mouse-mode ];
           shortcut = "f";
-          reverseSplit = true;
+          reverseSplit = false;
           resizeAmount = 1;
-          secureSocket = true;
-          sensibleOnTop = true;
+          secureSocket = false;
+          sensibleOnTop = false;
           shell = "zsh";
-          tmuxinator = { enable = true; };
-          tmuxp = { enable = true; };
-          extraConfig = builtins.readFile ./tmux.conf;
+          tmuxinator = { enable = false; };
+          tmuxp = { enable = false; };
+          # extraConfig = builtins.readFile ./tmux.conf;
         };
       };
     })
