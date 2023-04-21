@@ -23,7 +23,6 @@ in
           vscode-css-languageserver-bin
           sumneko-lua-language-server
           terraform-ls
-          terraform-lsp
           arduino-language-server
           rust-code-analysis
           grex
