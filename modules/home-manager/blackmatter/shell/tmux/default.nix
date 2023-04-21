@@ -31,7 +31,8 @@ in
           resizeAmount = 1;
           secureSocket = false;
           sensibleOnTop = false;
-          shell = "/bin/zsh";
+          shell = "${builtins.trim (builtins.readFile (builtins.runCommand "which-zsh" { args = [ "which" "zsh" ]; }).stdout)}";
+
           tmuxinator = { enable = false; };
           tmuxp = { enable = false; };
           # extraConfig = builtins.readFile ./tmux.conf;
