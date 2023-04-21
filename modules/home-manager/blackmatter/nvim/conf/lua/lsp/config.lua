@@ -7,10 +7,12 @@ local M = {}
 -- control what languages are on
 M["enabled_languages"] = {
 	-- "docker-compose-language-server",
-	"dockerls",
 	"rust_analyzer",
+	"terraform_lsp",
+	"terraformls",
 	"solargraph",
 	"tsserver",
+	"dockerls",
 	"pyright",
 	"lua_ls",
 	"cssls",
