@@ -22,6 +22,7 @@ in
           python39Packages.poetry-core
           vscode-css-languageserver-bin
           sumneko-lua-language-server
+          terraform-ls
           arduino-language-server
           rust-code-analysis
           grex
