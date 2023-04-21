@@ -9,7 +9,7 @@ function M.setup(opts)
 		opts
 	)
 
-	-- enable bashls
+	-- enable terraform_lsp
 	require("lspconfig").terraform_lsp.setup(terraform_lsp_opts)
 end
 
