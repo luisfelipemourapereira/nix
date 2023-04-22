@@ -1,3 +1,4 @@
 .vagrant
 result
 vendor.bash
+.envrc
