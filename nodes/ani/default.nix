@@ -100,7 +100,6 @@
       weechat
       gnumake
       openssh
-      awscli
       nixops
       nodejs
       # TODO: poetry is flagged as insecure

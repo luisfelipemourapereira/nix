@@ -22,6 +22,7 @@ in
           python39Packages.poetry-core
           vscode-css-languageserver-bin
           sumneko-lua-language-server
+          awscli2
           terraform-ls
           tflint
           arduino-language-server

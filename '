@@ -115,7 +115,7 @@
         in
         {
           overlays = [
-            (self: super:
+            self: super:
               rec {
                 python3 = with super; super.python3.override {
                   packageOverrides = self: super: {
@@ -192,7 +192,7 @@
                     maintainers = [ ];
                   };
                 };
-              })
+              }
           ];
           # attach to outputs so you can access it in nixos module
           # and pass to home-manager modules called by nixos modules
