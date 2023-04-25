@@ -168,6 +168,7 @@
 
         [core]
           pager = delta --dark --line-numbers
+          editor = vim
 
         [delta]
           side-by-side = true
