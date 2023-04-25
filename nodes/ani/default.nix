@@ -159,21 +159,5 @@
       # stop a dumb bug
       # https://github.com/nix-community/home-manager/issues/3342
       manual.manpages.enable = false;
-
-      # TODO: move this to its own module in the future
-      home.file.".gitconfig".text = ''
-        [user]
-          email = ldesiqueira@pinger.com
-          name = luis
-
-        [merge]
-          default = merge
-
-        [core]
-          pager = delta --dark --line-numbers
-
-        [delta]
-          side-by-side = true
-      '';
     };
 }
