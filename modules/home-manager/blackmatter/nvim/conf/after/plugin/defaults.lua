@@ -43,4 +43,4 @@ autocmd BufReadPost *
 vim.opt.timeoutlen = 300
 
 -- format keybindings
-vim.cmd [[nnoremap <silent> ff <cmd>lua vim.lsp.buf.format()<CR>]]
+-- vim.cmd [[nnoremap <silent> ff <cmd>lua vim.lsp.buf.format()<CR>]]

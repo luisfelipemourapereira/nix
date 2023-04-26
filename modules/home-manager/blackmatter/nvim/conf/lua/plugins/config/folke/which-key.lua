@@ -3,6 +3,7 @@ function M.setup()
 	local wk = require('which-key')
 
 	local conf = {
+		triggers = "auto",
 		window = {
 			border = "single",
 			position = "bottom",
@@ -19,9 +20,10 @@ function M.setup()
 	}
 
 	local mappings = {
-		["t"] = { "<cmd>Telescope find_files<CR>", "Find" },
-		["w"] = { "<cmd>update!<CR>", "Save" },
-		["q"] = { "<cmd>q!<CR>", "Quit" },
+		["ff"] = { "<cmd>lua vim.lsp.buff.format()<CR>", "Format" },
+		["t"]  = { "<cmd>Telescope find_files<CR>", "Find" },
+		["w"]  = { "<cmd>update!<CR>", "Save" },
+		["q"]  = { "<cmd>q!<CR>", "Quit" },
 
 		b = {
 			name = "Buffer",
