@@ -19,11 +19,10 @@ function M.setup()
 		nowait = false,
 	}
 
-	local mappings = {
-		["ff"] = { "<cmd>lua vim.lsp.buff.format()<CR>", "Format" },
-		["t"]  = { "<cmd>Telescope find_files<CR>", "Find" },
-		["w"]  = { "<cmd>update!<CR>", "Save" },
-		["q"]  = { "<cmd>q!<CR>", "Quit" },
+	local leader_mappings = {
+		["t"] = { "<cmd>Telescope find_files<CR>", "Find" },
+		["w"] = { "<cmd>update!<CR>", "Save" },
+		["q"] = { "<cmd>q!<CR>", "Quit" },
 
 		b = {
 			name = "Buffer",
@@ -31,8 +30,19 @@ function M.setup()
 		},
 	}
 
+	local non_leader_opts = {
+		mode = "n",
+		silent = true,
+		noremap = true
+	}
+
+	local non_leader_mappings = {
+		["ff"] = { "<cmd>lua vim.lsp.buf.format()<CR>", "Format" },
+	}
+
 	wk.setup(conf)
-	wk.register(mappings, opts)
+	wk.register(leader_mappings, opts)
+	wk.register(non_leader_mappings, non_leader_opts)
 end
 
 return M
