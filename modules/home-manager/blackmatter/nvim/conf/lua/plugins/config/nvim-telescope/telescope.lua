@@ -1,5 +1,8 @@
 local M = {}
 function M.setup()
+	local map = vim.api.nvim_set_keymap
+	local opts = { noremap = true, silent = true }
+
 	local telescope = require("telescope")
 
 	telescope.load_extension("file_browser")
@@ -22,6 +25,8 @@ function M.setup()
 			}
 		}
 	})
+
+	map('n', '<leader>ff', '<cmd>Telescope find_files<CR>', opts)
 end
 
 return M
