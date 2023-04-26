@@ -19,6 +19,7 @@ function M.setup()
 	}
 
 	local mappings = {
+		["t"] = { "<cmd>Telescope find_files<CR>", "Find" },
 		["w"] = { "<cmd>update!<CR>", "Save" },
 		["q"] = { "<cmd>q!<CR>", "Quit" },
 
