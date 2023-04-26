@@ -26,7 +26,7 @@ function M.setup()
 		}
 	})
 
-	map('n', '<leader>ff', '<cmd>Telescope find_files<CR>', opts)
+	map('n', '<leader>t', '<cmd>Telescope find_files<CR>', opts)
 end
 
 return M
