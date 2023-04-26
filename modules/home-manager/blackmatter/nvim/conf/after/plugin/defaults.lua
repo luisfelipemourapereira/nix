@@ -41,6 +41,3 @@ autocmd BufReadPost *
 
 -- Time in milliseconds to wait for a mapped sequence to complete.
 vim.opt.timeoutlen = 300
-
--- format keybindings
--- vim.cmd [[nnoremap <silent> ff <cmd>lua vim.lsp.buf.format()<CR>]]
