@@ -90,7 +90,6 @@
           };
 
           darwin.configurations = {
-
             # personal macos laptop
             ani = nix-darwin.lib.darwinSystem {
               specialArgs = { inherit outputs; };
