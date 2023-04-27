@@ -30,6 +30,7 @@ in
           terraform-landscape
           terraform-compliance
           rust-code-analysis
+          go-task
           grex
           exa
           sops
