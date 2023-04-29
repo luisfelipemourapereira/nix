@@ -19,6 +19,7 @@
     hydra.url = github:NixOS/hydra?branch=master;
     arion.url = github:hercules-ci/arion?branch=master;
     cauda.url = git+ssh://git@github.com/luisfelipemourapereira/cauda?ref=main;
+    stitches.url = git+ssh://git@github.com/luisfelipemourapereira/stitches?ref=main;
     nixt = {
       url = github:nix-community/nixt?branch=master;
       flake = false;
@@ -34,6 +35,7 @@
     , nix-funcs
     , pythonix
     , sops-nix
+    , stitches
     , nix-pub
     , nixpkgs
     , bundix
@@ -47,8 +49,6 @@
     let
       systems =
         let
-          # a stub module for testing stuff
-          defaultModule = { pkgs, ... }: { };
           funcs = import ./funcs;
           mkHomeConfiguration = name: node: pkgs: extraSpecialArgs:
             home-manager.lib.homeManagerConfiguration {
@@ -57,7 +57,7 @@
             };
           system = "x86_64-linux";
           pkgs = nixpkgs.legacyPackages."${system}";
-          specialArgs = { inherit inputs outputs; };
+          specialArgs = { inherit inputs outputs stitches; };
           stdenv = pkgs.stdenv;
           inherit (self) outputs;
           home.modules = import ./modules/home-manager;
@@ -118,7 +118,9 @@
           # and pass to home-manager modules called by nixos modules
           inherit specialArgs extraSpecialArgs funcs;
           packages =
-            { x86_64-linux = flake-utils.lib.flattenTree localPackages; };
+            {
+              x86_64-linux = flake-utils.lib.flattenTree localPackages;
+            };
           homeManagerModules = home.modules;
           homeConfigurations = home.configurations;
           nixosModules = node.modules;

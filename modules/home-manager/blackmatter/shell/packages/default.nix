@@ -1,4 +1,4 @@
-{ lib, pkgs, outputs, config, ... }:
+{ lib, pkgs, config, inputs, ... }:
 with lib;
 let
   cfg = config.blackmatter;
@@ -7,7 +7,8 @@ in
 {
   options = {
     blackmatter = {
-      shell.packages.enable = mkEnableOption "shell.packages";
+      shell.packages.enable =
+        mkEnableOption "shell.packages";
     };
   };
   config = mkMerge [
@@ -18,6 +19,7 @@ in
         with pkgs.rubyPackages_3_1;
         with pkgs.nodePackages_latest;
         [
+          inputs.stitches.x86_64-linux.stitches
           python39Packages.pipenv-poetry-migrate
           python39Packages.poetry-core
           vscode-css-languageserver-bin
@@ -48,7 +50,6 @@ in
           fd
           sd
           youtube-dl
-          # docker-compose
           rust-analyzer
           transmission
           tree-sitter
