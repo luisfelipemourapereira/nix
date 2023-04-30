@@ -1,4 +1,4 @@
-{ lib, pkgs, config, inputs, ... }:
+{ lib, pkgs, config, ... }:
 with lib;
 let
   cfg = config.blackmatter;
@@ -19,7 +19,6 @@ in
         with pkgs.rubyPackages_3_1;
         with pkgs.nodePackages_latest;
         [
-          inputs.stitches.x86_64-linux.stitches
           python39Packages.pipenv-poetry-migrate
           python39Packages.poetry-core
           vscode-css-languageserver-bin

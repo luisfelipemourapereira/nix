@@ -142,7 +142,7 @@
   home-manager.useGlobalPkgs = true;
   home-manager.useUserPackages = true;
   home-manager.users.ldesiqueira =
-    { outputs, ... }: {
+    { ... }: {
       imports = [ ../../modules/home-manager/blackmatter ];
 
       home.stateVersion = "21.11";

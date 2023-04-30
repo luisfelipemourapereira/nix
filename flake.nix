@@ -57,11 +57,11 @@
             };
           system = "x86_64-linux";
           pkgs = nixpkgs.legacyPackages."${system}";
-          specialArgs = { inherit inputs outputs stitches; };
           stdenv = pkgs.stdenv;
           inherit (self) outputs;
           home.modules = import ./modules/home-manager;
           node.modules = import ./modules/nixos;
+          specialArgs = { inherit inputs outputs; };
           extraSpecialArgs = specialArgs;
           localPackages = import ./pkgs specialArgs;
           home.configurations = {
@@ -89,10 +89,18 @@
             };
           };
 
+          stitchesMod = { ... }: {
+            environment.systemPackages = [
+              # stitches
+            ];
+          };
+
           darwin.configurations = {
             # personal macos laptop
             ani = nix-darwin.lib.darwinSystem {
-              specialArgs = { inherit outputs; };
+              specialArgs = {
+                inherit outputs;
+              };
               system = "x86_64-darwin";
               modules = [
                 home-manager.darwinModules.home-manager
@@ -107,6 +115,7 @@
               modules = [
                 home-manager.darwinModules.home-manager
                 ./nodes/cid
+                stitchesMod
               ];
             };
 
@@ -119,7 +128,9 @@
           inherit specialArgs extraSpecialArgs funcs;
           packages =
             {
-              x86_64-linux = flake-utils.lib.flattenTree localPackages;
+              x86_64-linux =
+                flake-utils.lib.flattenTree
+                  localPackages;
             };
           homeManagerModules = home.modules;
           homeConfigurations = home.configurations;
