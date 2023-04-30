@@ -91,7 +91,7 @@
 
           stitchesMod = { ... }: {
             environment.systemPackages = [
-              # stitches
+              # stitches.packages.x86_64-darwin.default
             ];
           };
 
