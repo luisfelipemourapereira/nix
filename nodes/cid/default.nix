@@ -1,12 +1,29 @@
 # ani is macos ventura
 # https://daiderd.com/nix-darwin/manual/index.html#sec-options
-{ config, pkgs, inputs, ... }: {
+{ config, pkgs, inputs, ... }:
+let
+  deploymentFile = ./deployment.nix;
+in
+{
   system.stateVersion = 4;
   networking.hostName = "cid";
 
   nixpkgs.config.permittedInsecurePackages = [
     "python2.7-pyjwt-1.7.1"
   ];
+
+  # virtual machine services
+  # services.launchd.user.agents = {
+  #   test-vm = {
+  #     enable = true;
+  #     script = ''
+  #       deploymentFile="${deploymentFile}"
+  #
+  #       ${pkgs.nixops}/bin/nixops create -d test $deploymentFile || true
+  #       ${pkgs.nixops}/bin/nixops deploy -d test --include=my-vm --check
+  #     '';
+  #   };
+  # };
 
   nix.settings.sandbox = true;
   nix.package = pkgs.nixFlakes;
