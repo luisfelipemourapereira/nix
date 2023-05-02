@@ -174,7 +174,7 @@ in
       # https://github.com/nix-community/home-manager/issues/3342
       manual.manpages.enable = false;
 
-      # TODO: move this to its own module in the future
+      # TODO: gitconfig: move this to its own module in the future
       home.file.".gitconfig".text = ''
         [user]
           email = ldesiqueira@pinger.com
@@ -190,5 +190,12 @@ in
         [delta]
           side-by-side = true
       '';
+
+      # TODO: redis: move this to its own module in the future
+      # home.file."".text = ''
+      #   host 127.0.01
+      #   port 6379
+      #   requirepass mypassword
+      # '';
     };
 }

@@ -21,6 +21,7 @@ in
         [
           pkgs.redis
           pkgs.redis-dump
+          pkgs.redli
           python39Packages.pipenv-poetry-migrate
           python39Packages.poetry-core
           vscode-css-languageserver-bin
