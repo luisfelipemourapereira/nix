@@ -19,6 +19,8 @@ in
         with pkgs.rubyPackages_3_1;
         with pkgs.nodePackages_latest;
         [
+          pkgs.redis
+          pkgs.redis-dump
           python39Packages.pipenv-poetry-migrate
           python39Packages.poetry-core
           vscode-css-languageserver-bin
