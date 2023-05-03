@@ -79,12 +79,14 @@ in
           openssl
           rustfmt
           rustcat
+          gofumpt
           xrandr
           pipenv
           httpie
           zoxide
           nodejs
           gobang
+          asmfmt
           trunk
           rustc
           whois
