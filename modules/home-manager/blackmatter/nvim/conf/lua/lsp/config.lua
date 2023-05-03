@@ -12,6 +12,7 @@ M["enabled_languages"] = {
 	"solargraph",
 	"tsserver",
 	"dockerls",
+	"groovyls",
 	"pyright",
 	"lua_ls",
 	"cssls",
