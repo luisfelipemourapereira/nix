@@ -80,6 +80,7 @@ in
           rustfmt
           rustcat
           gofumpt
+          gradle
           xrandr
           pipenv
           httpie
