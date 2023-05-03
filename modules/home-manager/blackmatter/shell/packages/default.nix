@@ -102,7 +102,7 @@ in
         ++ lib.optionals isDarwin [
           (zulu.overrideAttrs (_:
             {
-              # hack the jdk package because of a dumb bug
+              # hack the jdk package because of a dumb bug on macos
               # https://github.com/LnL7/nix-darwin/issues/320
               postPatch = ''
                 rm -rf share/man
