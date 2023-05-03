@@ -98,6 +98,8 @@ in
           rbenv
           procs
           tokei
+        ]
+        ++ lib.optionals isDarwin [
           (zulu.overrideAttrs (_:
             {
               # hack the jdk package because of a dumb bug
@@ -112,7 +114,6 @@ in
             }
           ))
         ]
-        ++ lib.optionals isDarwin [ ]
         ++ lib.optionals isLinux [
           traceroute
           iproute2
