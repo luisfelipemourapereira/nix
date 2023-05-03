@@ -1,5 +1,10 @@
 ! [ -d ~/.config/shellz ] && mkdir -p ~/.config/shellz
 
+# put this nix hack in so that in macos
+# nix intalled zulu java hits the path
+# before the native macos java
+export PATH=/etc/profiles/per-user/$USER/bin:$PATH
+
 function load_shellz_mod() {
 	[ -d ~/.config/shellz/$1 ] && source ~/.config/shellz/$1/main.sh
 }
