@@ -100,7 +100,8 @@ in
           tokei
           (zulu.overrideAttrs (_:
             {
-              # phases = [ "buildPhase" "installPhase" "fixupPhase" ];
+              # hack the jdk package because of a dumb bug
+              # https://github.com/LnL7/nix-darwin/issues/320
               postPatch = ''
                 rm -rf share/man
                 rm -rf man
@@ -108,18 +109,8 @@ in
                 ln -s ../zulu-11.jdk/Contents/Home/man/ share
 
               '';
-              # "zulu-11.52.13/share/man";
             }
           ))
-
-          # hack the jdk package because of a dumb bug
-          # https://github.com/LnL7/nix-darwin/issues/320
-          # (jdk.overrideAttrs (_:
-          #   {
-          #     postPatch =
-          #       "rm man; ln -s ../zulu-15.jdk/Contents/Home/man man";
-          #   }
-          # ))
         ]
         ++ lib.optionals isDarwin [ ]
         ++ lib.optionals isLinux [
