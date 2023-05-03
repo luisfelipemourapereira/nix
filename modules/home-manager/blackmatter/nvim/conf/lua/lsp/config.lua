@@ -16,6 +16,7 @@ M["enabled_languages"] = {
 	"lua_ls",
 	"cssls",
 	"jdtls",
+	"gopls",
 	"rnix",
 }
 
