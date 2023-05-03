@@ -64,9 +64,27 @@ local function set_lspkind_config(kind_config)
 					-- mode = 'symbol',
 					-- maxwidth = 50,
 					-- ellipsis_char = '...',
-					before = function(_, vim_item)
+					before = function(entry, vim_item)
+						-- TODO: work in progress to give better completion information
 						-- vim_item.kind = symbol_map[vim_item.kind]
 						-- vim_item.menu = string.format("%s %s", vim_item.menu, vim_item.kind)
+
+						-- show source of completion items
+						-- showing source is useful for many things but especially
+						-- testing out functionality of new language servers
+						local source = entry.source.name
+
+						-- EXAMPLE: in case we only want to show source
+						-- on certain sources this incantation should work
+						-- if source == 'nvim_lsp' then
+						-- 	source = entry.source.client.name
+						-- end
+
+						vim_item.menu = string.format(
+							"%s (%s)",
+							vim_item.menu or "",
+							source
+						)
 
 						return vim_item
 					end
