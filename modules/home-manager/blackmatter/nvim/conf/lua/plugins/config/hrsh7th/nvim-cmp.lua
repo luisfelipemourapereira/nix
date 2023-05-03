@@ -65,8 +65,8 @@ local function set_lspkind_config(kind_config)
 					-- maxwidth = 50,
 					-- ellipsis_char = '...',
 					before = function(_, vim_item)
-						vim_item.kind = symbol_map[vim_item.kind]
-						vim_item.menu = string.format("%s %s", vim_item.menu, vim_item.kind)
+						-- vim_item.kind = symbol_map[vim_item.kind]
+						-- vim_item.menu = string.format("%s %s", vim_item.menu, vim_item.kind)
 
 						return vim_item
 					end
