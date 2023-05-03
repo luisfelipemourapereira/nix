@@ -11,8 +11,11 @@ vim.g.python3_host_prog = '/usr/local/bin/python'
 
 -- common editor settings
 vim.g.mapleader = ','
-vim.opt.relativenumber = true
 vim.opt.hlsearch = true
+
+-- line number settings
+vim.opt.relativenumber = true
+-- end: line number settings
 
 -- customize file finding
 vim.opt.path:remove '/usr/include'
