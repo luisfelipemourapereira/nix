@@ -22,6 +22,7 @@ in
           pkgs.redis
           pkgs.redis-dump
           pkgs.redli
+          pkgs.kubectl
           ssm-session-manager-plugin
           python39Packages.pipenv-poetry-migrate
           python39Packages.poetry-core
