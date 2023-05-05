@@ -16,12 +16,36 @@ in
   # services.launchd.user.agents = {
   #   test-vm = {
   #     enable = true;
-  #     script = ''
-  #       deploymentFile="${deploymentFile}"
+  #     script =
+  #       let
+  #         # shorthand
+  #         nixops = "${pkgs.nixops}/bin/nixops";
+  #         create = "${nixops} create -d test ";
+  #         deploy = "${nixops} deploy -d test ";
+  #         start = "${nixops} start -d test ";
+  #         stop = "${nixops} stop -d test ";
   #
-  #       ${pkgs.nixops}/bin/nixops create -d test $deploymentFile || true
-  #       ${pkgs.nixops}/bin/nixops deploy -d test --include=my-vm --check
-  #     '';
+  #         nixops_create =
+  #           "${create} ${deploymentFile} || true";
+  #         nixops_deploy =
+  #           "${deploy} --include=my-wm --check";
+  #         nixops_start = "${start} --include=my-wm";
+  #         nixops_stop = "${stop} --include=my-wm";
+  #       in
+  #       ''
+  #         ${nixops_create}
+  #         ${nixops_deploy}
+  #         ${nixops_start}
+  #         trap '${nixos_stop}'; exit 0' TERM
+  #         while true; do sleep 300;done
+  #       '';
+  #     # TODO: older so consider deleting
+  #     # script = ''
+  #     #   deploymentFile="${deploymentFile}"
+  #     #
+  #     #   ${pkgs.nixops}/bin/nixops create -d test $deploymentFile || true
+  #     #   ${pkgs.nixops}/bin/nixops deploy -d test --include=my-vm --check
+  #     # '';
   #   };
   # };
 
