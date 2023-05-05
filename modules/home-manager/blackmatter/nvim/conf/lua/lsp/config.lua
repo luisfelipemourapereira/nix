@@ -15,6 +15,7 @@ M["enabled_languages"] = {
 	"groovyls",
 	"pyright",
 	"lua_ls",
+	"bashls",
 	"cssls",
 	"jdtls",
 	"gopls",
@@ -23,7 +24,6 @@ M["enabled_languages"] = {
 
 -- languages that exist but are not automatically installed
 M["autoinstalled_langauges_disabled"] = {
-	"bashls",
 	"terraform_lsp",
 	"eslint",
 	"pylsp",
