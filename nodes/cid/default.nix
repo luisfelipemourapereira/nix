@@ -13,9 +13,9 @@ in
   ];
 
   # virtual machine services
-  services.launchd.user.agents = {
+  launchd.user.agents = {
     rex = {
-      enable = true;
+      # enable = true;
       script =
         let
           # shorthand
