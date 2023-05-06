@@ -18,6 +18,7 @@ M["enabled_languages"] = {
 	"lua_ls",
 	"bashls",
 	"cssls",
+	"cmake",
 	"jdtls",
 	"gopls",
 	"rnix",
