@@ -13,6 +13,7 @@ M["enabled_languages"] = {
 	"tsserver",
 	"dockerls",
 	"groovyls",
+	"neocmake",
 	"pyright",
 	"lua_ls",
 	"bashls",
