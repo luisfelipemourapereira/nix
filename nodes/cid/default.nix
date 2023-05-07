@@ -8,9 +8,10 @@ in
   system.stateVersion = 4;
   networking.hostName = "cid";
 
-  nixpkgs.config.permittedInsecurePackages = [
-    "python2.7-pyjwt-1.7.1"
-  ];
+  nixpkgs.config.permittedInsecurePackages =
+    [
+      "python2.7-pyjwt-1.7.1"
+    ];
 
   # virtual machine services
   launchd.user.agents = {
@@ -48,27 +49,27 @@ in
     };
   };
 
-  nix.settings.sandbox = true;
-  nix.package = pkgs.nixFlakes;
-  nix.extraOptions = "experimental-features = nix-command flakes";
   services.nix-daemon.enable = true;
   programs.zsh.enable = true;
+  nix.settings.sandbox = true;
+  nix.extraOptions = "experimental-features = nix-command flakes";
+  nix.package = pkgs.nixFlakes;
 
   system.keyboard = {
-    enableKeyMapping = true;
     remapCapsLockToEscape = true;
+    enableKeyMapping = true;
   };
 
   system.defaults = {
-    NSGlobalDomain.KeyRepeat = 2;
     NSGlobalDomain.InitialKeyRepeat = 20;
+    NSGlobalDomain.KeyRepeat = 2;
   };
 
   documentation = {
-    enable = false;
-    doc.enable = false;
     info.enable = false;
+    doc.enable = false;
     man.enable = false;
+    enable = false;
   };
 
   nixpkgs.config.allowUnfree = true;
@@ -117,7 +118,6 @@ in
 
     # List of additional package outputs to be symlinked into /run/current-system/sw.
     # extraOutputsToInstall
-
   };
 
   environment.systemPackages =
