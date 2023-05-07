@@ -23,6 +23,7 @@ in
           pkgs.redis-dump
           pkgs.redli
           pkgs.kubectl
+          cargo-edit
           ssm-session-manager-plugin
           python39Packages.pipenv-poetry-migrate
           python39Packages.poetry-core
