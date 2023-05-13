@@ -4,8 +4,7 @@ function M.setup()
 		history = false,
 		updateevents = 'TextChanged,TextChangedI',
 	}
-	-- off for now due to impact on performance
-	-- require("luasnip/loaders/from_vscode").load()
+	require("luasnip/loaders/from_vscode").lazy_load()
 end
 
 return M
