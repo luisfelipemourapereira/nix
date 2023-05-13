@@ -61,6 +61,9 @@ let
       rouge8.neotest-rust.enable = true;
       stevearc."overseer.nvim".enable = true;
 
+      # improved motion
+      andymass.vim-matchup.enable = true;
+
       # rest calls
       diepm.vim-rest-console.enable = true;
       NTBBloodbath."rest.nvim".enable = true;
@@ -308,6 +311,7 @@ in
       ./plugins/ziontee113/icon-picker.nvim
       ./plugins/EtiamNullam/relative-source.nvim
       ./plugins/ellisonleao/glow.nvim
+      ./plugins/andymass/vim-matchup
     ];
 
   options = {
