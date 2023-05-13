@@ -75,6 +75,7 @@ in
     ./packages
     ./firefox
     ./i3
+    ./kitty
     # ./chrome
     # ./sway
   ];
