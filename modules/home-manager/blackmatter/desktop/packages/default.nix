@@ -31,6 +31,7 @@ in
         leftwm
         slack
         zoom-us
+        kitty
         discord-canary
         # exists but build is broken
         # it may be fixed later
