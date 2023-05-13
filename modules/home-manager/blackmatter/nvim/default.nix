@@ -75,6 +75,9 @@ let
       L3MON4D3.LuaSnip.enable = true;
       rafamadriz.friendly-snippets.enable = true;
 
+      # refactoring
+      ThePrimeagen."refactoring.nvim".enable = true;
+
       # rest calls
       diepm.vim-rest-console.enable = true;
       NTBBloodbath."rest.nvim".enable = true;
@@ -186,6 +189,7 @@ in
   imports =
     [
       ./plugins/maaslalani/nordbuddy
+      ./plugins/ThePrimeagen/refactoring.nvim
       ./plugins/diepm/vim-rest-console
       ./plugins/ravenxrz/DAPInstall.nvim
       ./plugins/Pocco81/dap-buddy.nvim
