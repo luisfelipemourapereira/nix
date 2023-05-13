@@ -52,6 +52,9 @@ let
       # lua debug adapter
       jbyuki.one-small-step-for-vimkind.enable = true;
 
+      # testing
+      nvim-neotest.neotest.enable = true;
+
       # enabled completion mechanisms
       ray-x.cmp-treesitter.enable = true;
       hrsh7th.cmp-nvim-lsp.enable = true;
@@ -139,7 +142,6 @@ let
       nvim-neorg.neorg.enable = false;
       nvim-neorocks.luarocks-tag-release.enable = false;
       gennaro-tedesco."nvim-possession".enable = false;
-      nvim-neotest.neotest.enable = false;
       ojroques.nvim-lspfuzzy.enable = false;
       phaazon."hop.nvim".enable = false;
       pwntester."octo.nvim".enable = false;
