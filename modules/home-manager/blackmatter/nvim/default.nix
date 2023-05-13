@@ -20,9 +20,6 @@ let
       hrsh7th.nvim-cmp.enable = true;
       jose-elias-alvarez.null-ls.enable = true;
       yriveiro."dap-go.nvim".enable = true;
-      mfussenegger.nvim-dap.enable = true;
-      leoluz.nvim-dap-go.enable = true;
-      mfussenegger.nvim-dap-python.enable = true;
       nathom.filetype.enable = true;
       NvChad."nvim-colorizer.lua".enable = true;
       numToStr.Comment.enable = true;
@@ -36,14 +33,20 @@ let
       nvim-treesitter.nvim-treesitter.enable = true;
       # tree-sitter for nix is bugged with OOM
       LnL7.vim-nix.enable = true;
-      rcarriga.nvim-dap-ui.enable = true;
       simrat39."rust-tools.nvim".enable = true;
-      suketa.nvim-dap-ruby.enable = true;
       williamboman."mason.nvim".enable = true;
       williamboman."mason-lspconfig.nvim".enable = true;
       ray-x.lsp_signature.enable = true;
       onsails."lspkind.nvim".enable = true;
       willothy."veil.nvim".enable = true;
+
+      # dap protocol
+      mfussenegger.nvim-dap.enable = true;
+      leoluz.nvim-dap-go.enable = true;
+      mfussenegger.nvim-dap-python.enable = true;
+      theHamsta.nvim-dap-virtual-text.enable = true;
+      suketa.nvim-dap-ruby.enable = true;
+      rcarriga.nvim-dap-ui.enable = true;
 
       # enabled completion mechanisms
       ray-x.cmp-treesitter.enable = true;
@@ -96,7 +99,6 @@ let
       ibhagwan.fzf-lua.enable = false;
       glepnir."lspsaga.nvim".enable = false;
       glepnir.dashboard-nvim.enable = false;
-      theHamsta.nvim-dap-virtual-text.enable = false;
       ggandor."leap.nvim".enable = false;
       chrisgrieser.nvim-various-textobjs.enable = false;
       esensar.nvim-dev-container.enable = false;
