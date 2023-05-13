@@ -69,6 +69,9 @@ let
       ggandor."leap.nvim".enable = true;
       unblevable.quick-scope.enable = true;
 
+      # snippets
+      L3MON4D3.LuaSnip.enable = true;
+
       # rest calls
       diepm.vim-rest-console.enable = true;
       NTBBloodbath."rest.nvim".enable = true;
@@ -322,6 +325,7 @@ in
       ./plugins/andymass/vim-matchup
       ./plugins/chaoren/vim-wordmotion
       ./plugins/unblevable/quick-scope
+      ./plugins/L3MON4D3/LuaSnip
     ];
 
   options = {
