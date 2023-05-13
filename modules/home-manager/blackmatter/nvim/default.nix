@@ -32,6 +32,7 @@ let
       nvim-tree.nvim-web-devicons.enable = true;
       nvim-treesitter.nvim-treesitter.enable = true;
       nvim-treesitter.nvim-treesitter-textobjects.enable = true;
+      nvim-treesitter.nvim-treesitter-refactor.enable = true;
       # tree-sitter for nix is bugged with OOM
       LnL7.vim-nix.enable = true;
       simrat39."rust-tools.nvim".enable = true;
@@ -239,6 +240,7 @@ in
       ./plugins/theHamsta/nvim-dap-virtual-text
       ./plugins/nvim-treesitter/nvim-treesitter
       ./plugins/nvim-treesitter/nvim-treesitter-textobjects
+      ./plugins/nvim-treesitter/nvim-treesitter-refactor
       ./plugins/wellle/targets.vim
       ./plugins/amrbashir/nvim-docs-view
       ./plugins/norcalli/nvim-colorizer.lua
