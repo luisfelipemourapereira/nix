@@ -66,6 +66,7 @@ let
       andymass.vim-matchup.enable = true;
       chaoren.vim-wordmotion.enable = true;
       wellle."targets.vim".enable = true;
+      ggandor."leap.nvim".enable = true;
 
       # rest calls
       diepm.vim-rest-console.enable = true;
@@ -121,7 +122,6 @@ let
       ibhagwan.fzf-lua.enable = false;
       glepnir."lspsaga.nvim".enable = false;
       glepnir.dashboard-nvim.enable = false;
-      ggandor."leap.nvim".enable = false;
       chrisgrieser.nvim-various-textobjs.enable = false;
       esensar.nvim-dev-container.enable = false;
       nvim-lua."lsp-status.nvim".enable = false;
