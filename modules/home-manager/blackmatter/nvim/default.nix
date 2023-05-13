@@ -54,7 +54,10 @@ let
 
       # testing
       nvim-neotest.neotest.enable = true;
+
+      # rest calls
       diepm.vim-rest-console.enable = true;
+      NTBBloodbath."rest.nvim".enable = true;
 
       # enabled completion mechanisms
       ray-x.cmp-treesitter.enable = true;
@@ -277,6 +280,7 @@ in
       ./plugins/nanotee/nvim-lsp-basics
       ./plugins/nanotee/nvim-lua-guide
       ./plugins/NTBBloodbath/galaxyline.nvim
+      ./plugins/NTBBloodbath/rest.nvim
       ./plugins/nvim-lua/lsp-status.nvim
       ./plugins/nvim-neorg/neorg
       ./plugins/rafcamlet/nvim-luapad
