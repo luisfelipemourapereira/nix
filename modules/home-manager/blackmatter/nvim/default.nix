@@ -47,6 +47,8 @@ let
       theHamsta.nvim-dap-virtual-text.enable = true;
       suketa.nvim-dap-ruby.enable = true;
       rcarriga.nvim-dap-ui.enable = true;
+      # lua debug adapter
+      jbyuki.one-small-step-for-vimkind.enable = true;
 
       # enabled completion mechanisms
       ray-x.cmp-treesitter.enable = true;
@@ -91,7 +93,6 @@ let
       kosayoda.nvim-lightbulb.enable = false;
       idanarye.nvim-buffls.enable = false;
       gwatcha.reaper-keys.enable = false;
-      jbyuki.one-small-step-for-vimkind.enable = false;
       LeonHeidelbach."trailblazer.nvim".enable = false;
       lewis6991."gitsigns.nvim".enable = false;
       jghauser."follow-md-links.nvim".enable = false;
