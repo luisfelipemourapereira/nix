@@ -1,6 +1,7 @@
 local M = {}
 function M.setup()
-	require('leap').add_default_mappings()
+	require('leap').setup
+	--require('leap').add_default_mappings()
 	-- default values
 	--require('leap').opts = {
 	--	max_phase_one_targets = nil,
