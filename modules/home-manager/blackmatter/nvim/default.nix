@@ -54,6 +54,7 @@ let
 
       # testing
       nvim-neotest.neotest.enable = true;
+      diepm.vim-rest-console.enable = true;
 
       # enabled completion mechanisms
       ray-x.cmp-treesitter.enable = true;
@@ -162,6 +163,7 @@ in
   imports =
     [
       ./plugins/maaslalani/nordbuddy
+      ./plugins/diepm/vim-rest-console
       ./plugins/ravenxrz/DAPInstall.nvim
       ./plugins/Pocco81/dap-buddy.nvim
       ./plugins/willothy/veil.nvim
