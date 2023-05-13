@@ -17,6 +17,7 @@ in
         # You can either generally allow unfree packages or white-list
         # them.  I have chosen to white-list.
         nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
+          "ssm-session-manager-plugin"
           "spotify-unwrapped"
           "nvidia-settings"
           "1password-cli"
@@ -32,7 +33,7 @@ in
           with pkgs;
           with inputs;
           [
-						fcitx5-configtool
+            fcitx5-configtool
             # docker-client
             traceroute
             terraform
@@ -49,7 +50,7 @@ in
             weechat
             gnumake
             openssh
-						fcitx5
+            fcitx5
             nixops
             nodejs
             # TODO: poetry is flagged as insecure
