@@ -69,6 +69,7 @@ let
       wellle."targets.vim".enable = true;
       ggandor."leap.nvim".enable = true;
       unblevable.quick-scope.enable = true;
+      t3rro.nvim-ts-rainbow.enable = true;
 
       # snippets
       L3MON4D3.LuaSnip.enable = true;
@@ -241,6 +242,7 @@ in
       ./plugins/nvim-treesitter/nvim-treesitter
       ./plugins/nvim-treesitter/nvim-treesitter-textobjects
       ./plugins/nvim-treesitter/nvim-treesitter-refactor
+      ./plugins/t3rro/nvim-ts-rainbow
       ./plugins/wellle/targets.vim
       ./plugins/amrbashir/nvim-docs-view
       ./plugins/norcalli/nvim-colorizer.lua
