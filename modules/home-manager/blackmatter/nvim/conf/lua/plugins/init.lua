@@ -11,6 +11,9 @@ function M.setup()
 
 	-- by default make gitblame on line off
 	vim.cmd [[ let g:gitblame_enabled = 0 ]]
+
+	-- load all language specific configs
+	utils.load_files('~/.config/nvim/lua/config/langs')
 end
 
 return M
