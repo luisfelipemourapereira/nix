@@ -47,7 +47,7 @@ let
       theHamsta.nvim-dap-virtual-text.enable = true;
       suketa.nvim-dap-ruby.enable = true;
       rcarriga.nvim-dap-ui.enable = true;
-      Pocco81.dap-buddy.enable = true;
+      Pocco81."dap-buddy.nvim".enable = true;
       # lua debug adapter
       jbyuki.one-small-step-for-vimkind.enable = true;
 
@@ -159,7 +159,7 @@ in
   imports =
     [
       ./plugins/maaslalani/nordbuddy
-      ./plugins/Pocco81/dap-buddy
+      ./plugins/Pocco81/dap-buddy.nvim
       ./plugins/willothy/veil.nvim
       ./plugins/jcdickinson/codeium.nvim
       ./plugins/jcdickinson/http.nvim
