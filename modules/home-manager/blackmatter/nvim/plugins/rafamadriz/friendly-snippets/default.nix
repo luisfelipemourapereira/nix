@@ -4,7 +4,7 @@ let
   author = "rafamadriz";
   name = "friendly-snippets";
   url = "https://github.com/${author}/${name}";
-  ref = "master";
+  ref = "main";
   rev = "1d0dac346de7c6895ac72528df3276386c6b149b";
   plugPath = ".local/share/nvim/site/pack/${author}/start/${name}";
   cfg = config.blackmatter.programs.nvim.plugins.${author}.${name};
