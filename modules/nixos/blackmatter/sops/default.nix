@@ -57,6 +57,13 @@ in
         sopsFile = ../../../../secrets/t3rro/ssh.yaml;
       };
 
+      sops.secrets."t3rro/ssh/id_rsa_pub" = {
+        mode = "0400";
+        owner = config.users.users.t3rro.name;
+        path = "/home/t3rro/.ssh/id_rsa.pub";
+        sopsFile = ../../../../secrets/t3rro/ssh.yaml;
+      };
+
       sops.secrets."luis/bundle/config" = {
         owner = config.users.users.luis.name;
         path = "/home/luis/.bundle/config";
