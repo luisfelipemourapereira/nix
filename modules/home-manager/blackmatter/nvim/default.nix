@@ -71,6 +71,7 @@ let
 
       # snippets
       L3MON4D3.LuaSnip.enable = true;
+      rafamadriz.friendly-snippets.enable = true;
 
       # rest calls
       diepm.vim-rest-console.enable = true;
@@ -326,6 +327,7 @@ in
       ./plugins/chaoren/vim-wordmotion
       ./plugins/unblevable/quick-scope
       ./plugins/L3MON4D3/LuaSnip
+      ./plugins/rafamadriz/friendly-snippets
     ];
 
   options = {
