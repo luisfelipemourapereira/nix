@@ -59,6 +59,7 @@ let
       nvim-neotest.neotest-go.enable = true;
       nvim-neotest.neotest-jest.enable = true;
       rouge8.neotest-rust.enable = true;
+      stevearc."overseer.nvim".enable = true;
 
       # rest calls
       diepm.vim-rest-console.enable = true;
@@ -212,6 +213,7 @@ in
       ./plugins/nvim-neotest/neotest-jest
       ./plugins/nvim-neotest/neotest-go
       ./plugins/rouge8/neotest-rust
+      ./plugins/stevearc/overseer.nvim
       ./plugins/aserowy/tmux.nvim
       ./plugins/frabjous/knap
       ./plugins/glepnir/lspsaga.nvim
