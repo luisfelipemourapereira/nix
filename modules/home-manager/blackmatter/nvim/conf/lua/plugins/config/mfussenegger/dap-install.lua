@@ -9,10 +9,10 @@
 --
 local M = {}
 local function configure()
-	local dap_buddy = require "dap-buddy"
-	dap_buddy.setup {
-		installation_path = vim.fn.stdpath "data" .. "/dapbuddy/",
-	}
+	--local dap_buddy = require "dap-buddy"
+	--dap_buddy.setup {
+	--	installation_path = vim.fn.stdpath "data" .. "/dapbuddy/",
+	--}
 
 	-- local dap_breakpoint = {
 	-- 	error = {
