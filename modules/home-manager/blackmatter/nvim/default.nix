@@ -67,6 +67,7 @@ let
       chaoren.vim-wordmotion.enable = true;
       wellle."targets.vim".enable = true;
       ggandor."leap.nvim".enable = true;
+      unblevable.quick-scope.enable = true;
 
       # rest calls
       diepm.vim-rest-console.enable = true;
@@ -320,6 +321,7 @@ in
       ./plugins/ellisonleao/glow.nvim
       ./plugins/andymass/vim-matchup
       ./plugins/chaoren/vim-wordmotion
+      ./plugins/unblevable/quick-scope
     ];
 
   options = {
