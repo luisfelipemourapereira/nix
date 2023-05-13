@@ -65,6 +65,7 @@ let
       # improved motion
       andymass.vim-matchup.enable = true;
       chaoren.vim-wordmotion.enable = true;
+      wellle."targets.vim".enable = true;
 
       # rest calls
       diepm.vim-rest-console.enable = true;
@@ -232,6 +233,7 @@ in
       ./plugins/theHamsta/nvim-dap-virtual-text
       ./plugins/nvim-treesitter/nvim-treesitter
       ./plugins/nvim-treesitter/nvim-treesitter-textobjects
+      ./plugins/wellle/targets.vim
       ./plugins/amrbashir/nvim-docs-view
       ./plugins/norcalli/nvim-colorizer.lua
       ./plugins/nvim-tree/nvim-web-devicons
