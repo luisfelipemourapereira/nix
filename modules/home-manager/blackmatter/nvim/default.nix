@@ -56,6 +56,8 @@ let
       nvim-neotest.neotest.enable = true;
       nvim-neotest.neotest-python.enable = true;
       nvim-neotest.neotest-plenary.enable = true;
+      nvim-neotest.neotest-go.enable = true;
+      nvim-neotest.neotest-jest.enable = true;
 
       # rest calls
       diepm.vim-rest-console.enable = true;
@@ -206,6 +208,8 @@ in
       ./plugins/nvim-neotest/neotest
       ./plugins/nvim-neotest/neotest-python
       ./plugins/nvim-neotest/neotest-plenary
+      ./plugins/nvim-neotest/neotest-jest
+      ./plugins/nvim-neotest/neotest-go
       ./plugins/aserowy/tmux.nvim
       ./plugins/frabjous/knap
       ./plugins/glepnir/lspsaga.nvim
