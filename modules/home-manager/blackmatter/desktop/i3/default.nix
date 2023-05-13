@@ -2,9 +2,9 @@
 with lib;
 let
   cfg = config.blackmatter;
-	monitors = cfg.desktop.monitors;
+  monitors = cfg.desktop.monitors;
   # monitors.main = { name = "DisplayPort-0"; };
-	# refactor this is for plo
+  # refactor this is for plo
   # monitors.main = { name = "DP-2"; };
   nord.graphics.indicator = ">";
   nord.graphics.border.child = "1";
