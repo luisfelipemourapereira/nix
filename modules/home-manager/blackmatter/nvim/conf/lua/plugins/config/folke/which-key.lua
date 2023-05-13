@@ -109,14 +109,28 @@ function M.setup()
 		},
 	}
 
+
 	local testing_mappings = neotest_testing_mappings
 
 	local non_leader_mappings = {
 		["ff"] = { "<cmd>lua vim.lsp.buf.format()<CR>", "Format" },
 	}
 
+	local ls = require("luasnip")
+	local luasnip_mappings = {
+		s = {
+			name = "Snippets",
+			s = { function() ls.jump(1) end, "Jump forward" },
+			b = { function() ls.jump(-1) end, "Jump backward" },
+			c = { function() ls.choice_active() end, "Next choice" },
+		}
+	}
+
 	-- finish setting up
 	wk.setup(conf)
+
+	-- hang luasnip off leader
+	wk.register(luasnip_mappings, leader_opts)
 
 	-- hang overseer off leader
 	wk.register(overseer_mappings, leader_opts)
