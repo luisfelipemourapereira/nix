@@ -55,6 +55,7 @@ let
       # testing
       nvim-neotest.neotest.enable = true;
       nvim-neotest.neotest-python.enable = true;
+      nvim-neotest.neotest-plenary.enable = true;
 
       # rest calls
       diepm.vim-rest-console.enable = true;
@@ -204,6 +205,7 @@ in
       ./plugins/smjonas/inc-rename.nvim
       ./plugins/nvim-neotest/neotest
       ./plugins/nvim-neotest/neotest-python
+      ./plugins/nvim-neotest/neotest-plenary
       ./plugins/aserowy/tmux.nvim
       ./plugins/frabjous/knap
       ./plugins/glepnir/lspsaga.nvim
