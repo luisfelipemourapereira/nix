@@ -82,9 +82,28 @@ local function config_ultest()
 	require("ultest").setup { builders = builders }
 end
 
+local function config_neotest()
+	require("neotest").setup {
+		adapters = {
+			require "neotest-python" {
+				dap = { justMyCode = false },
+				runner = "pytest",
+			},
+			require "neotest-jest",
+			require "neotest-plenary",
+			require "neotest-go",
+			require "neotest-rust",
+			require "neotest-vim-test" {
+				ignore_file_types = { "python", "vim", "lua" },
+			},
+		},
+	}
+end
+
 function M.setup()
 	config_test()
 	config_ultest()
+	config_neotest()
 	keymaps()
 end
 
