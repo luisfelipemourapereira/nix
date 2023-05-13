@@ -62,11 +62,27 @@ function M.setup()
 		},
 	}
 
+	local testing_mappings = {
+		name = "Test",
+		S = { "<cmd>UltestSummary<cr>", "Summary" },
+		a = { "<cmd>Ultest<cr>", "All" },
+		d = { "<cmd>UltestDebug<cr>", "Debug" },
+		f = { "<cmd>TestFile<cr>", "File" },
+		l = { "<cmd>TestLast<cr>", "Last" },
+		n = { "<cmd>TestNearest<cr>", "Nearest" },
+		o = { "<cmd>UltestOutput<cr>", "Output" },
+		s = { "<cmd>TestSuite<cr>", "Suite" },
+		v = { "<cmd>TestVisit<cr>", "Visit" },
+	}
+
 	local non_leader_mappings = {
 		["ff"] = { "<cmd>lua vim.lsp.buf.format()<CR>", "Format" },
 	}
 
 	wk.setup(conf)
+
+	-- hang testing off leader
+	wk.register(testing_mappings, leader_opts)
 
 	-- hang dap off leader
 	wk.register(dap_mappings, leader_opts)
