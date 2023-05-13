@@ -1,6 +1,6 @@
 local M = {}
 function M.setup()
-	--require('leap').set_default_keymaps()
+	require('leap').set_default_keymaps()
 	-- default values
 	--require('leap').opts = {
 	--	max_phase_one_targets = nil,
