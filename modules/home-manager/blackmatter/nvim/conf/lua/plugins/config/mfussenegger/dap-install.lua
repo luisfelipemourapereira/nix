@@ -1,8 +1,12 @@
 -- gratuitiously stolen from https://alpha2phi.medium.com/neovim-for-beginners-debugging-using-dap-44626a767f57
+--
+--
+-- stub to do nothing without error
 local M = {}
 function M.setup()
 end
 return M
+--
 --local M = {}
 --local function configure()
 --	local dap_install = require "dap-install"
