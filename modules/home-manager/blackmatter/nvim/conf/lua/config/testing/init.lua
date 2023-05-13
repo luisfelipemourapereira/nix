@@ -37,7 +37,7 @@ local function python_debugger(cmd)
 	end
 	local module = cmd[module_index]
 
-	local args = vim.list_slice(cmd, module_index + 1)
+	local args = vim.list_slice(cmd, module_index + 1, #cmd)
 	return {
 		dap = {
 			type = "python",
