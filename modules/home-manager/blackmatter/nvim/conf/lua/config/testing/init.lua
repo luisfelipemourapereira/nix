@@ -97,6 +97,15 @@ local function config_neotest()
 				ignore_file_types = { "python", "vim", "lua" },
 			},
 		},
+
+		consumers = {
+			overseer = require "neotest.consumers.overseer",
+		},
+
+		overseer = {
+			enabled = true,
+			force_default = true,
+		},
 	}
 end
 
