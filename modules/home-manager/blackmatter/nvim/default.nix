@@ -54,6 +54,7 @@ let
 
       # testing
       nvim-neotest.neotest.enable = true;
+      nvim-neotest.neotest-python.enable = true;
 
       # rest calls
       diepm.vim-rest-console.enable = true;
@@ -202,6 +203,7 @@ in
       ./plugins/simrat39/symbols-outline.nvim
       ./plugins/smjonas/inc-rename.nvim
       ./plugins/nvim-neotest/neotest
+      ./plugins/nvim-neotest/neotest-python
       ./plugins/aserowy/tmux.nvim
       ./plugins/frabjous/knap
       ./plugins/glepnir/lspsaga.nvim
