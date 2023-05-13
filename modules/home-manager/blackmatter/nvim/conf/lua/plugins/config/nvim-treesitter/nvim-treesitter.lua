@@ -8,6 +8,7 @@ function M.setup()
 	-- require("orgmode").setup_ts_grammar()
 
 	require("nvim-treesitter.configs").setup {
+		context_commentstring = { enable = true },
 		parser_install_dir = parsers_path,
 		ensure_installed = "all";
 		auto_install = true,
