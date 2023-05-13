@@ -8,6 +8,10 @@ function M.setup()
 		nls.builtins.formatting.terraform_fmt.with({
 			filetypes = { 'terraform', 'tf', 'hcl' },
 		}),
+		nls.code_actions.gitsigns,
+		nls.code_actions.eslint_d,
+		nls.code_actions.gitrebase,
+		nls.code_actions.refactoring,
 	}
 	nls.setup({ sources = nlssources })
 end
