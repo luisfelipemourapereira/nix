@@ -92,13 +92,34 @@ function M.setup()
 		},
 	}
 
+	local overseer_mappings = {
+		o = {
+			name = "Overseer",
+			C = { "<cmd>OverseerClose<cr>", "OverseerClose" },
+			a = { "<cmd>OverseerTaskAction<cr>", "OverseerTaskAction" },
+			b = { "<cmd>OverseerBuild<cr>", "OverseerBuild" },
+			c = { "<cmd>OverseerRunCmd<cr>", "OverseerRunCmd" },
+			d = { "<cmd>OverseerDeleteBundle<cr>", "OverseerDeleteBundle" },
+			l = { "<cmd>OverseerLoadBundle<cr>", "OverseerLoadBundle" },
+			o = { "<cmd>OverseerOpen!<cr>", "OverseerOpen" },
+			q = { "<cmd>OverseerQuickAction<cr>", "OverseerQuickAction" },
+			r = { "<cmd>OverseerRun<cr>", "OverseerRun" },
+			s = { "<cmd>OverseerSaveBundle<cr>", "OverseerSaveBundle" },
+			t = { "<cmd>OverseerToggle!<cr>", "OverseerToggle" },
+		},
+	}
+
 	local testing_mappings = neotest_testing_mappings
 
 	local non_leader_mappings = {
 		["ff"] = { "<cmd>lua vim.lsp.buf.format()<CR>", "Format" },
 	}
 
+	-- finish setting up
 	wk.setup(conf)
+
+	-- hang overseer off leader
+	wk.register(overseer_mappings, leader_opts)
 
 	-- hang testing off leader
 	wk.register(testing_mappings, leader_opts)
