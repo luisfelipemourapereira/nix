@@ -1,6 +1,6 @@
 local M = {}
 function M.setup()
-	require('leap').setup
+	require('leap').set_default_keymaps()
 	--require('leap').add_default_mappings()
 	-- default values
 	--require('leap').opts = {
