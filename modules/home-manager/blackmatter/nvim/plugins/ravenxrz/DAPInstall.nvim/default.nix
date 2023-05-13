@@ -5,7 +5,7 @@ let
   name = "DAPInstall.nvim";
   url = "https://github.com/${author}/${name}";
   ref = "main";
-  rev = "92f03b9786bed8f01ae5d78645b480ac3cc8eb31";
+  rev = "8798b4c36d33723e7bba6ed6e2c202f84bb300de";
   plugPath = ".local/share/nvim/site/pack/${author}/start/${name}";
   cfg = config.blackmatter.programs.nvim.plugins.${author}.${name};
 in
