@@ -62,18 +62,37 @@ function M.setup()
 		},
 	}
 
-	local testing_mappings = {
-		name = "Test",
-		S = { "<cmd>UltestSummary<cr>", "Summary" },
-		a = { "<cmd>Ultest<cr>", "All" },
-		d = { "<cmd>UltestDebug<cr>", "Debug" },
-		f = { "<cmd>TestFile<cr>", "File" },
-		l = { "<cmd>TestLast<cr>", "Last" },
-		n = { "<cmd>TestNearest<cr>", "Nearest" },
-		o = { "<cmd>UltestOutput<cr>", "Output" },
-		s = { "<cmd>TestSuite<cr>", "Suite" },
-		v = { "<cmd>TestVisit<cr>", "Visit" },
+	-- TODO: consider removing with enough neotest experience
+	-- local ulttest_testing_mappings = {
+	-- 	name = "Test",
+	-- 	S = { "<cmd>UltestSummary<cr>", "Summary" },
+	-- 	a = { "<cmd>Ultest<cr>", "All" },
+	-- 	d = { "<cmd>UltestDebug<cr>", "Debug" },
+	-- 	f = { "<cmd>TestFile<cr>", "File" },
+	-- 	l = { "<cmd>TestLast<cr>", "Last" },
+	-- 	n = { "<cmd>TestNearest<cr>", "Nearest" },
+	-- 	o = { "<cmd>UltestOutput<cr>", "Output" },
+	-- 	s = { "<cmd>TestSuite<cr>", "Suite" },
+	-- 	v = { "<cmd>TestVisit<cr>", "Visit" },
+	-- }
+
+	local neotest_testing_mappings = {
+		n = {
+			name = "Neotest",
+			a = { "<cmd>lua require('neotest').run.attach()<cr>", "Attach" },
+			f = { "<cmd>lua require('neotest').run.run(vim.fn.expand('%'))<cr>", "Run File" },
+			F = { "<cmd>lua require('neotest').run.run({vim.fn.expand('%'), strategy = 'dap'})<cr>", "Debug File" },
+			l = { "<cmd>lua require('neotest').run.run_last()<cr>", "Run Last" },
+			L = { "<cmd>lua require('neotest').run.run_last({ strategy = 'dap' })<cr>", "Debug Last" },
+			n = { "<cmd>lua require('neotest').run.run()<cr>", "Run Nearest" },
+			N = { "<cmd>lua require('neotest').run.run({strategy = 'dap'})<cr>", "Debug Nearest" },
+			o = { "<cmd>lua require('neotest').output.open({ enter = true })<cr>", "Output" },
+			S = { "<cmd>lua require('neotest').run.stop()<cr>", "Stop" },
+			s = { "<cmd>lua require('neotest').summary.toggle()<cr>", "Summary" },
+		},
 	}
+
+	local testing_mappings = neotest_testing_mappings
 
 	local non_leader_mappings = {
 		["ff"] = { "<cmd>lua vim.lsp.buf.format()<CR>", "Format" },
