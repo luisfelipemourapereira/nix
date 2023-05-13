@@ -65,7 +65,7 @@ end
 local function configure_debuggers()
 	local languages = { "lua", "python", "rust", "go" }
 	for _, lang in ipairs(languages) do
-		require("dap." .. lang).setup()
+		require("config.dap." .. lang).setup()
 	end
 end
 
