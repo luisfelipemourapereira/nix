@@ -14,7 +14,7 @@ function M.setup()
 		enable = true,
 		highlight = {
 			enable = true,
-			disable = {"nix"};
+			disable = { "nix" };
 			additional_vim_regex_highlighting = { "org" },
 		},
 		incremental_selection = {
@@ -29,6 +29,8 @@ function M.setup()
 		indent = {
 			enable = true;
 		};
+		-- enable vim-matchup integration
+		matchup = { enable = true, },
 	}
 	-- TODO: folding is a bit buggy troubleshoot later
 	-- vim.cmd [[ set foldmethod=expr ]]
