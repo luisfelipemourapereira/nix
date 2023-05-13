@@ -149,6 +149,7 @@ let
       mrjones2014."legendary.nvim".enable = false;
       MarcHamamji."runner.nvim".enable = true;
       tpope.vim-fugitive.enable = true;
+      tpope.vim-repeat.enable = true;
       mfussenegger.nvim-lint.enable = false;
       camspiers.animate.enable = false;
       tpope.vim-rhubarb.enable = false;
@@ -257,6 +258,7 @@ in
       ./plugins/nvim-lua/popup.nvim
       ./plugins/hrsh7th/cmp-buffer
       ./plugins/tpope/vim-fugitive
+      ./plugins/tpope/vim-repeat
       ./plugins/lewis6991/gitsigns.nvim
       ./plugins/lotabout/skim
       ./plugins/p00f/cphelper.nvim
