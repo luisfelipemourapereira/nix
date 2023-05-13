@@ -22,7 +22,7 @@ function M.setup()
 	--		multi_revert = '<backspace>',
 	--	}
 	--}
-	--vim.cmd [[autocmd ColorScheme * lua require('leap').init_highlight(true)]]
+	vim.cmd [[autocmd ColorScheme * lua require('leap').init_highlight(true)]]
 end
 
 return M
