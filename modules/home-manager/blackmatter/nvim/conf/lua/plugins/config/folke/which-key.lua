@@ -10,8 +10,17 @@ function M.setup()
 		}
 	}
 
-	local leader_opts = {
+	local normal_opts = {
 		mode = "n",
+		prefix = "<leader>",
+		buffer = nil,
+		silent = true,
+		noremap = true,
+		nowait = false,
+	}
+
+	local visual_opts = {
+		mode = "v",
 		prefix = "<leader>",
 		buffer = nil,
 		silent = true,
@@ -126,23 +135,41 @@ function M.setup()
 		}
 	}
 
+	local refactor_mappings = {
+		r = {
+			name = "Refactor",
+			e = { [[ <Esc><Cmd>lua require('refactoring').refactor('Extract Function')<CR>]], "Extract Function" },
+			f = {
+				[[ <Esc><Cmd>lua require('refactoring').refactor('Extract Function to File')<CR>]],
+				"Extract Function to File",
+			},
+			v = { [[ <Esc><Cmd>lua require('refactoring').refactor('Extract Variable')<CR>]], "Extract Variable" },
+			i = { [[ <Esc><Cmd>lua require('refactoring').refactor('Inline Variable')<CR>]], "Inline Variable" },
+			r = { [[ <Esc><Cmd>lua require('telescope').extensions.refactoring.refactors()<CR>]], "Refactor" },
+			V = { [[ <Esc><Cmd>lua require('refactoring').debug.print_var({})<CR>]], "Debug Print Var" },
+		}
+	}
+
 	-- finish setting up
 	wk.setup(conf)
 
-	-- hang luasnip off leader
-	wk.register(luasnip_mappings, leader_opts)
+	-- refactor keybindings
+	wk.register(refactor_mappings, visual_opts)
 
-	-- hang overseer off leader
-	wk.register(overseer_mappings, leader_opts)
+	-- hang luasnip off normal mode
+	wk.register(luasnip_mappings, normal_opts)
 
-	-- hang testing off leader
-	wk.register(testing_mappings, leader_opts)
+	-- hang overseer off normal mode
+	wk.register(overseer_mappings, normal_opts)
 
-	-- hang dap off leader
-	wk.register(dap_mappings, leader_opts)
+	-- hang testing off normal mode
+	wk.register(testing_mappings, normal_opts)
 
-	-- default leader keybindings
-	wk.register(leader_mappings, leader_opts)
+	-- hang dap off normal mode
+	wk.register(dap_mappings, normal_opts)
+
+	-- default keybindings
+	wk.register(leader_mappings, normal_opts)
 
 	-- default leader keybindings
 	wk.register(non_leader_mappings, non_leader_opts)
