@@ -62,17 +62,17 @@ local function configure_exts()
 
 end
 
--- local function configure_debuggers()
--- 	local languages = { "lua", "python", "rust", "go" }
--- 	for _, lang in ipairs(languages) do
--- 		require("config.dap." .. lang).setup()
--- 	end
--- end
+local function configure_debuggers()
+	local languages = { "lua", "python", "rust", "go" }
+	for _, lang in ipairs(languages) do
+		require("dap." .. lang).setup()
+	end
+end
 
 function M.setup()
 	configure()
 	configure_exts()
-	-- configure_debuggers()
+	configure_debuggers()
 end
 
 return M
