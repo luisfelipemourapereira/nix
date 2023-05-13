@@ -14,6 +14,9 @@ function M.setup()
 
 	-- load all language specific configs
 	utils.load_files('~/.config/nvim/lua/config/langs')
+
+	-- load testing configurations
+	utils.load_files('~/.config/nvim/lua/config/testing')
 end
 
 return M
