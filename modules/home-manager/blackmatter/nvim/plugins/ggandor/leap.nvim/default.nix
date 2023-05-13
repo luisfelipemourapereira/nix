@@ -5,7 +5,7 @@ let
   name = "leap.nvim";
   url = "https://github.com/${author}/${name}";
   ref = "main";
-  rev = "f74473d23ebf60957e0db3ff8172349a82e5a442";
+  rev = "6f2912755c9c4ae790abd829f0cf1b07c037b2a4";
   plugPath = ".local/share/nvim/site/pack/${author}/start/${name}";
   cfg = config.blackmatter.programs.nvim.plugins.${author}.${name};
 in
