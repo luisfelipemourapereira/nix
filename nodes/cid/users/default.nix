@@ -8,7 +8,7 @@
 
   home-manager.users.ldesiqueira =
     { ... }: {
-      imports = [ ../../modules/home-manager/blackmatter ];
+      imports = [ ../../../modules/home-manager/blackmatter ];
 
       home.stateVersion = "21.11";
       programs.home-manager.enable = true;
