@@ -1,2 +1,3 @@
 #!/usr/bin/env sh
-nixops create fli.nix -d fli
+# nixops create -d test
+nixops start -d test
