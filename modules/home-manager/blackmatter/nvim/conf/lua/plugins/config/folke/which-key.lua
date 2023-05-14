@@ -125,6 +125,14 @@ function M.setup()
 		["ff"] = { "<cmd>lua vim.lsp.buf.format()<CR>", "Format" },
 	}
 
+	-- manage projects
+	project_mappings = {
+		p = {
+			name = "Projects",
+			f = { "<cmd>lua require('telescope').extensions.project.project{}<cr>", "Find" },
+		},
+	}
+
 	local ls = require("luasnip")
 	local luasnip_mappings = {
 		s = {
@@ -164,6 +172,9 @@ function M.setup()
 
 	-- hang testing off normal mode
 	wk.register(testing_mappings, normal_opts)
+
+	-- hang projects off normal mode
+	wk.register(project_mappings, normal_opts)
 
 	-- hang dap off normal mode
 	wk.register(dap_mappings, normal_opts)
