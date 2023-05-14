@@ -193,6 +193,16 @@ in
       blackmatter.desktop.alacritty.enable = true;
       blackmatter.envrc.enable = true;
 
+      #########################################################################
+      # networking
+      #########################################################################
+
+      # enable packet forwarding in order to use macos
+      # to route through VPN for other clients
+      boot.kernel.sysctl."net.ipv4.ip_forward" = 1;
+
+      # end networking
+
       # stop a dumb bug
       # https://github.com/nix-community/home-manager/issues/3342
       manual.manpages.enable = false;
