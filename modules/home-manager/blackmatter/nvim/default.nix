@@ -78,6 +78,10 @@ let
       # refactoring
       ThePrimeagen."refactoring.nvim".enable = true;
 
+      # annotating
+      kkoomen.vim-doge.enable = true;
+
+
       # rest calls
       diepm.vim-rest-console.enable = true;
       NTBBloodbath."rest.nvim".enable = true;
@@ -189,6 +193,7 @@ in
   imports =
     [
       ./plugins/maaslalani/nordbuddy
+      ./plugins/kkoomen/vim-doge
       ./plugins/ThePrimeagen/refactoring.nvim
       ./plugins/diepm/vim-rest-console
       ./plugins/ravenxrz/DAPInstall.nvim
