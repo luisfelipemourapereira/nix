@@ -32,7 +32,6 @@ in
           vscode-css-languageserver-bin
           sumneko-lua-language-server
           awscli2
-          nixopsUnstable
           terraform-ls
           tflint
           arduino-language-server
