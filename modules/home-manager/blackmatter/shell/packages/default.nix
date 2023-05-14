@@ -35,6 +35,7 @@ in
           terraform-ls
           tflint
           arduino-language-server
+          nixopsUnstable
           terraform-docs
           terraform-landscape
           terraform-compliance
