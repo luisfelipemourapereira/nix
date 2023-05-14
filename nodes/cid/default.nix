@@ -179,6 +179,20 @@ in
     };
   };
 
+  #########################################################################
+  # networking
+  #########################################################################
+
+  # enable packet forwarding in order to use macos
+  # to route through VPN for other clients
+  # system.sysctl."net.ipv4.ip_forward" = 1;
+  # launchd.user.agents.router = {
+  #   serviceConfig.RunAtLoad = true;
+  # };
+
+
+  # end networking
+
   home-manager.useGlobalPkgs = true;
   home-manager.useUserPackages = true;
   home-manager.users.ldesiqueira =
@@ -192,16 +206,6 @@ in
       blackmatter.shell.enable = true;
       blackmatter.desktop.alacritty.enable = true;
       blackmatter.envrc.enable = true;
-
-      #########################################################################
-      # networking
-      #########################################################################
-
-      # enable packet forwarding in order to use macos
-      # to route through VPN for other clients
-      boot.kernel.sysctl."net.ipv4.ip_forward" = 1;
-
-      # end networking
 
       # stop a dumb bug
       # https://github.com/nix-community/home-manager/issues/3342
