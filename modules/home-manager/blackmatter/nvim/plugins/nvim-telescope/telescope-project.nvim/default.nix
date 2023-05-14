@@ -1,19 +1,23 @@
 { lib, config, ... }:
 with lib;
 let
-  cfg = config.blackmatter.programs.nvim.plugins.nvim-telescope."telescope-project.nvim";
+  author = "nvim-telescope";
+  name = "telescope-project.nvim";
+  url = "https://github.com/${author}/${name}";
+  ref = "master";
+  rev = "7c64b181dd4e72deddcf6f319e3bf1e95b2a2f30";
+  plugPath = ".local/share/nvim/site/pack/${author}/start/${name}";
+  cfg = config.blackmatter.programs.nvim.plugins.${author}.${name};
 in
 {
-  options.blackmatter.programs.nvim.plugins.nvim-telescope."telescope-project.nvim".enable =
-    mkEnableOption "nvim-telescope/telescope-project.nvim";
+  options.blackmatter.programs.nvim.plugins.${author}.${name}.enable =
+    mkEnableOption "${author}/${name}";
 
   config = mkMerge [
     (mkIf cfg.enable {
-      home.file.".local/share/nvim/site/pack/nvim-telescope/start/telescope-project.nvim".source =
+      home.file.".local/share/nvim/site/pack/${author}/start/${name}".source =
         builtins.fetchGit {
-          url = "https://github.com/nvim-telescope/telescope-project.nvim";
-          ref = "master";
-          rev = "8e8ee37b7210761502cdf2c3a82b5ba8fb5b2972";
+          inherit url ref rev;
         };
     })
   ];
