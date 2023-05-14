@@ -35,7 +35,6 @@ in
           terraform-ls
           tflint
           arduino-language-server
-          nixopsUnstable
           terraform-docs
           terraform-landscape
           terraform-compliance
@@ -121,6 +120,7 @@ in
           ))
         ]
         ++ lib.optionals isLinux [
+          nixopsUnstable
           traceroute
           iproute2
           sheldon
