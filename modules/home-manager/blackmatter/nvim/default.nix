@@ -147,6 +147,21 @@ let
 
       # this is a less compatible nord with tree-sitter
       shaunsingh.nord.enable = false;
+
+      # dap protocol
+      ravenxrz."DAPInstall.nvim".enable = true;
+      mfussenegger.nvim-dap.enable = true;
+      # lua debug adapter
+      jbyuki.one-small-step-for-vimkind.enable = true;
+
+      # dap protocol
+      leoluz.nvim-dap-go.enable = true;
+      mfussenegger.nvim-dap-python.enable = true;
+      theHamsta.nvim-dap-virtual-text.enable = true;
+      suketa.nvim-dap-ruby.enable = true;
+      rcarriga.nvim-dap-ui.enable = true;
+
+
     } // 
 
     # unfortunately macos has some sandbox issue
@@ -154,17 +169,6 @@ let
     # somewhat impossible, separating this to linux
     # only for now.
     lib.optionalAttrs isLinux {
-      ravenxrz."DAPInstall.nvim".enable = true;
-      # lua debug adapter
-      jbyuki.one-small-step-for-vimkind.enable = true;
-
-      # dap protocol
-      mfussenegger.nvim-dap.enable = true;
-      leoluz.nvim-dap-go.enable = true;
-      mfussenegger.nvim-dap-python.enable = true;
-      theHamsta.nvim-dap-virtual-text.enable = true;
-      suketa.nvim-dap-ruby.enable = true;
-      rcarriga.nvim-dap-ui.enable = true;
 
       # testing
       nvim-neotest.neotest.enable = true;

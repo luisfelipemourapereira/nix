@@ -133,15 +133,18 @@ function M.setup()
 		},
 	}
 
-	local ls = require("luasnip")
-	local luasnip_mappings = {
-		s = {
-			name = "Snippets",
-			s = { function() ls.jump(1) end, "Jump forward" },
-			b = { function() ls.jump(-1) end, "Jump backward" },
-			c = { function() ls.choice_active() end, "Next choice" },
-		}
-	}
+	local ls_success, ls = pcall(require, "luasnip")
+
+	if ls_success then
+	  local luasnip_mappings = {
+	  	s = {
+	  		name = "Snippets",
+	  		s = { function() ls.jump(1) end, "Jump forward" },
+	  		b = { function() ls.jump(-1) end, "Jump backward" },
+	  		c = { function() ls.choice_active() end, "Next choice" },
+	  	}
+	  }
+	end
 
 	local refactor_mappings = {
 		r = {
@@ -164,8 +167,10 @@ function M.setup()
 	-- refactor keybindings
 	wk.register(refactor_mappings, visual_opts)
 
-	-- hang luasnip off normal mode
-	wk.register(luasnip_mappings, normal_opts)
+	if ls_success then
+		-- hang luasnip off normal mode
+		wk.register(luasnip_mappings, normal_opts)
+	end
 
 	-- hang overseer off normal mode
 	wk.register(overseer_mappings, normal_opts)
