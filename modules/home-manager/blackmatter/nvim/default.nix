@@ -2,6 +2,7 @@
 with lib;
 let
   cfg = config.blackmatter.programs.nvim;
+  inherit (pkgs.stdenv.hostPlatform) isLinux isDarwin;
   plugins.toggles =
     {
       # enabled lua libraries
@@ -42,50 +43,8 @@ let
       onsails."lspkind.nvim".enable = true;
       willothy."veil.nvim".enable = true;
 
-      # dap protocol
-      mfussenegger.nvim-dap.enable = true;
-      leoluz.nvim-dap-go.enable = true;
-      mfussenegger.nvim-dap-python.enable = true;
-      theHamsta.nvim-dap-virtual-text.enable = true;
-      suketa.nvim-dap-ruby.enable = true;
-      rcarriga.nvim-dap-ui.enable = true;
+      # dap protocol off plugins
       Pocco81."dap-buddy.nvim".enable = false;
-      ravenxrz."DAPInstall.nvim".enable = true;
-      # lua debug adapter
-      jbyuki.one-small-step-for-vimkind.enable = true;
-
-      # testing
-      nvim-neotest.neotest.enable = true;
-      nvim-neotest.neotest-python.enable = true;
-      nvim-neotest.neotest-plenary.enable = true;
-      nvim-neotest.neotest-go.enable = true;
-      nvim-neotest.neotest-jest.enable = true;
-      rouge8.neotest-rust.enable = true;
-      stevearc."overseer.nvim".enable = true;
-
-      # improved motion
-      andymass.vim-matchup.enable = true;
-      chaoren.vim-wordmotion.enable = true;
-      wellle."targets.vim".enable = true;
-      ggandor."leap.nvim".enable = true;
-      unblevable.quick-scope.enable = true;
-      t3rro.nvim-ts-rainbow.enable = true;
-
-      # snippets
-      L3MON4D3.LuaSnip.enable = true;
-      rafamadriz.friendly-snippets.enable = true;
-
-      # refactoring
-      ThePrimeagen."refactoring.nvim".enable = true;
-
-      # annotating
-      kkoomen.vim-doge.enable = true;
-      danymat.neogen.enable = true;
-
-
-      # rest calls
-      diepm.vim-rest-console.enable = true;
-      NTBBloodbath."rest.nvim".enable = true;
 
       # enabled completion mechanisms
       ray-x.cmp-treesitter.enable = true;
@@ -188,7 +147,57 @@ let
 
       # this is a less compatible nord with tree-sitter
       shaunsingh.nord.enable = false;
-    };
+    } // 
+
+    # unfortunately macos has some sandbox issue
+    # that makes loading many plugins at once
+    # somewhat impossible, separating this to linux
+    # only for now.
+    lib.optionalAttrs isLinux {
+      ravenxrz."DAPInstall.nvim".enable = true;
+      # lua debug adapter
+      jbyuki.one-small-step-for-vimkind.enable = true;
+
+      # dap protocol
+      mfussenegger.nvim-dap.enable = true;
+      leoluz.nvim-dap-go.enable = true;
+      mfussenegger.nvim-dap-python.enable = true;
+      theHamsta.nvim-dap-virtual-text.enable = true;
+      suketa.nvim-dap-ruby.enable = true;
+      rcarriga.nvim-dap-ui.enable = true;
+
+      # testing
+      nvim-neotest.neotest.enable = true;
+      nvim-neotest.neotest-python.enable = true;
+      nvim-neotest.neotest-plenary.enable = true;
+      nvim-neotest.neotest-go.enable = true;
+      nvim-neotest.neotest-jest.enable = true;
+      rouge8.neotest-rust.enable = true;
+      stevearc."overseer.nvim".enable = true;
+
+      # improved motion
+      andymass.vim-matchup.enable = true;
+      chaoren.vim-wordmotion.enable = true;
+      wellle."targets.vim".enable = true;
+      ggandor."leap.nvim".enable = true;
+      unblevable.quick-scope.enable = true;
+      t3rro.nvim-ts-rainbow.enable = true;
+
+      # snippets
+      L3MON4D3.LuaSnip.enable = true;
+      rafamadriz.friendly-snippets.enable = true;
+
+      # refactoring
+      ThePrimeagen."refactoring.nvim".enable = true;
+
+      # annotating
+      kkoomen.vim-doge.enable = true;
+      danymat.neogen.enable = true;
+
+      # rest calls
+      diepm.vim-rest-console.enable = true;
+      NTBBloodbath."rest.nvim".enable = true;
+    } ;
 in
 {
   imports =
