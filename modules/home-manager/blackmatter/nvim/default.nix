@@ -80,6 +80,7 @@ let
 
       # annotating
       kkoomen.vim-doge.enable = true;
+      danymat.neogen.enable = true;
 
 
       # rest calls
@@ -194,6 +195,7 @@ in
     [
       ./plugins/maaslalani/nordbuddy
       ./plugins/kkoomen/vim-doge
+      ./plugins/danymat/neogen
       ./plugins/ThePrimeagen/refactoring.nvim
       ./plugins/diepm/vim-rest-console
       ./plugins/ravenxrz/DAPInstall.nvim
