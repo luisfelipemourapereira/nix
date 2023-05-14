@@ -11,8 +11,10 @@ in
         mkEnableOption "shell.packages";
     };
   };
+
   config = mkMerge [
     (mkIf cfg.shell.packages.enable {
+
       home.packages =
         with pkgs;
         with xorg;
@@ -30,6 +32,7 @@ in
           vscode-css-languageserver-bin
           sumneko-lua-language-server
           awscli2
+          nixopsUnstable
           terraform-ls
           tflint
           arduino-language-server

@@ -1,4 +1,25 @@
 [
+  #############################################################################
+  # nixops (unstable)
+  # python cryptography bug forced me to upgrade
+  #############################################################################
+  (self: super: {
+    nixops = super.nixops.overrideAttrs (oldAttrs: rec {
+      version = "unstable-2023-05-14"; # Update the date to match the current date or the date of the commit you are using
+
+      src = super.fetchFromGitHub {
+        owner = "NixOS";
+        repo = "nixops";
+        rev = "fc9b55c55da62f949028143b974f67fdc7f40c8b";
+        sha256 = "0f5r17rq3rf3ylp16cq50prn8qmfc1gwpqgqfj491w38sr5sspf8";
+      };
+    });
+  })
+  # end nixops (unstable)
+
+  #############################################################################
+  # awscli2
+  #############################################################################
   (self: super:
     rec {
       python3 = with super; super.python3.override {
@@ -77,4 +98,5 @@
         };
       };
     })
+  # end awscli2
 ]
