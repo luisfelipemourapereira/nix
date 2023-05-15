@@ -14,7 +14,6 @@ let
     {
       # enabled plugins
       hrsh7th.nvim-cmp.enable = true;
-      jose-elias-alvarez.null-ls.enable = true;
       yriveiro."dap-go.nvim".enable = true;
       nathom.filetype.enable = true;
       NvChad."nvim-colorizer.lua".enable = true;
@@ -31,8 +30,6 @@ let
       # tree-sitter for nix is bugged with OOM
       LnL7.vim-nix.enable = true;
       simrat39."rust-tools.nvim".enable = true;
-      ray-x.lsp_signature.enable = true;
-      onsails."lspkind.nvim".enable = true;
       willothy."veil.nvim".enable = true;
 
       # dap protocol off plugins
@@ -210,7 +207,6 @@ in
       ./plugins/willothy/veil.nvim
       ./plugins/jcdickinson/codeium.nvim
       ./plugins/hrsh7th/nvim-cmp
-      ./plugins/jose-elias-alvarez/null-ls
       ./plugins/yriveiro/dap-go.nvim
       ./plugins/mfussenegger/nvim-dap
       ./plugins/leoluz/nvim-dap-go
@@ -229,7 +225,6 @@ in
       ./plugins/pwntester/octo.nvim
       ./plugins/phaazon/hop.nvim
       ./plugins/ojroques/nvim-lspfuzzy
-      ./plugins/onsails/lspkind.nvim
       ./plugins/nvim-telescope/telescope-project.nvim
       ./plugins/nvim-neorocks/luarocks-tag-release
       ./plugins/simrat39/symbols-outline.nvim
@@ -272,7 +267,6 @@ in
       ./plugins/ray-x/navigator.lua
       ./plugins/rcarriga/nvim-dap-ui
       ./plugins/hrsh7th/cmp-nvim-lsp
-      ./plugins/ray-x/lsp_signature
       ./plugins/hrsh7th/cmp-cmdline
       ./plugins/lewis6991/impatient
       ./plugins/nvim-lua/popup.nvim

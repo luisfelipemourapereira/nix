@@ -13,6 +13,9 @@ in
     ../neovim/nvim-lspconfig
     ../williamboman/mason.nvim
     ../williamboman/mason-lspconfig.nvim
+    ../jose-elias-alvarez/null-ls
+    ../ray-x/lsp_signature
+    ../onsails/lspkind.nvim
   ];
 
   config =
@@ -27,6 +30,9 @@ in
               neovim.nvim-lspconfig.enable = true;
               williamboman."mason.nvim".enable = true;
               williamboman."mason-lspconfig.nvim".enable = true;
+              jose-elias-alvarez.null-ls.enable = true;
+              ray-x.lsp_signature.enable = true;
+              onsails."lspkind.nvim".enable = true;
             };
         }
       )
