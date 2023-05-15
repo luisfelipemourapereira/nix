@@ -16,7 +16,9 @@ in
     (mkIf cfg.shell.packages.enable {
 
       home.packages = with pkgs;
-        [ ]
+        [
+          docker
+        ]
         ++ import ./kubernetes pkgs
         ++ import ./javascript pkgs
         ++ import ./hashicorp pkgs
@@ -55,7 +57,6 @@ in
           iproute2
           sheldon
           fcitx5
-          docker
           julia
         ];
     })
