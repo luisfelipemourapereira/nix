@@ -15,7 +15,6 @@ in
     ../nvim-telescope/telescope-project.nvim
     ../nvim-telescope/telescope-dap.nvim
     ../nvim-telescope/telescope-z.nvim
-    ../danielpieper/telescope-tmuxinator
   ];
 
   config =
@@ -32,7 +31,6 @@ in
               nvim-telescope."telescope-project.nvim".enable = true;
               nvim-telescope."telescope-dap.nvim".enable = true;
               nvim-telescope."telescope-z.nvim".enable = true;
-              danielpieper."telescope-tmuxinator".enable = true;
             };
         }
       )
