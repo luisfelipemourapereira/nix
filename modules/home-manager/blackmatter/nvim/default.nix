@@ -62,7 +62,6 @@ let
       LudoPinelli."comment-box.nvim".enable = false;
       madskjeldgaard.reaper-nvim.enable = false;
       lotabout.skim.enable = false;
-      danielpieper."telescope-tmuxinator.nvim".enable = false;
       drybalka."tree-climber.nvim".enable = false;
       jubnzv."mdeval.nvim".enable = false;
       kkharji."sqlite.lua".enable = false;
