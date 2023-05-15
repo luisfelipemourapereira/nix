@@ -24,9 +24,7 @@ in
           sumneko-lua-language-server
           nodePackages_latest.pnpm
           arduino-language-server
-          sops
           zlib
-          age
           lua
           php
           youtube-dl
@@ -47,6 +45,7 @@ in
         ++ import ./hashicorp pkgs
         ++ import ./utilities pkgs
         ++ import ./rustlang pkgs
+        ++ import ./secrets pkgs
         ++ import ./python pkgs
         ++ import ./golang pkgs
         ++ import ./redis pkgs
