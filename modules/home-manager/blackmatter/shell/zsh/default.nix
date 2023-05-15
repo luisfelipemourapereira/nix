@@ -19,6 +19,7 @@ in
   };
   config = mkMerge [
     (mkIf cfg.shell.zsh.enable {
+      	# home.packages = [ cfg.shell.zsh.package pkgs.oh-my-zsh ];
       	home.packages = [ cfg.shell.zsh.package ];
   	xdg.configFile."shellz/rbenv/main.sh".source = ./rbenv/main.sh;
   	xdg.configFile."shellz/direnv/main.sh".source = ./direnv/main.sh;
@@ -29,7 +30,7 @@ in
   	xdg.configFile."shellz/tmux/main.sh".source = ./tmux/main.sh;
   	xdg.configFile."shellz/ssh_agent/main.sh".source = ./ssh_agent/main.sh;
   	programs.zsh.enable = true;
-  	programs.zsh.plugins = ["docker"];
+  	# programs.zsh.plugin.zsh.ohMyZshModule.plugins = ["docker"];
   	programs.zsh.defaultKeymap = "viins";
   	programs.zsh.enableAutosuggestions = true;
   	programs.zsh.enableCompletion = true;
