@@ -1,0 +1,29 @@
+pkgs: with pkgs; [
+  grex
+  exa
+  skim
+  stig
+  gdb
+  bat
+  feh
+  fd
+  sd
+  hyperfine
+  bandwhich
+  json2hcl
+  node2nix
+  cpulimit
+  nushell
+  ansible
+  openssl
+  gradle
+  xrandr
+  trunk
+  whois
+  delta
+  tokei
+  zoxide
+  httpie
+  xclip
+  procs
+]

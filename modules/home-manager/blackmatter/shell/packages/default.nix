@@ -18,68 +18,37 @@ in
       home.packages =
         with pkgs;
         with xorg;
-        with pkgs.rubyPackages_3_1;
-        with pkgs.nodePackages_latest;
         [
-          vscode-css-languageserver-bin
+          nodePackages_latest.vscode-css-languageserver-bin
+          nodePackages_latest.prettier
           sumneko-lua-language-server
-          terraform-ls
-          tflint
+          nodePackages_latest.pnpm
           arduino-language-server
-          terraform-docs
-          terraform-landscape
-          terraform-compliance
-          grex
-          exa
           sops
-          skim
-          stig
           zlib
-          pnpm
-          gdb
           age
           lua
-          bat
           php
-          feh
-          fd
-          sd
           youtube-dl
           transmission
           tree-sitter
           pkgs.poetry
           solargraph
-          hyperfine
-          bandwhich
-          prettier
           rnix-lsp
           tealdeer
           himalaya
-          json2hcl
-          node2nix
           luarocks
-          cpulimit
-          nushell
-          ansible
-          openssl
-          gradle
-          xrandr
-          httpie
-          zoxide
           nodejs
           asmfmt
-          trunk
-          whois
           shfmt
-          delta
-          xclip
           rbenv
-          procs
-          tokei
         ]
         ++ import ./kubernetes pkgs
+        ++ import ./hashicorp pkgs
+        ++ import ./utilities pkgs
         ++ import ./rustlang pkgs
         ++ import ./python pkgs
+        ++ import ./golang pkgs
         ++ import ./redis pkgs
         ++ import ./aws pkgs
         ++ lib.optionals isDarwin [
