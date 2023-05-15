@@ -1,4 +1,9 @@
 pkgs: with pkgs; [
+  tealdeer
+  himalaya
+  tree-sitter
+  youtube-dl
+  transmission
   xorg.xrandr
   grex
   exa

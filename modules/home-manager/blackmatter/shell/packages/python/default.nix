@@ -3,4 +3,5 @@ pkgs: with pkgs; [
   python39Packages.poetry-core
   black
   pipenv
+  poetry
 ]

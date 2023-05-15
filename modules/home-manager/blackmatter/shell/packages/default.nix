@@ -16,32 +16,9 @@ in
     (mkIf cfg.shell.packages.enable {
 
       home.packages =
-        with pkgs;
-        # with xorg;
-        [
-          nodePackages_latest.vscode-css-languageserver-bin
-          nodePackages_latest.prettier
-          sumneko-lua-language-server
-          nodePackages_latest.pnpm
-          arduino-language-server
-          zlib
-          lua
-          php
-          youtube-dl
-          transmission
-          tree-sitter
-          pkgs.poetry
-          solargraph
-          rnix-lsp
-          tealdeer
-          himalaya
-          luarocks
-          nodejs
-          asmfmt
-          shfmt
-          rbenv
-        ]
+        [ ]
         ++ import ./kubernetes pkgs
+        ++ import ./javascript pkgs
         ++ import ./hashicorp pkgs
         ++ import ./utilities pkgs
         ++ import ./rustlang pkgs
