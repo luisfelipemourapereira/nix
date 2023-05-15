@@ -2,17 +2,10 @@
 with lib;
 let
   cfg = config.blackmatter.programs.nvim;
+  plugs = cfg.plugin.groups;
   inherit (pkgs.stdenv.hostPlatform) isLinux isDarwin;
   plugins.toggles =
     {
-      # enabled lua libraries
-
-      # TODO: needs a valid macos build
-      # TODO: turning off until a valid build
-      # TODO: is created for the rust dependency
-      jcdickinson."http.nvim".enable = false;
-      nvim-lua.plenary.enable = true;
-
       # enabled plugins
       folke."which-key.nvim".enable = true;
       maaslalani.nordbuddy.enable = true;
@@ -162,7 +155,7 @@ let
       rcarriga.nvim-dap-ui.enable = true;
 
 
-    } // 
+    } //
 
     # unfortunately macos has some sandbox issue
     # that makes loading many plugins at once
@@ -201,11 +194,12 @@ let
       # rest calls
       diepm.vim-rest-console.enable = true;
       NTBBloodbath."rest.nvim".enable = true;
-    } ;
+    };
 in
 {
   imports =
     [
+      ./plugins/common
       ./plugins/maaslalani/nordbuddy
       ./plugins/kkoomen/vim-doge
       ./plugins/danymat/neogen
@@ -215,13 +209,11 @@ in
       ./plugins/Pocco81/dap-buddy.nvim
       ./plugins/willothy/veil.nvim
       ./plugins/jcdickinson/codeium.nvim
-      ./plugins/jcdickinson/http.nvim
       ./plugins/folke/neodev.nvim
       ./plugins/neovim/nvim-lspconfig
       ./plugins/hrsh7th/nvim-cmp
       ./plugins/jose-elias-alvarez/null-ls
       ./plugins/yriveiro/dap-go.nvim
-      ./plugins/nvim-lua/plenary
       ./plugins/mfussenegger/nvim-dap
       ./plugins/leoluz/nvim-dap-go
       ./plugins/mfussenegger/nvim-dap-python
@@ -375,6 +367,7 @@ in
     (mkIf cfg.enable {
       home.packages = [ cfg.package ];
       xdg.configFile."nvim".source = ./conf;
+      plugs.common.enable = true;
       blackmatter = { programs = { nvim = { plugins = plugins.toggles; }; }; };
     })
   ];
