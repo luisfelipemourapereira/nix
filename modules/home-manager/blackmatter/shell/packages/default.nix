@@ -21,21 +21,17 @@ in
         with pkgs.rubyPackages_3_1;
         with pkgs.nodePackages_latest;
         [
-          pkgs.kubectl
-          cargo-edit
           ssm-session-manager-plugin
           python39Packages.pipenv-poetry-migrate
           python39Packages.poetry-core
           vscode-css-languageserver-bin
           sumneko-lua-language-server
-          awscli2
           terraform-ls
           tflint
           arduino-language-server
           terraform-docs
           terraform-landscape
           terraform-compliance
-          rust-code-analysis
           go-task
           grex
           exa
@@ -54,16 +50,10 @@ in
           fd
           sd
           youtube-dl
-          rust-analyzer
           transmission
           tree-sitter
-          rust-script
           pkgs.poetry
-          cloud-nuke
           solargraph
-          rustic-rs
-          rust-motd
-          rusty-man
           hyperfine
           bandwhich
           cdktf-cli
@@ -74,13 +64,10 @@ in
           json2hcl
           node2nix
           luarocks
-          rustscan
           cpulimit
           nushell
           ansible
           openssl
-          rustfmt
-          rustcat
           gofumpt
           gradle
           xrandr
@@ -91,7 +78,6 @@ in
           gobang
           asmfmt
           trunk
-          rustc
           whois
           shfmt
           black
@@ -101,7 +87,10 @@ in
           procs
           tokei
         ]
-        ++ import ./redis
+        ++ import ./rustlang pkgs
+        ++ import ./aws pkgs
+        ++ import ./redis pkgs
+        ++ import ./kubernetes pkgs
         ++ lib.optionals isDarwin [
           (zulu.overrideAttrs (_:
             {
