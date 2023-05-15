@@ -1,6 +1,6 @@
 pkgs: with pkgs; [
   ssm-session-manager-plugin
   cloud-nuke
-  cdktf-cli
+  nodePackages_latest.cdktf-cli
   awscli2
 ]
