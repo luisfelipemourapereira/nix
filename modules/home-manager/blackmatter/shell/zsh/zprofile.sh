@@ -32,6 +32,7 @@ done
 # some aliases
 alias grep=rg
 alias cat=bat
+alias cd=z
 
 # integrate zoxide
 eval "$(zoxide init zsh)"
