@@ -21,9 +21,6 @@ in
         with pkgs.rubyPackages_3_1;
         with pkgs.nodePackages_latest;
         [
-          pkgs.redis
-          pkgs.redis-dump
-          pkgs.redli
           pkgs.kubectl
           cargo-edit
           ssm-session-manager-plugin
@@ -104,6 +101,7 @@ in
           procs
           tokei
         ]
+        ++ import ./redis
         ++ lib.optionals isDarwin [
           (zulu.overrideAttrs (_:
             {
@@ -125,8 +123,9 @@ in
           iproute2
           sheldon
           fcitx5
-          julia
           docker
+          julia
+          tig
         ];
     })
   ];
