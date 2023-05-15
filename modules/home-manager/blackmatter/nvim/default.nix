@@ -7,12 +7,12 @@ let
 
   groups.toggles = {
     common.enable = true;
+    lsp.enable = true;
   };
 
   plugins.toggles =
     {
       # enabled plugins
-      neovim.nvim-lspconfig.enable = true;
       hrsh7th.nvim-cmp.enable = true;
       jose-elias-alvarez.null-ls.enable = true;
       yriveiro."dap-go.nvim".enable = true;
@@ -31,8 +31,6 @@ let
       # tree-sitter for nix is bugged with OOM
       LnL7.vim-nix.enable = true;
       simrat39."rust-tools.nvim".enable = true;
-      williamboman."mason.nvim".enable = true;
-      williamboman."mason-lspconfig.nvim".enable = true;
       ray-x.lsp_signature.enable = true;
       onsails."lspkind.nvim".enable = true;
       willothy."veil.nvim".enable = true;
@@ -201,6 +199,7 @@ in
   imports =
     [
       ./plugins/common
+      ./plugins/lsp
       ./plugins/maaslalani/nordbuddy
       ./plugins/kkoomen/vim-doge
       ./plugins/danymat/neogen
@@ -210,7 +209,6 @@ in
       ./plugins/Pocco81/dap-buddy.nvim
       ./plugins/willothy/veil.nvim
       ./plugins/jcdickinson/codeium.nvim
-      ./plugins/neovim/nvim-lspconfig
       ./plugins/hrsh7th/nvim-cmp
       ./plugins/jose-elias-alvarez/null-ls
       ./plugins/yriveiro/dap-go.nvim
@@ -267,8 +265,6 @@ in
       ./plugins/akinsho/git-conflict.nvim
       ./plugins/niuiic/divider.nvim
       ./plugins/simrat39/rust-tools.nvim
-      ./plugins/williamboman/mason.nvim
-      ./plugins/williamboman/mason-lspconfig.nvim
       ./plugins/mfussenegger/nvim-jdtls
       ./plugins/nvim-orgmode/orgmode
       ./plugins/suketa/nvim-dap-ruby
