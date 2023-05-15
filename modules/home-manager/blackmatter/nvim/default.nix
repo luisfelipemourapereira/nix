@@ -34,14 +34,6 @@ let
       # dap protocol off plugins
       Pocco81."dap-buddy.nvim".enable = false;
 
-      # enabled completion mechanisms
-      ray-x.cmp-treesitter.enable = true;
-      hrsh7th.cmp-nvim-lsp.enable = true;
-      hrsh7th.cmp-cmdline.enable = true;
-      sar."cmp-lsp.nvim".enable = true;
-      hrsh7th.cmp-buffer.enable = true;
-      hrsh7th.cmp-path.enable = true;
-
       # TODO: has bug, so turning off for now
       jcdickinson."codeium.nvim".enable = false;
 
@@ -261,14 +253,10 @@ in
       ./plugins/mfussenegger/nvim-jdtls
       ./plugins/nvim-orgmode/orgmode
       ./plugins/suketa/nvim-dap-ruby
-      ./plugins/ray-x/cmp-treesitter
       ./plugins/ray-x/navigator.lua
       ./plugins/rcarriga/nvim-dap-ui
-      ./plugins/hrsh7th/cmp-nvim-lsp
-      ./plugins/hrsh7th/cmp-cmdline
       ./plugins/lewis6991/impatient
       ./plugins/nvim-lua/popup.nvim
-      ./plugins/hrsh7th/cmp-buffer
       ./plugins/tpope/vim-fugitive
       ./plugins/tpope/vim-repeat
       ./plugins/lewis6991/gitsigns.nvim
@@ -278,9 +266,7 @@ in
       ./plugins/tpope/vim-rhubarb
       ./plugins/folke/noice.nvim
       ./plugins/f-person/git-blame.nvim
-      ./plugins/hrsh7th/cmp-path
       ./plugins/numToStr/Navigator.nvim
-      ./plugins/sar/cmp-lsp.nvim
       ./plugins/shaunsingh/nord
       ./plugins/camspiers/lens
       ./plugins/LnL7/vim-nix
