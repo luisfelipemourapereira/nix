@@ -11,6 +11,7 @@ let
     completion.enable = true;
     debugging.enable = true;
     treesitter.enable = true;
+    telescope.enable = true;
   };
 
   plugins.toggles =
@@ -18,10 +19,6 @@ let
       # enabled plugins
       NvChad."nvim-colorizer.lua".enable = true;
       nvim-lualine.lualine.enable = true;
-      nvim-telescope."telescope.nvim".enable = true;
-      nvim-telescope."telescope-file-browser.nvim".enable = true;
-      nvim-telescope."telescope-project.nvim".enable = true;
-      nvim-telescope."telescope-z.nvim".enable = true;
       nvim-tree.nvim-web-devicons.enable = true;
       # tree-sitter for nix is bugged with OOM
       LnL7.vim-nix.enable = true;
@@ -170,6 +167,7 @@ in
       ./plugins/completion
       ./plugins/debugging
       ./plugins/treesitter
+      ./plugins/telescope
       ./plugins/maaslalani/nordbuddy
       ./plugins/kkoomen/vim-doge
       ./plugins/danymat/neogen
