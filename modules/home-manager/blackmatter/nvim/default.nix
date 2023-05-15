@@ -189,6 +189,7 @@ in
     [
       ./plugins/common
       ./plugins/lsp
+      ./plugins/completion
       ./plugins/maaslalani/nordbuddy
       ./plugins/kkoomen/vim-doge
       ./plugins/danymat/neogen
