@@ -21,9 +21,6 @@ in
         with pkgs.rubyPackages_3_1;
         with pkgs.nodePackages_latest;
         [
-          ssm-session-manager-plugin
-          python39Packages.pipenv-poetry-migrate
-          python39Packages.poetry-core
           vscode-css-languageserver-bin
           sumneko-lua-language-server
           terraform-ls
@@ -32,7 +29,6 @@ in
           terraform-docs
           terraform-landscape
           terraform-compliance
-          go-task
           grex
           exa
           sops
@@ -46,7 +42,6 @@ in
           bat
           php
           feh
-          go
           fd
           sd
           youtube-dl
@@ -56,7 +51,6 @@ in
           solargraph
           hyperfine
           bandwhich
-          cdktf-cli
           prettier
           rnix-lsp
           tealdeer
@@ -68,29 +62,26 @@ in
           nushell
           ansible
           openssl
-          gofumpt
           gradle
           xrandr
-          pipenv
           httpie
           zoxide
           nodejs
-          gobang
           asmfmt
           trunk
           whois
           shfmt
-          black
           delta
           xclip
           rbenv
           procs
           tokei
         ]
-        ++ import ./rustlang pkgs
-        ++ import ./aws pkgs
-        ++ import ./redis pkgs
         ++ import ./kubernetes pkgs
+        ++ import ./rustlang pkgs
+        ++ import ./python pkgs
+        ++ import ./redis pkgs
+        ++ import ./aws pkgs
         ++ lib.optionals isDarwin [
           (zulu.overrideAttrs (_:
             {
