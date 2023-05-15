@@ -15,7 +15,7 @@ in
   config = mkMerge [
     (mkIf cfg.shell.packages.enable {
 
-      home.packages =
+      home.packages = with pkgs;
         [ ]
         ++ import ./kubernetes pkgs
         ++ import ./javascript pkgs
