@@ -16,6 +16,7 @@ in
     ../folke/neodev.nvim
     ../maaslalani/nordbuddy
     ../numToStr/Comment
+    ../nathom/filetype
   ];
 
   config =
@@ -33,6 +34,7 @@ in
               nvim-lua.plenary.enable = true;
               folke."which-key.nvim".enable = true;
               folke."neodev.nvim".enable = true;
+              nathom.filetype.enable = true;
             };
         }
       )

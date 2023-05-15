@@ -16,7 +16,6 @@ let
   plugins.toggles =
     {
       # enabled plugins
-      nathom.filetype.enable = true;
       NvChad."nvim-colorizer.lua".enable = true;
       nvim-lualine.lualine.enable = true;
       nvim-telescope."telescope.nvim".enable = true;
@@ -184,7 +183,6 @@ in
       ./plugins/mfussenegger/nvim-dap
       ./plugins/leoluz/nvim-dap-go
       ./plugins/mfussenegger/nvim-dap-python
-      ./plugins/nathom/filetype
       ./plugins/NvChad/nvim-colorizer.lua
       ./plugins/nvim-lualine/lualine
       ./plugins/nvim-telescope/telescope.nvim
