@@ -4,12 +4,14 @@ let
   cfg = config.blackmatter.programs.nvim;
   plugs = cfg.plugin.groups;
   inherit (pkgs.stdenv.hostPlatform) isLinux isDarwin;
+
+  groups.toggles = {
+    common.enable = true;
+  };
+
   plugins.toggles =
     {
       # enabled plugins
-      folke."which-key.nvim".enable = true;
-      maaslalani.nordbuddy.enable = true;
-      folke."neodev.nvim".enable = true;
       neovim.nvim-lspconfig.enable = true;
       hrsh7th.nvim-cmp.enable = true;
       jose-elias-alvarez.null-ls.enable = true;
@@ -209,7 +211,6 @@ in
       ./plugins/Pocco81/dap-buddy.nvim
       ./plugins/willothy/veil.nvim
       ./plugins/jcdickinson/codeium.nvim
-      ./plugins/folke/neodev.nvim
       ./plugins/neovim/nvim-lspconfig
       ./plugins/hrsh7th/nvim-cmp
       ./plugins/jose-elias-alvarez/null-ls
@@ -290,7 +291,6 @@ in
       ./plugins/camspiers/animate
       ./plugins/tpope/vim-rhubarb
       ./plugins/folke/noice.nvim
-      ./plugins/folke/which-key.nvim
       ./plugins/f-person/git-blame.nvim
       ./plugins/hrsh7th/cmp-path
       ./plugins/numToStr/Navigator.nvim
@@ -371,11 +371,7 @@ in
         programs = {
           nvim = {
             plugin = {
-              groups = {
-                common = {
-                  enable = true;
-                };
-              };
+              groups = groups.toggles;
             };
             plugins = plugins.toggles;
           };
