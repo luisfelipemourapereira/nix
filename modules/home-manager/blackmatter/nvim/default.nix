@@ -5,6 +5,13 @@ let
   plugs = cfg.plugin.groups;
   inherit (pkgs.stdenv.hostPlatform) isLinux isDarwin;
 
+  #############################################################################
+  # plugin groups:
+  # toggle which groups of plugins are on
+  # 
+  # TODO: implement override to enable/disable each plugin
+  #############################################################################
+
   groups.toggles = {
     common.enable = true;
     lsp.enable = true;
@@ -13,6 +20,8 @@ let
     treesitter.enable = true;
     telescope.enable = true;
   };
+
+  # end plugin groups
 
   plugins.toggles =
     {
@@ -183,8 +192,6 @@ in
       ./plugins/mfussenegger/nvim-dap-python
       ./plugins/NvChad/nvim-colorizer.lua
       ./plugins/nvim-lualine/lualine
-      ./plugins/nvim-telescope/telescope.nvim
-      ./plugins/nvim-telescope/telescope-file-browser.nvim
       ./plugins/svermeulen/vimpeccable
       ./plugins/tjdevries/vlog.nvim
       ./plugins/someone-stole-my-name/yaml-companion.nvim
@@ -194,7 +201,6 @@ in
       ./plugins/pwntester/octo.nvim
       ./plugins/phaazon/hop.nvim
       ./plugins/ojroques/nvim-lspfuzzy
-      ./plugins/nvim-telescope/telescope-project.nvim
       ./plugins/nvim-neorocks/luarocks-tag-release
       ./plugins/simrat39/symbols-outline.nvim
       ./plugins/smjonas/inc-rename.nvim
@@ -213,8 +219,6 @@ in
       ./plugins/gennaro-tedesco/nvim-possession
       ./plugins/esensar/nvim-dev-container
       ./plugins/bennypowers/nvim-regexplainer
-      ./plugins/nvim-telescope/telescope-dap.nvim
-      ./plugins/nvim-telescope/telescope-z.nvim
       ./plugins/theHamsta/nvim-dap-virtual-text
       ./plugins/t3rro/nvim-ts-rainbow
       ./plugins/wellle/targets.vim
@@ -259,7 +263,6 @@ in
       ./plugins/ldelossa/litee.nvim
       ./plugins/jubnzv/mdeval.nvim
       ./plugins/jbyuki/one-small-step-for-vimkind
-      ./plugins/danielpieper/telescope-tmuxinator.nvim
       ./plugins/jghauser/follow-md-links.nvim
       ./plugins/kkharji/sqlite.lua
       ./plugins/kosayoda/nvim-lightbulb
