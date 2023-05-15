@@ -23,11 +23,17 @@ in
         ++ import ./utilities pkgs
         ++ import ./rustlang pkgs
         ++ import ./secrets pkgs
+        ++ import ./arduino pkgs
         ++ import ./python pkgs
         ++ import ./golang pkgs
         ++ import ./redis pkgs
+        ++ import ./ruby pkgs
+        ++ import ./shell pkgs
         ++ import ./aws pkgs
         ++ import ./nix pkgs
+        ++ import ./asm pkgs
+        ++ import ./lua pkgs
+        ++ import ./php pkgs
         ++ lib.optionals isDarwin [
           (zulu.overrideAttrs (_:
             {
