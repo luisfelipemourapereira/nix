@@ -13,7 +13,6 @@ let
   plugins.toggles =
     {
       # enabled plugins
-      hrsh7th.nvim-cmp.enable = true;
       yriveiro."dap-go.nvim".enable = true;
       nathom.filetype.enable = true;
       NvChad."nvim-colorizer.lua".enable = true;
@@ -206,7 +205,6 @@ in
       ./plugins/Pocco81/dap-buddy.nvim
       ./plugins/willothy/veil.nvim
       ./plugins/jcdickinson/codeium.nvim
-      ./plugins/hrsh7th/nvim-cmp
       ./plugins/yriveiro/dap-go.nvim
       ./plugins/mfussenegger/nvim-dap
       ./plugins/leoluz/nvim-dap-go
