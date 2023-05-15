@@ -9,19 +9,18 @@ let
     common.enable = true;
     lsp.enable = true;
     completion.enable = true;
+    debugging.enable = true;
   };
 
   plugins.toggles =
     {
       # enabled plugins
-      yriveiro."dap-go.nvim".enable = true;
       nathom.filetype.enable = true;
       NvChad."nvim-colorizer.lua".enable = true;
       nvim-lualine.lualine.enable = true;
       nvim-telescope."telescope.nvim".enable = true;
       nvim-telescope."telescope-file-browser.nvim".enable = true;
       nvim-telescope."telescope-project.nvim".enable = true;
-      nvim-telescope."telescope-dap.nvim".enable = true;
       nvim-telescope."telescope-z.nvim".enable = true;
       nvim-tree.nvim-web-devicons.enable = true;
       nvim-treesitter.nvim-treesitter.enable = true;
@@ -31,9 +30,6 @@ let
       LnL7.vim-nix.enable = true;
       simrat39."rust-tools.nvim".enable = true;
       willothy."veil.nvim".enable = true;
-
-      # dap protocol off plugins
-      Pocco81."dap-buddy.nvim".enable = false;
 
       # TODO: has bug, so turning off for now
       jcdickinson."codeium.nvim".enable = false;
@@ -128,21 +124,6 @@ let
 
       # this is a less compatible nord with tree-sitter
       shaunsingh.nord.enable = false;
-
-      # dap protocol
-      ravenxrz."DAPInstall.nvim".enable = true;
-      mfussenegger.nvim-dap.enable = true;
-      # lua debug adapter
-      jbyuki.one-small-step-for-vimkind.enable = true;
-
-      # dap protocol
-      leoluz.nvim-dap-go.enable = true;
-      mfussenegger.nvim-dap-python.enable = true;
-      theHamsta.nvim-dap-virtual-text.enable = true;
-      suketa.nvim-dap-ruby.enable = true;
-      rcarriga.nvim-dap-ui.enable = true;
-
-
     } //
 
     # unfortunately macos has some sandbox issue
@@ -190,6 +171,7 @@ in
       ./plugins/common
       ./plugins/lsp
       ./plugins/completion
+      ./plugins/debugging
       ./plugins/maaslalani/nordbuddy
       ./plugins/kkoomen/vim-doge
       ./plugins/danymat/neogen
