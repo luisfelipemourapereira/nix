@@ -5,6 +5,7 @@ pkgs: with pkgs; [
   youtube-dl
   transmission
   xorg.xrandr
+  tig
   grex
   exa
   skim

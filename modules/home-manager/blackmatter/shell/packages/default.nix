@@ -50,7 +50,6 @@ in
           fcitx5
           docker
           julia
-          tig
         ];
     })
   ];
