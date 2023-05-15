@@ -33,6 +33,7 @@ in
         zoom-us
         kitty
         discord-canary
+        webcamoid
         # exists but build is broken
         # it may be fixed later
         # retroshare
