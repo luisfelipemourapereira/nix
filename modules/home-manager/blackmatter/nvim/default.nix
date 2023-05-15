@@ -10,6 +10,7 @@ let
     lsp.enable = true;
     completion.enable = true;
     debugging.enable = true;
+    treesitter.enable = true;
   };
 
   plugins.toggles =
@@ -23,9 +24,6 @@ let
       nvim-telescope."telescope-project.nvim".enable = true;
       nvim-telescope."telescope-z.nvim".enable = true;
       nvim-tree.nvim-web-devicons.enable = true;
-      nvim-treesitter.nvim-treesitter.enable = true;
-      nvim-treesitter.nvim-treesitter-textobjects.enable = true;
-      nvim-treesitter.nvim-treesitter-refactor.enable = true;
       # tree-sitter for nix is bugged with OOM
       LnL7.vim-nix.enable = true;
       simrat39."rust-tools.nvim".enable = true;
@@ -221,9 +219,6 @@ in
       ./plugins/nvim-telescope/telescope-dap.nvim
       ./plugins/nvim-telescope/telescope-z.nvim
       ./plugins/theHamsta/nvim-dap-virtual-text
-      ./plugins/nvim-treesitter/nvim-treesitter
-      ./plugins/nvim-treesitter/nvim-treesitter-textobjects
-      ./plugins/nvim-treesitter/nvim-treesitter-refactor
       ./plugins/t3rro/nvim-ts-rainbow
       ./plugins/wellle/targets.vim
       ./plugins/amrbashir/nvim-docs-view
