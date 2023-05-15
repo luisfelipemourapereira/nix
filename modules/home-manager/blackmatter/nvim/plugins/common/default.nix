@@ -15,6 +15,7 @@ in
     ../folke/which-key.nvim
     ../folke/neodev.nvim
     ../maaslalani/nordbuddy
+    ../numToStr/Comment
   ];
 
   config =
@@ -26,6 +27,7 @@ in
           # TODO: is created for the rust dependency
           blackmatter.programs.nvim.plugins =
             {
+              numToStr.Comment.enable = true;
               jcdickinson."http.nvim".enable = false;
               maaslalani.nordbuddy.enable = true;
               nvim-lua.plenary.enable = true;

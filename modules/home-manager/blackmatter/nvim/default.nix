@@ -18,7 +18,6 @@ let
       yriveiro."dap-go.nvim".enable = true;
       nathom.filetype.enable = true;
       NvChad."nvim-colorizer.lua".enable = true;
-      numToStr.Comment.enable = true;
       nvim-lualine.lualine.enable = true;
       nvim-telescope."telescope.nvim".enable = true;
       nvim-telescope."telescope-file-browser.nvim".enable = true;
@@ -220,7 +219,6 @@ in
       ./plugins/mfussenegger/nvim-dap-python
       ./plugins/nathom/filetype
       ./plugins/NvChad/nvim-colorizer.lua
-      ./plugins/numToStr/Comment
       ./plugins/nvim-lualine/lualine
       ./plugins/nvim-telescope/telescope.nvim
       ./plugins/nvim-telescope/telescope-file-browser.nvim
