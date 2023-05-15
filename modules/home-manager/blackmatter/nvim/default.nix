@@ -367,8 +367,20 @@ in
     (mkIf cfg.enable {
       home.packages = [ cfg.package ];
       xdg.configFile."nvim".source = ./conf;
-      plugs.common.enable = true;
-      blackmatter = { programs = { nvim = { plugins = plugins.toggles; }; }; };
+      blackmatter = {
+        programs = {
+          nvim = {
+            plugin = {
+              groups = {
+                common = {
+                  enable = true;
+                };
+              };
+            };
+            plugins = plugins.toggles;
+          };
+        };
+      };
     })
   ];
 }
