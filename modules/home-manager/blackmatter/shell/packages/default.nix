@@ -27,6 +27,7 @@ in
         ++ import ./golang pkgs
         ++ import ./redis pkgs
         ++ import ./aws pkgs
+        ++ import ./nix pkgs
         ++ lib.optionals isDarwin [
           (zulu.overrideAttrs (_:
             {
