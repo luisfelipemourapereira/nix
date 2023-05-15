@@ -170,6 +170,7 @@ in
       ./plugins/lsp
       ./plugins/completion
       ./plugins/debugging
+      ./plugins/treesitter
       ./plugins/maaslalani/nordbuddy
       ./plugins/kkoomen/vim-doge
       ./plugins/danymat/neogen
