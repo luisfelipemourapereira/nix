@@ -53,6 +53,8 @@ in
         ]
         ++ lib.optionals isLinux [
           nixopsUnstable
+          lazydocker
+          lazygit
           traceroute
           iproute2
           sheldon
