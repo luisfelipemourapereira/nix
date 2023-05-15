@@ -1,4 +1,5 @@
 pkgs: with pkgs; [
+  xorg.xrandr
   grex
   exa
   skim
@@ -17,7 +18,6 @@ pkgs: with pkgs; [
   ansible
   openssl
   gradle
-  xrandr
   trunk
   whois
   delta

@@ -17,7 +17,7 @@ in
 
       home.packages =
         with pkgs;
-        with xorg;
+        # with xorg;
         [
           nodePackages_latest.vscode-css-languageserver-bin
           nodePackages_latest.prettier
