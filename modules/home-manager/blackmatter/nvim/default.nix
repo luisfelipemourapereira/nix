@@ -8,6 +8,7 @@ let
   groups.toggles = {
     common.enable = true;
     lsp.enable = true;
+    completion.enable = true;
   };
 
   plugins.toggles =
