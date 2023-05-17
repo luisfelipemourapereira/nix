@@ -18,6 +18,8 @@ in
       home.packages = with pkgs;
         [
           docker
+          # TODO: install later when macos build issue is over
+          # tree
         ]
         ++ import ./kubernetes pkgs
         ++ import ./javascript pkgs
