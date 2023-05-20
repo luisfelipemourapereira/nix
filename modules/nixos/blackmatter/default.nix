@@ -10,9 +10,7 @@ let
   tun0 = {
     description = "create persistent tunnels owned by luis";
     wantedBy = [ "multi-user.target" ];
-    script = ''
-      ${pkgs.iproute}/bin/ip tuntap add name tun0 mode tun user luis
-    '';
+    script = "${pkgs.iproute}/bin/ip tuntap add name tun0 mode tun user luis";
     serviceConfig = {
       RemainAfterExit = "yes";
       Type = "oneshot";
