@@ -55,4 +55,15 @@
     source = "${pkgs.bash}/bin/bash";
     symlink = true;
   };
+  systemd.services.create-bash-symlink = {
+    description = "Create symlink for /bin/bash";
+    wantedBy = [ "multi-user.target" ];
+    script = ''
+      ! [ -L /bin/bash ] && ln -sf ${pkgs.bash}/bin/bash /bin/bash
+    '';
+    serviceConfig = { 
+      RemainAfterExit = "yes";
+      Type = "oneshot";
+    };
+  };
 }
