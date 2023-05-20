@@ -1,12 +1,34 @@
+# TODO: move openconnect related hacks to it's own module
 { pkgs, ... }:
 let
-  csd-wrapper = pkgs.writeshellScriptBin "csd-wrapper" builtins.readFile ./csd-wrapper.sh;
+  #############################################################################
+  # openconnect vars
+  #############################################################################
+
+  # systemd service to manage tun0 by luis
+  # this will permit openconnect to stay in userland
+  tun0 = {
+    description = "create persistent tunnels owned by luis";
+    wantedBy = [ "multi-user.target" ];
+    script = ''
+      ${pkgs.iproute}/bin/ip tuntap add name tun0 mode tun user luis
+    '';
+    serviceConfig = {
+      RemainAfterexit = "yes";
+      Type = "oneshot";
+      Restart = "always";
+      ExecStop = "${pkgs.iproute}/bin/ip tuntap del name tun0 mode tun";
+    };
+  };
+  csd-wrapper-script-input = builtins.readFile ./csd-wrapper.sh;
+  csd-wrapper = pkgs.writeShellScriptBin "csd-wrapper" csd-wrapper-script-input;
   pinger-vpn-connect = pkgs.writeShellScriptBin "pinger-vpn-connect" "
   #!/usr/bin/env sh
   username=$(cat /secrets/pinger/vpn/username)
   password=$(cat /secrets/pinger/vpn/password)
-  echo $password | sudo ${pkgs.openconnect}/bin/openconnect --protocol=gp --user=$username --passwd-on-stdin \"$@\" --csd-wrapper=$(which csd-wrapper) pan.corp.pinger.com
+  echo $password | ${pkgs.openconnect}/bin/openconnect --protocol=gp --user=$username --passwd-on-stdin \"$@\" pan.corp.pinger.com
   ";
+  # end openconnect vars
 in
 {
   imports = [
@@ -26,21 +48,20 @@ in
     ./sops
     ./dns
   ];
-  environment.systemPackages = [ 
-    pinger-vpn-connect 
+
+  #############################################################################
+  # openconnect configs
+  #############################################################################
+
+  # create tun0 interface for luis
+  # user so that openconnect can
+  systemd.services.tun0 = tun0;
+
+  # add the scripts to PATH
+  environment.systemPackages = [
+    pinger-vpn-connect
     csd-wrapper
   ];
 
-  # services.globalprotect = {
-  #   enable = true;
-  #   settings = {
-  #     "pan.corp.pinger.com" = {
-  #       openconnect-args = ''
-  #         #!/usr/bin/env sh
-  #         username=$(cat /secrets/pinger/vpn/username)
-  #         password=$(cat /secrets/pinger/vpn/password)
-  #       '';
-  #     };
-  #   };
-  # };
+  # openconnect end configs
 }
