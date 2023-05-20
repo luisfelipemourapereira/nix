@@ -13,7 +13,7 @@ let
     script = "${pkgs.iproute}/bin/ip tuntap add name tun0 mode tun user luis";
     serviceConfig = {
       RemainAfterExit = "yes";
-      Type = "oneshot";
+      Type = "simple";
       Restart = "always";
       ExecStop = "${pkgs.iproute}/bin/ip tuntap del name tun0 mode tun";
     };
