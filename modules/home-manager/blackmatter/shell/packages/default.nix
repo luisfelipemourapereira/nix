@@ -54,7 +54,6 @@ in
           ))
         ]
         ++ lib.optionals isLinux [
-          nixopsUnstable
           lazydocker
           lazygit
           traceroute
