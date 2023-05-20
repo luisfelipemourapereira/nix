@@ -31,6 +31,12 @@ in
         sopsFile = ../../../../secrets/luis/aws.yaml;
       };
 
+      sops.secrets."luis/aws/config" = {
+        owner = config.users.users.luis.name;
+        path = "/home/luis/.aws/config";
+        sopsFile = ../../../../secrets/luis/aws.yaml;
+      };
+
       sops.secrets."t3rro/aws/credentials" = {
         owner = config.users.users.t3rro.name;
         path = "/home/t3rro/.aws/credentials";
