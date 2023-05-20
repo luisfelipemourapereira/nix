@@ -7,15 +7,15 @@ let
 
   # systemd service to manage tun0 by luis
   # this will permit openconnect to stay in userland
-  tun0 = {
-    description = "create persistent tunnels owned by luis";
-    wantedBy = [ "multi-user.target" ];
-    script = "${pkgs.iproute}/bin/ip tuntap add name tun0 mode tun user luis";
-    serviceConfig = {
-      RemainAfterExit = "yes";
-      Type = "oneshot";
-    };
-  };
+  # tun0 = {
+  #   description = "create persistent tunnels owned by luis";
+  #   wantedBy = [ "multi-user.target" ];
+  #   script = "${pkgs.iproute}/bin/ip tuntap add name tun0 mode tun user luis";
+  #   serviceConfig = {
+  #     RemainAfterExit = "yes";
+  #     Type = "oneshot";
+  #   };
+  # };
 
   csd-wrapper-script-input = builtins.readFile ./csd-wrapper.sh;
   csd-wrapper = pkgs.writeShellScriptBin "csd-wrapper" csd-wrapper-script-input;
@@ -52,7 +52,7 @@ in
 
   # create tun0 interface for luis
   # user so that openconnect can
-  systemd.services.tun0 = tun0;
+  # systemd.services.tun0 = tun0;
 
   # add the scripts to PATH
   environment.systemPackages = [
