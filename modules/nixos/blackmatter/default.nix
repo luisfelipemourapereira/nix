@@ -4,7 +4,8 @@ let
   #!/usr/bin/env sh
   username=$(cat /secrets/pinger/vpn/username)
   password=$(cat /secrets/pinger/vpn/password)
-  echo $password | sudo ${pkgs.openconnect}/bin/openconnect --protocol=gp --user=$username --passwd-on-stdin \"$@\" --csd-wrapper=${pkgs.openconnect}/libexec/openconnect/hireport.sh pan.corp.pinger.com
+  echo $password | sudo ${pkgs.openconnect}/bin/openconnect --protocol=gp --user=$username --passwd-on-stdin \"$@\"
+  --csd-wrapper=${pkgs.openconnect}/libexec/openconnect/csd-wrapper.sh pan.corp.pinger.com
   ";
 in
 {
