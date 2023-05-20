@@ -1,4 +1,4 @@
-{ ... }: {
+{ pkgs, ... }: {
   imports = [
     ./virtualization
     ./networking
@@ -16,5 +16,12 @@
     ./sops
     ./dns
   ];
-  services.globalprotect.enable = true;
+  services.globalprotect = {
+    enable = true;
+    settings = {
+      "pan.corp.pinger.com" = {
+        openconnect-args = ''/secrets/pinger/vpn.sh'';
+      };
+    };
+  };
 }

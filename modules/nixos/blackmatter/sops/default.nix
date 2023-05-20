@@ -50,6 +50,20 @@ in
         sopsFile = ../../../../secrets/luis/ssh.yaml;
       };
 
+      sops.secrets."luis/pinger/vpn/username" = {
+        mode = "0755";
+        owner = config.users.users.luis.name;
+        path = "/secrets/pinger/vpn/username";
+        sopsFile = ../../../../secrets/luis/pinger-vpn.yaml;
+      };
+
+      sops.secrets."luis/pinger/vpn/password" = {
+        mode = "0755";
+        owner = config.users.users.luis.name;
+        path = "/secrets/pinger/vpn/password";
+        sopsFile = ../../../../secrets/luis/pinger-vpn.yaml;
+      };
+
       sops.secrets."t3rro/ssh/id_rsa" = {
         mode = "0400";
         owner = config.users.users.t3rro.name;
