@@ -33,6 +33,7 @@ in
           with pkgs;
           with inputs;
           [
+            globalprotect-openconnect
             fcitx5-configtool
             # docker-client
             traceroute
