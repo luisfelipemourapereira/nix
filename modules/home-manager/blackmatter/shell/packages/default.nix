@@ -18,6 +18,7 @@ in
       home.packages = with pkgs;
         [
           docker
+          docker-compose
           # TODO: install later when macos build issue is over
           # tree
         ]
