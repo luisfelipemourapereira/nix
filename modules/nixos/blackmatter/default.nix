@@ -24,7 +24,7 @@ let
   #!/usr/bin/env sh
   username=$(cat /secrets/pinger/vpn/username)
   password=$(cat /secrets/pinger/vpn/password)
-  echo $password | ${pkgs.openconnect}/bin/openconnect --protocol=gp --user=$username --passwd-on-stdin \"$@\" pan.corp.pinger.com
+  echo $password | ${pkgs.openconnect}/bin/openconnect --csd-wrapper=$(which csd-wrapper) --protocol=gp --user=$username --passwd-on-stdin \"$@\" pan.corp.pinger.com
   ";
   # end openconnect vars
 in
