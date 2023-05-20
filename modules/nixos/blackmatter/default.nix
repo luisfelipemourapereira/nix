@@ -16,4 +16,5 @@
     ./sops
     ./dns
   ];
+  services.globalprotect.enable = true;
 }
