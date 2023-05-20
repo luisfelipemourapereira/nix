@@ -38,10 +38,11 @@ in
             enable = false;
           };
           tmuxp = { enable = false; };
-          extraConfig = builtins.readFile ./tmux.conf;
         } // lib.optionalAttrs isLinux {
-          shell = "/usr/bin/zsh";
+          extraConfig = builtins.readFile ./tmux-linux.conf;
+          shell = "${pkgs.zsh}/bin/zsh";
         } // lib.optionalAttrs isDarwin {
+          extraConfig = builtins.readFile ./tmux-darwin.conf;
           shell = "/bin/zsh";
         };
       };
