@@ -12,19 +12,35 @@ let
     wantedBy = [ "multi-user.target" ];
     script = "${pkgs.iproute}/bin/ip tuntap add name tun0 mode tun user luis";
     serviceConfig = {
-      RemainAfterExit = "yes";
+      RemainAfterExit = "no";
       Type = "simple";
       Restart = "always";
       ExecStop = "${pkgs.iproute}/bin/ip tuntap del name tun0 mode tun";
     };
   };
+
+  # systemd service to manage the connction itself
+  pinger-vpn = {
+    description = "maintain pinger vpn connection alive";
+    wantedBy = [ "multi-user.target" ];
+    script = "pinger-vpn-connect";
+    serviceConfig = {
+      RemainAfterExit = "no";
+      Type = "simple";
+      Restart = "always";
+      ExecStop = "${pkgs.iproute}/bin/ip tuntap del name tun0 mode tun";
+    };
+  };
+
   csd-wrapper-script-input = builtins.readFile ./csd-wrapper.sh;
   csd-wrapper = pkgs.writeShellScriptBin "csd-wrapper" csd-wrapper-script-input;
   pinger-vpn-connect = pkgs.writeShellScriptBin "pinger-vpn-connect" "
   #!/usr/bin/env sh
   username=$(cat /secrets/pinger/vpn/username)
   password=$(cat /secrets/pinger/vpn/password)
-  echo $password | ${pkgs.openconnect}/bin/openconnect --csd-wrapper=$(which csd-wrapper) --protocol=gp --user=$username --passwd-on-stdin \"$@\" pan.corp.pinger.com
+  # echo $password | ${pkgs.openconnect}/bin/openconnect --csd-wrapper=$(which csd-wrapper) --protocol=gp --user=$username --passwd-on-stdin \"$@\" pan.corp.pinger.com
+  # echo $password | sudo ${pkgs.openconnect}/bin/openconnect --csd-wrapper=$(which csd-wrapper) --protocol=gp --user=$username --passwd-on-stdin \"$@\" pan.corp.pinger.com
+  echo $password | sudo ${pkgs.openconnect}/bin/openconnect --protocol=gp --user=$username --passwd-on-stdin \"$@\" pan.corp.pinger.com
   ";
   # end openconnect vars
 in
