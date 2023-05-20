@@ -1,4 +1,13 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+let
+  pinger-vpn-connect = pkgs.writeShellScriptBin "pinger-vpn-connect" "
+  #!/usr/bin/env sh
+  username=$(cat /secrets/pinger/vpn/username)
+  password=$(cat /secrets/pinger/vpn/password)
+  echo $password | sudo ${pkgs.openconnect}/bin/openconnect --protocol=gp --user=$username --passwd-on-stdin \"$@\" --csd-wrapper=${pkgs.openconnect}/libexec/openconnect/hireport.sh pan.corp.pinger.com
+  ";
+in
+{
   imports = [
     ./virtualization
     ./networking
@@ -16,12 +25,18 @@
     ./sops
     ./dns
   ];
-  services.globalprotect = {
-    enable = true;
-    settings = {
-      "pan.corp.pinger.com" = {
-        openconnect-args = ''/secrets/pinger/vpn.sh'';
-      };
-    };
-  };
+  environment.systemPackages = [ pinger-vpn-connect ];
+
+  # services.globalprotect = {
+  #   enable = true;
+  #   settings = {
+  #     "pan.corp.pinger.com" = {
+  #       openconnect-args = ''
+  #         #!/usr/bin/env sh
+  #         username=$(cat /secrets/pinger/vpn/username)
+  #         password=$(cat /secrets/pinger/vpn/password)
+  #       '';
+  #     };
+  #   };
+  # };
 }
