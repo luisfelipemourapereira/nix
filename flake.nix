@@ -4,6 +4,7 @@
 
   inputs = {
     dream2nix.url = github:nix-community/dream2nix?branch=main;
+    nixpkgs.url = github:NixOS/nixpkgs?branch=release-22.11;
     home-manager.url = github:luisfelipemourapereira/home-manager?branch=release-22.11;
     flake-utils.url = github:numtide/flake-utils?branch=master;
     nix-darwin.url = github:LnL7/nix-darwin?branch=master;
@@ -11,7 +12,6 @@
     sops-nix.url = github:Mic92/sops-nix;
     nix-funcs.url = github:t3rro/nix-funcs;
     nix-pub.url = github:luisfelipemourapereira/nix-pub;
-    nixpkgs.url = github:NixOS/nixpkgs?branch=release-22.11;
     bundix = {
       url = github:nix-community/bundix?branch=master;
       flake = false;
