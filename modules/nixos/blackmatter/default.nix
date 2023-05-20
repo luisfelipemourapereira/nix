@@ -14,7 +14,7 @@ let
       ${pkgs.iproute}/bin/ip tuntap add name tun0 mode tun user luis
     '';
     serviceConfig = {
-      RemainAfterexit = "yes";
+      RemainAfterExit = "yes";
       Type = "oneshot";
       Restart = "always";
       ExecStop = "${pkgs.iproute}/bin/ip tuntap del name tun0 mode tun";
