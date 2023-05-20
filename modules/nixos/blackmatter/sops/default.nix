@@ -32,6 +32,7 @@ in
       # };
 
       sops.secrets."luis/aws/config" = {
+        mode = "0755";
         owner = config.users.users.luis.name;
         path = "/home/luis/.aws/config";
         sopsFile = ../../../../secrets/luis/aws.yaml;
