@@ -1,8 +1,8 @@
 { outputs, ... }:
 {
-  imports = [ 
-    outputs.nixosModules.blackmatter 
-    outputs.nixosModules.antimatter 
+  imports = [
+    outputs.nixosModules.blackmatter
+    outputs.nixosModules.antimatter
   ];
   blackmatter.host = "plo";
   blackmatter.dns.enable = true;
@@ -23,4 +23,26 @@
 
   antimatter.services.consul.enable = true;
   antimatter.services.nomad.enable = true;
+  # TODO: remove after pinger IT does it's job
+  # globalprotect-openconnect exists to service pinger
+  # the pinger vpn currently does not implement a route
+  # to the shared environment so we must supplament.
+  networking = {
+    defaultGateway = "192.168.50.1";
+    useDHCP = false;
+    interfaces.enp5s0 = {
+      ipv4.routes = [
+        { address = "10.160.0.0"; prefixLength = 16; }
+      ];
+      ipv4.addresses = [{
+        address = "192.168.50.153";
+        prefixLength = 24;
+      }];
+      # ipv4.gateway = "192.168.50.1";
+      # extraCommands = ''
+      #   ip route add 10.160.0.0/16 via 192.168.50.1 dev tun0
+      # '';
+    };
+  };
+
 }
