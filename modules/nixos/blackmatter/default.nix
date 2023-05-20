@@ -1,11 +1,11 @@
 { pkgs, ... }:
 let
+  csd-wrapper = pkgs.writeshellScriptBin "csd-wrapper" builtins.readFile ./csd-wrapper.sh;
   pinger-vpn-connect = pkgs.writeShellScriptBin "pinger-vpn-connect" "
   #!/usr/bin/env sh
   username=$(cat /secrets/pinger/vpn/username)
   password=$(cat /secrets/pinger/vpn/password)
-  echo $password | sudo ${pkgs.openconnect}/bin/openconnect --protocol=gp --user=$username --passwd-on-stdin \"$@\"
-  --csd-wrapper=${pkgs.openconnect}/libexec/openconnect/csd-wrapper.sh pan.corp.pinger.com
+  echo $password | sudo ${pkgs.openconnect}/bin/openconnect --protocol=gp --user=$username --passwd-on-stdin \"$@\" --csd-wrapper=$(which csd-wrapper) pan.corp.pinger.com
   ";
 in
 {
@@ -26,7 +26,10 @@ in
     ./sops
     ./dns
   ];
-  environment.systemPackages = [ pinger-vpn-connect ];
+  environment.systemPackages = [ 
+    pinger-vpn-connect 
+    csd-wrapper
+  ];
 
   # services.globalprotect = {
   #   enable = true;
