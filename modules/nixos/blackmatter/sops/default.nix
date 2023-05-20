@@ -43,12 +43,12 @@ in
         sopsFile = ../../../../secrets/t3rro/github.yaml;
       };
 
-      # sops.secrets."luis/ssh/id_rsa" = {
-      #   mode = "0400";
-      #   owner = config.users.users.luis.name;
-      #   path = "/home/luis/.ssh/id_rsa";
-      #   sopsFile = ../../../../secrets/luis/ssh.yaml;
-      # };
+      sops.secrets."luis/ssh/id_rsa" = {
+        mode = "0400";
+        owner = config.users.users.luis.name;
+        path = "/home/luis/.ssh/id_rsa";
+        sopsFile = ../../../../secrets/luis/ssh.yaml;
+      };
 
       sops.secrets."t3rro/ssh/id_rsa" = {
         mode = "0400";
