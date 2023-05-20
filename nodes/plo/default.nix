@@ -30,18 +30,17 @@
   networking = {
     defaultGateway = "192.168.50.1";
     useDHCP = false;
+    interfaces.tun0 = {
+      ipv4.routes = [{
+        address = "10.160.0.0";
+        prefixLength = 16;
+      }];
+    };
     interfaces.enp5s0 = {
-      ipv4.routes = [
-        { address = "10.160.0.0"; prefixLength = 16; }
-      ];
       ipv4.addresses = [{
         address = "192.168.50.153";
         prefixLength = 24;
       }];
-      # ipv4.gateway = "192.168.50.1";
-      # extraCommands = ''
-      #   ip route add 10.160.0.0/16 via 192.168.50.1 dev tun0
-      # '';
     };
   };
 
