@@ -25,11 +25,11 @@ in
         sopsFile = ../../../../secrets/tapvpn.yaml;
       };
 
-      sops.secrets."luis/aws/credentials" = {
-        owner = config.users.users.luis.name;
-        path = "/home/luis/.aws/credentials";
-        sopsFile = ../../../../secrets/luis/aws.yaml;
-      };
+      # sops.secrets."luis/aws/credentials" = {
+      #   owner = config.users.users.luis.name;
+      #   path = "/home/luis/.aws/credentials";
+      #   sopsFile = ../../../../secrets/luis/aws.yaml;
+      # };
 
       sops.secrets."luis/aws/config" = {
         owner = config.users.users.luis.name;
