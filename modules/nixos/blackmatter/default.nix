@@ -12,23 +12,8 @@ let
     wantedBy = [ "multi-user.target" ];
     script = "${pkgs.iproute}/bin/ip tuntap add name tun0 mode tun user luis";
     serviceConfig = {
-      RemainAfterExit = "no";
-      Type = "simple";
-      Restart = "always";
-      ExecStop = "${pkgs.iproute}/bin/ip tuntap del name tun0 mode tun";
-    };
-  };
-
-  # systemd service to manage the connction itself
-  pinger-vpn = {
-    description = "maintain pinger vpn connection alive";
-    wantedBy = [ "multi-user.target" ];
-    script = "pinger-vpn-connect";
-    serviceConfig = {
-      RemainAfterExit = "no";
-      Type = "simple";
-      Restart = "always";
-      ExecStop = "${pkgs.iproute}/bin/ip tuntap del name tun0 mode tun";
+      RemainAfterExit = "yes";
+      Type = "oneshot";
     };
   };
 
