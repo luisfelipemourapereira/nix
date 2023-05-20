@@ -43,7 +43,7 @@ in
           shell = "${pkgs.zsh}/bin/zsh";
         } // lib.optionalAttrs isDarwin {
           extraConfig = builtins.readFile ./tmux-darwin.conf;
-          shell = "/bin/zsh";
+          shell = "${pkgs.zsh}/bin/zsh";
         };
       };
     })
