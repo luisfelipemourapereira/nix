@@ -1,4 +1,4 @@
-{ outputs, ... }:
+{ outputs, pkgs, ... }:
 {
   imports = [
     outputs.nixosModules.blackmatter
@@ -44,4 +44,15 @@
     };
   };
 
+  # TODO: remove after you refactor pinger-apps and pinger-iac
+  # TODO: to have more portable shell scripting
+  # shell scripting in these repositories has a whole lot of 
+  # /bin/bash without using env to find the correct interpreter
+  # so this is to hack around that for now until pinger-apps and pinger-iac
+  # can be fixed.
+  environment.systemPackages = [ pkgs.bash ];
+  nixpkgs.config.fileSystems."/bin/bash" = {
+    source = "${pkgs.bash}/bin/bash";
+    symlink = true;
+  };
 }
