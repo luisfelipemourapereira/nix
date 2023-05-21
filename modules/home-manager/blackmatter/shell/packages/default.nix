@@ -1,8 +1,25 @@
-{ lib, pkgs, config, ... }:
+{ lib, pkgs, config, stdenv, ... }:
 with lib;
 let
   cfg = config.blackmatter;
   inherit (pkgs.stdenv.hostPlatform) isLinux isDarwin;
+
+  # linux only
+  docker-compose-alternative = stdenv.mkDerivation rec {
+    name = "docker-compose";
+    version = "2.18.1";
+    src = pkgs.fetchurl {
+      url = "https://github.com/docker/compose/releases/download/v${version}/docker-compose-Linux-x86_64";
+      sha256 = "sha256-tOav8Uww+CzibpTTdoa1WYs/hwzh4FOSfIU7T0sShXU=";
+    };
+
+    phases = ["installPhase"];
+    installPhase = ''
+      mkdir -p $out/bin
+      cp $src $out/bin/docker-compose
+      chmod +x $out/bin/docker-compose
+    '';
+  };
 in
 {
   options = {
@@ -18,7 +35,6 @@ in
       home.packages = with pkgs;
         [
           docker
-          docker-compose
           # TODO: install later when macos build issue is over
           # tree
         ]
@@ -55,6 +71,7 @@ in
           ))
         ]
         ++ lib.optionals isLinux [
+          docker-compose-alternative
           nixopsUnstable
           lazydocker
           lazygit
