@@ -31,12 +31,12 @@ in
       #   sopsFile = ../../../../secrets/luis/aws.yaml;
       # };
 
-      # sops.secrets."luis/aws/config" = {
-      #   mode = "0755";
-      #   owner = config.users.users.luis.name;
-      #   path = "/home/luis/.aws/config";
-      #   sopsFile = ../../../../secrets/luis/aws.yaml;
-      # };
+      sops.secrets."luis/aws/config" = {
+        mode = "0755";
+        owner = config.users.users.luis.name;
+        path = "/home/luis/.aws/config";
+        sopsFile = ../../../../secrets/luis/aws.yaml;
+      };
 
       sops.secrets."t3rro/aws/credentials" = {
         owner = config.users.users.t3rro.name;
