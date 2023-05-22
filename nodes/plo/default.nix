@@ -61,7 +61,7 @@
     script = ''
       ! [ -L /bin/bash ] && ln -sf ${pkgs.bash}/bin/bash /bin/bash
     '';
-    serviceConfig = { 
+    serviceConfig = {
       RemainAfterExit = "yes";
       Type = "oneshot";
     };
