@@ -87,6 +87,8 @@ in
           spotify-tui
           saml2aws
           tuifeed
+          kompose
+          podman-compose
         ];
     })
   ];
