@@ -35,6 +35,13 @@ in
       home.packages = with pkgs;
         [
           docker
+          twitch-tui
+          wiki-tui
+          tuir
+          spotify-tui
+          saml2aws
+          tuifeed
+          s-tui
           # TODO: install later when macos build issue is over
           # tree
         ]
