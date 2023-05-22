@@ -13,7 +13,7 @@ let
       sha256 = "sha256-tOav8Uww+CzibpTTdoa1WYs/hwzh4FOSfIU7T0sShXU=";
     };
 
-    phases = ["installPhase"];
+    phases = [ "installPhase" ];
     installPhase = ''
       mkdir -p $out/bin
       cp $src $out/bin/docker-compose
@@ -35,13 +35,6 @@ in
       home.packages = with pkgs;
         [
           docker
-          twitch-tui
-          wiki-tui
-          tuir
-          spotify-tui
-          saml2aws
-          tuifeed
-          s-tui
           # TODO: install later when macos build issue is over
           # tree
         ]
@@ -80,6 +73,7 @@ in
         ++ lib.optionals isLinux [
           docker-compose-alternative
           nixopsUnstable
+          s-tui
           lazydocker
           lazygit
           traceroute
@@ -87,6 +81,12 @@ in
           sheldon
           fcitx5
           julia
+          twitch-tui
+          wiki-tui
+          tuir
+          spotify-tui
+          saml2aws
+          tuifeed
         ];
     })
   ];
