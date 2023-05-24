@@ -22,7 +22,7 @@ ani:
 	brew bundle install
 
 cid:
-	NIXPKGS_ALLOW_BROKEN=1 darwin-rebuild switch --flake ".#cid"
+	darwin-rebuild switch --flake ".#cid"
 
 node:
 	build

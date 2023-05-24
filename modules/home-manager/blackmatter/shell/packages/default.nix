@@ -73,8 +73,8 @@ in
         ++ lib.optionals isLinux [
           docker-compose-alternative
           nixopsUnstable
-          lazydocker
           s-tui
+          lazydocker
           lazygit
           traceroute
           iproute2
