@@ -100,8 +100,9 @@ in
               fonts = [ themes.nord.styling.font-0 ];
               # send alt+d to menu
               menu = "rofi -show drun";
-              # terminal = "alacritty";
-              terminal = "kitty";
+              # alacritty has zoom in and out
+              terminal = "alacritty";
+              # terminal = "kitty";
               # if you have polybar active remove default bars configuration
               bars = [ ];
               colors.urgent = themes.nord.globals.colors.urgent;
