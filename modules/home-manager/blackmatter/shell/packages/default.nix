@@ -35,6 +35,17 @@ in
       home.packages = with pkgs;
         [
           docker
+          lazydocker
+          nixopsUnstable
+          lazygit
+          twitch-tui
+          wiki-tui
+          tuir
+          spotify-tui
+          saml2aws
+          tuifeed
+          kompose
+          podman-compose
           # TODO: install later when macos build issue is over
           # tree
         ]
@@ -72,23 +83,11 @@ in
         ]
         ++ lib.optionals isLinux [
           docker-compose-alternative
-          nixopsUnstable
-          s-tui
-          lazydocker
-          lazygit
           traceroute
           iproute2
+          s-tui
           sheldon
-          fcitx5
           julia
-          twitch-tui
-          wiki-tui
-          tuir
-          spotify-tui
-          saml2aws
-          tuifeed
-          kompose
-          podman-compose
         ];
     })
   ];
