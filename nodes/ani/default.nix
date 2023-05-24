@@ -8,7 +8,7 @@
     "python2.7-pyjwt-1.7.1"
   ];
 
-  nix.settings.sandbox = true;
+  nix.settings.sandbox = false;
   nix.package = pkgs.nixFlakes;
   nix.extraOptions = "experimental-features = nix-command flakes";
   services.nix-daemon.enable = true;

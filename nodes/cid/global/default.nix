@@ -4,7 +4,8 @@
   home-manager.useUserPackages = true;
   networking.hostName = "cid";
   services.nix-daemon.enable = true;
-  nix.settings.sandbox = true;
+  # false because my config size blows up the sandbox
+  nix.settings.sandbox = false;
   nix.extraOptions = "experimental-features = nix-command flakes";
   nix.package = pkgs.nixFlakes;
   documentation = {
