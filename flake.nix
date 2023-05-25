@@ -128,6 +128,9 @@
           inherit specialArgs extraSpecialArgs funcs;
           packages =
             {
+              x86_64-darwin =
+                flake-utils.lib.flattenTree
+                  localPackages;
               x86_64-linux =
                 flake-utils.lib.flattenTree
                   localPackages;
