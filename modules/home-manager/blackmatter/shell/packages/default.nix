@@ -35,6 +35,7 @@ in
       home.packages = with pkgs;
         [
           docker
+          delve
           lazydocker
           nixopsUnstable
           lazygit
