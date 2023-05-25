@@ -123,7 +123,6 @@
           };
         in
         {
-          overlays = import ./overlays;
           # attach to outputs so you can access it in nixos module
           # and pass to home-manager modules called by nixos modules
           inherit specialArgs extraSpecialArgs funcs;

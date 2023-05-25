@@ -4,6 +4,7 @@ args:
 let
   # imports
   pkgs = args.pkgs;
+  stdenv = args.stdenv;
 
   # values
   name = "neovim";
@@ -13,13 +14,13 @@ let
   sha256 = "1pzlrwz9c3hf79hhzfhmz5wh2kbypb4dxn4ajg6pi9n3yq0vh6iz";
 
   # grab the source
-  src = fetchFromGitHub { inherit owner repo rev sha256; };
+  src = pkgs.lib.fetchFromGitHub { inherit owner repo rev sha256; };
 
 in
 
 stdenv.mkDerivation {
   inherit name src;
-  buildInputs = [
+  buildInputs = with pkgs;[
     pkgconfig
     libX11
     libXt
@@ -32,7 +33,7 @@ stdenv.mkDerivation {
     unibilium
     xorg.libXtst
   ];
-  nativeBuildInputs = [
+  nativeBuildInputs = with pkgs;[
     pkgconfig
   ];
   buildPhase = ''
