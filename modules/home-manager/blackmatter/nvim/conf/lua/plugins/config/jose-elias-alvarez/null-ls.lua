@@ -5,6 +5,7 @@ function M.setup()
 		nls.builtins.formatting.black,
 		nls.builtins.formatting.shfmt,
 		nls.builtins.formatting.prettier,
+		nls.builtins.formatting.rubocop,
 		nls.builtins.code_actions.gitsigns,
 		nls.builtins.code_actions.eslint_d,
 		nls.builtins.code_actions.gitrebase,
