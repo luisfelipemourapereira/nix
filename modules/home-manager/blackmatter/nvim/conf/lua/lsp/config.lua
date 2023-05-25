@@ -15,6 +15,7 @@ M["enabled_languages"] = {
 	"neocmake",
 	"pyright",
 	"ruby_ls",
+	"sorbet",
 	"lua_ls",
 	"bashls",
 	"cssls",
