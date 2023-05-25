@@ -89,11 +89,6 @@
             };
           };
 
-          stitchesMod = { ... }: {
-            environment.systemPackages = [
-              stitches.packages.aarch64-darwin.default
-            ];
-          };
 
           darwin.configurations = {
             # personal macos laptop
@@ -108,14 +103,20 @@
               ];
             };
 
+            cidStitchesMod = { ... }: {
+              environment.systemPackages = [
+                stitches.packages.aarch64-darwin.default
+              ];
+            };
             # work macos laptop
             cid = nix-darwin.lib.darwinSystem {
-              specialArgs = { inherit outputs; };
+              specialArgs = {
+                inherit outputs;
+              };
               system = "x86_64-darwin";
               modules = [
                 home-manager.darwinModules.home-manager
                 ./nodes/cid
-                stitchesMod
               ];
             };
 
