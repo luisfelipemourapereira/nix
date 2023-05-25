@@ -61,7 +61,7 @@
           inherit (self) outputs;
           home.modules = import ./modules/home-manager;
           node.modules = import ./modules/nixos;
-          specialArgs = { inherit inputs outputs stdenv; };
+          specialArgs = { inherit inputs outputs stdenv pkgs; };
           extraSpecialArgs = specialArgs;
           localPackages = import ./pkgs specialArgs;
           home.configurations = {
