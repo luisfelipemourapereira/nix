@@ -13,22 +13,6 @@ in
   config =
     mkMerge [
       (mkIf cfg.packages.enable {
-        # There are two strategies for dealing with unfree packages
-        # You can either generally allow unfree packages or white-list
-        # them.  I have chosen to white-list.
-        # nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
-        #   "ssm-session-manager-plugin"
-        #   "spotify-unwrapped"
-        #   "nvidia-settings"
-        #   "1password-cli"
-        #   "nvidia-x11"
-        #   "1password"
-        #   "discord"
-        #   "spotify"
-        #   "slack"
-        #   "zoom"
-        # ];
-
         environment.systemPackages =
           with pkgs;
           with inputs;
@@ -106,12 +90,6 @@ in
           pkgs.gnome.tali
           pkgs.gnome-tour
         ];
-
-        # nixpkgs.config.permittedInsecurePackages = [
-        #   "python2.7-certifi-2021.10.8"
-        #   "python2.7-pyjwt-1.7.1"
-        #   "python-2.7.18.6"
-        # ];
       })
     ];
 }

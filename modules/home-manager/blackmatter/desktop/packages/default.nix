@@ -41,24 +41,6 @@ in
         xdotool
         xtitle
       ];
-
-      # There are two strategies for dealing with unfree packages
-      # You can either generally allow unfree packages or white-list
-      # them.  I have chosen to white-list.
-      # nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
-      #   "ssm-session-manager-plugin"
-      #   "spotify-unwrapped"
-      #   "nvidia-settings"
-      #   "1password-cli"
-      #   "nvidia-x11"
-      #   "1password"
-      #   "obsidian"
-      #   "discord-canary"
-      #   "discord"
-      #   "spotify"
-      #   "slack"
-      #   "zoom"
-      # ];
     })
   ];
 }

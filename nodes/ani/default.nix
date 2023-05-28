@@ -4,10 +4,6 @@
   system.stateVersion = 4;
   networking.hostName = "ani";
 
-  # nixpkgs.config.permittedInsecurePackages = [
-  #   "python2.7-pyjwt-1.7.1"
-  # ];
-
   nix.settings.sandbox = false;
   nix.package = pkgs.nixFlakes;
   nix.extraOptions = "experimental-features = nix-command flakes";
@@ -30,8 +26,6 @@
     info.enable = false;
     man.enable = false;
   };
-
-  # nixpkgs.config.allowUnfree = true;
 
   services.yabai.enable = false;
   services.yabai.enableScriptingAddition = true;
