@@ -1,4 +1,4 @@
-{ outputs, pkgs, ... }:
+{ outputs, pkgs, lib, ... }:
 {
   imports = [
     outputs.nixosModules.blackmatter
