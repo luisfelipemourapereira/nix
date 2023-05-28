@@ -74,9 +74,9 @@
                 # (https://nixos.org/manual/nixpkgs/stable/#idm140737322551056)
 
                 config.allowUnfree = false;
-                config.permittedInsecurePackages = [
-                  "python2.7-pyjwt-1.7.1"
-                ];
+                # config.permittedInsecurePackages = [
+                #   "python2.7-pyjwt-1.7.1"
+                # ];
 
               }
             );
@@ -103,11 +103,6 @@
             rai = nixpkgs.lib.nixosSystem {
               inherit system specialArgs;
               modules = [
-                {
-                  nixpkgs.config.permittedInsecurePackages = [
-                    "python2.7-pyjwt-1.7.1"
-                  ];
-                }
                 nodes/rai
               ];
             };
