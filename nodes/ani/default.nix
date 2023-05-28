@@ -31,7 +31,7 @@
     man.enable = false;
   };
 
-  nixpkgs.config.allowUnfree = true;
+  # nixpkgs.config.allowUnfree = true;
 
   services.yabai.enable = false;
   services.yabai.enableScriptingAddition = true;
