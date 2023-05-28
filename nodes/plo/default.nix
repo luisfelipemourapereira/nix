@@ -5,6 +5,8 @@
     outputs.nixosModules.antimatter
   ];
 
+  nixpkgs.config.allowUnfree = true;
+
   blackmatter.host = "plo";
   blackmatter.dns.enable = true;
   blackmatter.sops.enable = true;
