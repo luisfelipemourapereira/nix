@@ -4,9 +4,9 @@
   system.stateVersion = 4;
   networking.hostName = "ani";
 
-  nixpkgs.config.permittedInsecurePackages = [
-    "python2.7-pyjwt-1.7.1"
-  ];
+  # nixpkgs.config.permittedInsecurePackages = [
+  #   "python2.7-pyjwt-1.7.1"
+  # ];
 
   nix.settings.sandbox = false;
   nix.package = pkgs.nixFlakes;

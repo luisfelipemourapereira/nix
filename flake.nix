@@ -73,7 +73,11 @@
                 # Instead, you should set nixpkgs configs here
                 # (https://nixos.org/manual/nixpkgs/stable/#idm140737322551056)
 
-                config.allowUnfree = true;
+                config.allowUnfree = false;
+                config.permittedInsecurePackages = [
+                  "python2.7-pyjwt-1.7.1"
+                ];
+
               }
             );
           stdenv = pkgs.stdenv;
@@ -99,7 +103,11 @@
             rai = nixpkgs.lib.nixosSystem {
               inherit system specialArgs;
               modules = [
-                { nixpkgs.config.allowUnfree = true; }
+                {
+                  nixpkgs.config.permittedInsecurePackages = [
+                    "python2.7-pyjwt-1.7.1"
+                  ];
+                }
                 nodes/rai
               ];
             };
