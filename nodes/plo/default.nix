@@ -4,6 +4,9 @@
     outputs.nixosModules.blackmatter
     outputs.nixosModules.antimatter
   ];
+
+  nixpkgs.config.allowUnfree = true;
+
   blackmatter.host = "plo";
   blackmatter.dns.enable = true;
   blackmatter.sops.enable = true;
@@ -23,6 +26,7 @@
 
   antimatter.services.consul.enable = true;
   antimatter.services.nomad.enable = true;
+
   # TODO: remove after pinger IT does it's job
   # globalprotect-openconnect exists to service pinger
   # the pinger vpn currently does not implement a route
@@ -51,19 +55,21 @@
   # so this is to hack around that for now until pinger-apps and pinger-iac
   # can be fixed.
   environment.systemPackages = [ pkgs.bash ];
+
   nixpkgs.config.fileSystems."/bin/bash" = {
     source = "${pkgs.bash}/bin/bash";
     symlink = true;
   };
-  systemd.services.create-bash-symlink = {
-    description = "Create symlink for /bin/bash";
-    wantedBy = [ "multi-user.target" ];
-    script = ''
-      ! [ -L /bin/bash ] && ln -sf ${pkgs.bash}/bin/bash /bin/bash
-    '';
-    serviceConfig = {
-      RemainAfterExit = "yes";
-      Type = "oneshot";
-    };
-  };
+
+  # systemd.services.create-bash-symlink = {
+  #   description = "Create symlink for /bin/bash";
+  #   wantedBy = [ "multi-user.target" ];
+  #   script = ''
+  #     ! [ -e /bin/bash ] && ln -sf ${pkgs.bash}/bin/bash /bin/bash
+  #   '';
+  #   serviceConfig = {
+  #     RemainAfterExit = "yes";
+  #     Type = "oneshot";
+  #   };
+  # };
 }

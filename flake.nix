@@ -56,13 +56,32 @@
               modules = [ users/${name}/${node}/home.nix ];
             };
           system = "x86_64-linux";
-          pkgs = nixpkgs.legacyPackages."${system}";
+
+          # This instantiates nixpkgs for each system listed
+          # Allowing you to configure it (e.g. allowUnfree)
+          # Our configurations will use these instances
+          pkgs = legacyPackages.${system};
+          legacyPackages = nixpkgs.lib.genAttrs [
+            "x86_64-linux"
+            "x86_64-darwin"
+            "aarch64-darwin"
+          ]
+            (system:
+              import inputs.nixpkgs {
+                inherit system;
+                # NOTE: Using `nixpkgs.config` in your NixOS config won't work
+                # Instead, you should set nixpkgs configs here
+                # (https://nixos.org/manual/nixpkgs/stable/#idm140737322551056)
+
+                config.allowUnfree = true;
+              }
+            );
           stdenv = pkgs.stdenv;
           inherit (self) outputs;
           home.modules = import ./modules/home-manager;
           node.modules = import ./modules/nixos;
-          specialArgs = { inherit inputs outputs stdenv pkgs; };
-          extraSpecialArgs = specialArgs;
+          specialArgs = { inherit inputs outputs stdenv; };
+          extraSpecialArgs = specialArgs // { inherit pkgs; };
           localPackages = import ./pkgs specialArgs;
           home.configurations = {
             "luis@rai" =
@@ -79,7 +98,10 @@
             # coding desktop
             rai = nixpkgs.lib.nixosSystem {
               inherit system specialArgs;
-              modules = [ nodes/rai ];
+              modules = [
+                { nixpkgs.config.allowUnfree = true; }
+                nodes/rai
+              ];
             };
 
             # gaming desktop
