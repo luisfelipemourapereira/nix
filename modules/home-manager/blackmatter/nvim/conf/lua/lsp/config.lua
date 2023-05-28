@@ -9,7 +9,6 @@ M["enabled_languages"] = {
 	-- "docker-compose-language-server",
 	"rust_analyzer",
 	"terraform_lsp",
-	"solargraph",
 	"tsserver",
 	"dockerls",
 	"groovyls",
@@ -26,6 +25,9 @@ M["enabled_languages"] = {
 
 -- languages that exist but are not automatically installed
 M["autoinstalled_langauges_disabled"] = {
+	-- solagraph is god awful slow
+	-- its not even worth loading
+	"solargraph",
 	"terraformls",
 	"sorbet",
 	"ruby_ls",
