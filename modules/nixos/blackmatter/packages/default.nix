@@ -37,7 +37,8 @@ in
             fcitx5-configtool
             # docker-client
             traceroute
-            terraform
+            # use tfswitch to load terraform binary
+            # terraform
             # comes up as undefined
             # pkgconfig
             nix-index
