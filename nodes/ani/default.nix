@@ -80,7 +80,7 @@
     [
       # docker-client
       # docker
-      terraform
+      # terraform
       # comes up as undefined
       # pkgconfig
       nix-index
