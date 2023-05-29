@@ -1,4 +1,4 @@
-{ config, pkgs, inputs, ... }: {
+{ config, pkgs, inputs, outputs, ... }: {
   users.users = {
     ldesiqueira = {
       uid = 1002;
@@ -14,6 +14,7 @@
       programs.home-manager.enable = true;
 
       blackmatter.programs.nvim.enable = true;
+      # blackmatter.programs.nvim.package = outputs.packages.aarch64-darwin.drzln-neovim;
       blackmatter.shell.enable = true;
       blackmatter.desktop.alacritty.enable = true;
       blackmatter.envrc.enable = true;

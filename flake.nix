@@ -86,7 +86,7 @@
           node.modules = import ./modules/nixos;
           specialArgs = { inherit inputs outputs stdenv; };
           extraSpecialArgs = specialArgs // { inherit pkgs; };
-          localPackages = import ./pkgs specialArgs;
+          localPackages = import ./pkgs extraSpecialArgs;
           home.configurations = {
             "luis@rai" =
               mkHomeConfiguration "luis" "rai" pkgs extraSpecialArgs;
@@ -157,6 +157,9 @@
                 flake-utils.lib.flattenTree
                   localPackages;
               x86_64-linux =
+                flake-utils.lib.flattenTree
+                  localPackages;
+              aarch64-darwin =
                 flake-utils.lib.flattenTree
                   localPackages;
             };

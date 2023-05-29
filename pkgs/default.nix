@@ -5,6 +5,6 @@ args: {
     import ./tree-sitter/grammars/tree-sitter/tree-sitter-ruby/default.nix args;
   tailwind-intellisense =
     import ./language-servers/css/tailwindlabs/tailwindcss-intellisense/default.nix args;
-  neovim =
+  drzln-neovim =
     import ./editors/nvim/default.nix args;
 }
