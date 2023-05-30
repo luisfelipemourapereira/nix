@@ -20,12 +20,14 @@ in
         # must be present to account for Jai's architectural ideas
         boot.kernel.sysctl."net.ipv4.ip_unprivileged_port_start" = "80";
 
+        # not using nomad at the moment but may be relevant when
+        # you are.
         # boot.initrd.cgroups = {
-        # 	supportUserCgroups = true;
-        # 	userCgroups = {
-        # 		# permit nomad user to manager cgroups
-        # 		"nomad" = true;
-        # 	};
+        #   supportUserCgroups = true;
+        #   userCgroups = {
+        #     # permit nomad user to manager cgroups
+        #     "nomad" = true;
+        #   };
         # };
       })
 
