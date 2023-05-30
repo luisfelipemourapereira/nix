@@ -42,8 +42,8 @@ in
           xkbOptions = "caps:escape";
           libinput = { enable = true; };
           displayManager = {
-            # defaultSession = "none+i3";
-            defaultSession = "none+leftwm";
+            defaultSession = "none+i3";
+            # defaultSession = "none+leftwm";
             sddm = {
               enable = true;
               theme = "nord";
