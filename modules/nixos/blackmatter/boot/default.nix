@@ -14,19 +14,23 @@ in
 
   config =
     mkMerge [
-			(mkIf cfg.boot.enable {
-				boot.kernel.sysctl."kernel.unprivileged_userns_clone" = "1";
-				# boot.initrd.cgroups = {
-				# 	supportUserCgroups = true;
-				# 	userCgroups = {
-				# 		# permit nomad user to manager cgroups
-				# 		"nomad" = true;
-				# 	};
-				# };
-			})
+      (mkIf cfg.boot.enable {
+        boot.kernel.sysctl."kernel.unprivileged_userns_clone" = "1";
+
+        # must be present to account for Jai's architectural ideas
+        boot.kernel.sysctl."net.ipv4.ip_unprivileged_port_start" = "80";
+
+        # boot.initrd.cgroups = {
+        # 	supportUserCgroups = true;
+        # 	userCgroups = {
+        # 		# permit nomad user to manager cgroups
+        # 		"nomad" = true;
+        # 	};
+        # };
+      })
 
       (mkIf cfg.boot.rai.enable {
-				blackmatter.boot.enable = true;
+        blackmatter.boot.enable = true;
 
         # enable virtualization inside of virtualization
         # https://nixos.wiki/wiki/Libvirt
@@ -50,7 +54,7 @@ in
       })
 
       (mkIf cfg.boot.plo.enable {
-				blackmatter.boot.enable = true;
+        blackmatter.boot.enable = true;
 
         # enable virtualization inside of virtualization
         # https://nixos.wiki/wiki/Libvirt
