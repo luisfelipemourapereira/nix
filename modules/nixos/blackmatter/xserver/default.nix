@@ -42,8 +42,8 @@ in
           xkbOptions = "caps:escape";
           libinput = { enable = true; };
           displayManager = {
-            # defaultSession = "none+i3";
-            defaultSession = "none+leftwm";
+            defaultSession = "none+i3";
+            # defaultSession = "none+leftwm";
             sddm = {
               enable = true;
               theme = "nord";
@@ -65,9 +65,9 @@ in
             };
           };
           windowManager = {
-            leftwm = { enable = true; };
+            leftwm = { enable = false; };
             i3 = {
-              enable = false;
+              enable = true;
               extraPackages = with pkgs; [
                 i3blocks
                 i3status

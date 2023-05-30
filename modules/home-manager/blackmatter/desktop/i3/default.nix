@@ -90,11 +90,15 @@ in
   };
   config = mkMerge [
     (mkIf cfg.desktop.i3.enable {
+      xdg.configFile."leftwm/config.ron".source = ./leftwm.ron;
+      xdg.configFile."leftwm/themes/theme.toml".text = ''
+        status_bar = "polybar main"
+      '';
       xsession.enable = true;
       xsession = {
         windowManager = {
           i3 = {
-            enable = true;
+            enable = false;
             config = {
               window.border = 0;
               fonts = [ themes.nord.styling.font-0 ];
