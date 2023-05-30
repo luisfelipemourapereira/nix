@@ -3,9 +3,7 @@ with lib;
 let
   cfg = config.blackmatter;
   monitors = cfg.desktop.monitors;
-  # monitors.main = { name = "DisplayPort-0"; };
-  # refactor this is for plo
-  # monitors.main = { name = "DP-2"; };
+
   nord.graphics.indicator = ">";
   nord.graphics.border.child = "1";
   nord.colors = rec {
@@ -159,6 +157,8 @@ in
               # screen locking
               # TODO: for now set directly but move to config file in the future
               bindsym Mod1+Shift+l exec i3lock -c "${nord.colors.i3lock.background.blue}" -u
+
+              exec --no-startup-id ${pkgs.xorg.xrandr}/bin/xrandr --output ${monitors.main.name} --mode ${monitors.main.mode} --rate ${monitors.main.rate}
             '';
           };
         };

@@ -83,8 +83,11 @@ in
   options = {
     blackmatter = {
       desktop.enable = mkEnableOption "desktop";
+
+      # provide a monitor configuration
       desktop.monitors = mkOption {
         type = types.attrs;
+        description = "monitor related attributes";
       };
     };
   };
