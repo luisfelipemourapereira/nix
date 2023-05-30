@@ -132,7 +132,7 @@ in
       xsession = {
         windowManager = {
           i3 = {
-            enable = false;
+            enable = true;
             config = {
               window.border = 0;
               fonts = [ themes.nord.styling.font-0 ];
