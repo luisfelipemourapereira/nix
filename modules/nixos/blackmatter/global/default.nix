@@ -5,7 +5,6 @@ let
 in
 {
   imports = [
-    inputs.nix-pub.nixosModules.consul
     inputs.home-manager.nixosModules.home-manager
   ];
 

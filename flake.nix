@@ -5,21 +5,19 @@
   inputs = {
     dream2nix.url = github:nix-community/dream2nix?branch=main;
     nixpkgs.url = github:NixOS/nixpkgs?branch=release-22.11;
-    home-manager.url = github:luisfelipemourapereira/home-manager?branch=release-22.11;
+    home-manager.url = github:drzln/home-manager?branch=release-22.11;
     flake-utils.url = github:numtide/flake-utils?branch=master;
     nix-darwin.url = github:LnL7/nix-darwin?branch=master;
     pythonix.url = github:Mic92/pythonix?branch=master;
     sops-nix.url = github:Mic92/sops-nix;
     nix-funcs.url = github:t3rro/nix-funcs;
-    nix-pub.url = github:luisfelipemourapereira/nix-pub;
     bundix = {
       url = github:nix-community/bundix?branch=master;
       flake = false;
     };
     hydra.url = github:NixOS/hydra?branch=master;
     arion.url = github:hercules-ci/arion?branch=master;
-    cauda.url = git+ssh://git@github.com/luisfelipemourapereira/cauda?ref=main;
-    stitches.url = git+ssh://git@github.com/luisfelipemourapereira/stitches?ref=main;
+    stitches.url = github:drzln/stitches?ref=main;
     nixt = {
       url = github:nix-community/nixt?branch=master;
       flake = false;
@@ -36,12 +34,10 @@
     , pythonix
     , sops-nix
     , stitches
-    , nix-pub
     , nixpkgs
     , bundix
     , hydra
     , arion
-    , cauda
     , nixt
     , self
     , nur
