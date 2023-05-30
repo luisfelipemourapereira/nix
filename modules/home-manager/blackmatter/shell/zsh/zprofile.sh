@@ -4,6 +4,7 @@
 # nix intalled zulu java hits the path
 # before the native macos java
 export PATH=/etc/profiles/per-user/$USER/bin:$PATH
+export PATH=~/bin:$PATH
 
 function load_shellz_mod() {
 	[ -d ~/.config/shellz/$1 ] && source ~/.config/shellz/$1/main.sh
