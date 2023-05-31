@@ -36,6 +36,7 @@ in
         [
           docker
           delve
+          tree
           lazydocker
           nixopsUnstable
           lazygit
