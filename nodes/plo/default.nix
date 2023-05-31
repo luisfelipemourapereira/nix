@@ -34,7 +34,7 @@
   networking = {
     defaultGateway = "192.168.50.1";
     useDHCP = false;
-    # interfaces.tun1 = {
+    # interfaces.tun0 = {
     #   ipv4.routes = [{
     #     address = "10.160.0.0";
     #     prefixLength = 16;
