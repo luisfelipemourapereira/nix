@@ -45,13 +45,39 @@
     let
       systems =
         let
+          #####################################################################
+          # imports
+          #####################################################################
+          # import some stuff and set values
+
+          inherit (self) outputs;
           funcs = import ./funcs;
+          stdenv = pkgs.stdenv;
+          home.modules = import ./modules/home-manager;
+          node.modules = import ./modules/nixos;
+          specialArgs = { inherit inputs outputs stdenv; };
+          extraSpecialArgs = specialArgs // { inherit pkgs; };
+          localPackages = import ./pkgs extraSpecialArgs;
+
+          # end imports
+
+          #####################################################################
+          # func helpers
+          #####################################################################
+
+          # make a home configuration structure according to some rules
           mkHomeConfiguration = name: node: pkgs: extraSpecialArgs:
             home-manager.lib.homeManagerConfiguration {
               inherit extraSpecialArgs pkgs;
               modules = [ users/${name}/${node}/home.nix ];
             };
+
+          # end func helpers
           system = "x86_64-linux";
+
+          #####################################################################
+          # configure nixpkgs
+          #####################################################################
 
           # This instantiates nixpkgs for each system listed
           # Allowing you to configure it (e.g. allowUnfree)
@@ -70,19 +96,16 @@
                 # (https://nixos.org/manual/nixpkgs/stable/#idm140737322551056)
 
                 config.allowUnfree = true;
-                # config.permittedInsecurePackages = [
-                #   "python2.7-pyjwt-1.7.1"
-                # ];
-
               }
             );
-          stdenv = pkgs.stdenv;
-          inherit (self) outputs;
-          home.modules = import ./modules/home-manager;
-          node.modules = import ./modules/nixos;
-          specialArgs = { inherit inputs outputs stdenv; };
-          extraSpecialArgs = specialArgs // { inherit pkgs; };
-          localPackages = import ./pkgs extraSpecialArgs;
+
+          # end configure nixpkgs
+
+          #####################################################################
+          # home configurations
+          # these are exposed to outputs
+          #####################################################################
+
           home.configurations = {
             "luis@rai" =
               mkHomeConfiguration "luis" "rai" pkgs extraSpecialArgs;
@@ -93,6 +116,13 @@
             "t3rro@plo" =
               mkHomeConfiguration "t3rro" "plo" pkgs extraSpecialArgs;
           };
+
+          # end home configurations
+
+          #####################################################################
+          # nixos configurations
+          #####################################################################
+
           node.configurations = rec {
 
             # coding desktop
@@ -110,6 +140,12 @@
             };
           };
 
+          # end nixos configurations
+
+
+          #####################################################################
+          # nix-darwin configurations
+          #####################################################################
 
           darwin.configurations = {
             # personal macos laptop
@@ -124,11 +160,14 @@
               ];
             };
 
+            # TODO: module to add stitches, consider
+            # TODO: making more concise
             cidStitchesMod = { ... }: {
               environment.systemPackages = [
                 stitches.packages.aarch64-darwin.default
               ];
             };
+
             # work macos laptop
             cid = nix-darwin.lib.darwinSystem {
               specialArgs = {
@@ -140,13 +179,21 @@
                 ./nodes/cid
               ];
             };
-
           };
+
+          # end nix-darwin configurations
         in
         {
           # attach to outputs so you can access it in nixos module
           # and pass to home-manager modules called by nixos modules
           inherit specialArgs extraSpecialArgs funcs;
+
+          #####################################################################
+          # packages
+          # offered by outputs
+          # access with: outputs.packages.${system}.${pname}
+          #####################################################################
+
           packages =
             {
               x86_64-darwin =
@@ -159,6 +206,9 @@
                 flake-utils.lib.flattenTree
                   localPackages;
             };
+
+          # end packages
+
           homeManagerModules = home.modules;
           homeConfigurations = home.configurations;
           nixosModules = node.modules;
