@@ -2,6 +2,10 @@
 
   description = "nix configurations";
 
+  #############################################################################
+  # inputs
+  #############################################################################
+
   inputs = {
     dream2nix.url = github:nix-community/dream2nix?branch=main;
     nixpkgs.url = github:NixOS/nixpkgs?branch=release-22.11;
@@ -24,6 +28,12 @@
     };
     nur.url = github:nix-community/nur;
   };
+
+  # end inputs
+
+  #############################################################################
+  # outputs
+  #############################################################################
 
   outputs =
     { home-manager
@@ -209,12 +219,22 @@
 
           # end packages
 
+          #####################################################################
+          # expose to outputs
+          # expose these things to nix flake show
+          # also to anything that uses this flake
+          # also to internal modules via outputs
+          #####################################################################
+
           homeManagerModules = home.modules;
           homeConfigurations = home.configurations;
           nixosModules = node.modules;
           nixosConfigurations = node.configurations;
           darwinConfigurations = darwin.configurations;
+
+          # end expose to outputs
         };
     in
     systems;
+  # end outputs
 }
