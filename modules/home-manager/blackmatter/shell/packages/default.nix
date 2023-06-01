@@ -4,6 +4,10 @@ let
   cfg = config.blackmatter;
   inherit (pkgs.stdenv.hostPlatform) isLinux isDarwin;
 
+  #############################################################################
+  # docker compose custom build
+  #############################################################################
+
   # linux only
   docker-compose-alternative = stdenv.mkDerivation rec {
     name = "docker-compose";
@@ -20,14 +24,26 @@ let
       chmod +x $out/bin/docker-compose
     '';
   };
+
+  # end docker compose custom build
 in
 {
+  #############################################################################
+  # options
+  #############################################################################
+
   options = {
     blackmatter = {
       shell.packages.enable =
         mkEnableOption "shell.packages";
     };
   };
+
+  # end options
+
+  #############################################################################
+  # config
+  #############################################################################
 
   config = mkMerge [
     (mkIf cfg.shell.packages.enable {
@@ -93,4 +109,6 @@ in
         ];
     })
   ];
+
+  # end config
 }
