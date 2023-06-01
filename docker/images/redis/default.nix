@@ -1,5 +1,8 @@
 # https://lethalman.blogspot.com/2016/04/cheap-docker-images-with-nix_15.html
 # https://nixos.org/guides/building-and-running-docker-images.html
+###############################################################################
+# TODO: not in use
+###############################################################################
 { pkgs ? import <nixpkgs> { } }:
 pkgs.dockerTools.buildImage {
   name = "redis";
@@ -25,3 +28,4 @@ pkgs.dockerTools.buildImage {
   diskSize = 1024;
   buildVMMemorySize = 512;
 }
+# TODO: not in use
