@@ -1,3 +1,1 @@
-{
-  mkHomePath = user: host: ./users/${user}/${host}/home.nix;
-}
+{ mkHomePath = user: host: ./users/${user}/${host}/home.nix; }
