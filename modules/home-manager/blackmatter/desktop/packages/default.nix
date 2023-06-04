@@ -40,6 +40,7 @@ in
         obsidian
         xdotool
         xtitle
+        freecad
       ];
     })
   ];
