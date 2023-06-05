@@ -86,6 +86,7 @@ in
         ++ import ./lua pkgs
         ++ import ./php pkgs
         ++ lib.optionals isDarwin [
+          xhyve
           (zulu.overrideAttrs (_:
             {
               # hack the jdk package because of a dumb bug on macos
