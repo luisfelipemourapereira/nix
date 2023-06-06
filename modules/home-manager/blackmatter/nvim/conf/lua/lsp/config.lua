@@ -8,8 +8,8 @@ local M = {}
 M["enabled_languages"] = {
 	-- "docker-compose-language-server",
 	"rust_analyzer",
-	"terraform_lsp",
 	"tsserver",
+	"terraformls",
 	"dockerls",
 	"groovyls",
 	"neocmake",
@@ -27,8 +27,8 @@ M["enabled_languages"] = {
 M["autoinstalled_langauges_disabled"] = {
 	-- solagraph is god awful slow
 	-- its not even worth loading
+	"terraform_lsp",
 	"solargraph",
-	"terraformls",
 	"sorbet",
 	"ruby_ls",
 	"eslint",
