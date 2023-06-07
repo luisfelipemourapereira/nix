@@ -51,6 +51,7 @@ in
       home.packages = with pkgs;
         [
           golint
+          duckdb
           docker
           delve
           tree
