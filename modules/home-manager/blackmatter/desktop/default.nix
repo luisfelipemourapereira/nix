@@ -76,8 +76,6 @@ in
     ./firefox
     ./i3
     ./kitty
-    # ./chrome
-    # ./sway
   ];
 
   options = {

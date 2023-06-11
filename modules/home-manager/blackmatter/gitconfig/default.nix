@@ -24,17 +24,17 @@ in
     (mkIf cfg.enable {
       home.file.".gitconfig".text = ''
         [user]
-					email = ${cfg.email}
-					name = ${cfg.user}
+        	email = ${cfg.email}
+        	name = ${cfg.user}
 
         [merge]
-					default = merge
+        	default = merge
 
         [core]
-					pager = delta --dark --line-numbers
+        	pager = delta --dark --line-numbers
 
         [delta]
-					side-by-side = true
+        	side-by-side = true
       '';
     })
   ];
