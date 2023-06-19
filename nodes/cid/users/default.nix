@@ -11,6 +11,12 @@
       imports = [ ../../../modules/home-manager/blackmatter ];
 
       home.stateVersion = "21.11";
+      home.sessionVariables = {
+        EDITOR = "vim";
+        AWS_REGION = "us-west-2";
+        AWS_DEFAULT_REGION = "us-west-2";
+        AWS_PROFILE = "pinger-organization";
+      };
       programs.home-manager.enable = true;
 
       blackmatter.programs.nvim.enable = true;
