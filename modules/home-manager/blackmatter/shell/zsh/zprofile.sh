@@ -38,4 +38,4 @@ alias cd=z
 # integrate zoxide
 eval "$(zoxide init zsh)"
 #
-eval "$(~/.rbenv/bin/rbenv init - zsh)"
+[ -d ~/.rbenv/bin ] && eval "$(~/.rbenv/bin/rbenv init - zsh)"
