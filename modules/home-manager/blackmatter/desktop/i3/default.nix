@@ -178,6 +178,27 @@ in
               date = "%Y-%m-%d";
               time = "%H:%M %Z";
             };
+            "module/volume" = {
+              type = "internal/alsa";
+              master-mixer = "Master";
+              speaker-mixer = "Speaker";
+              headphone-mixer = "Headphone";
+              mixer = "default";
+              interval = 1;
+              format-volume = "♪ <label-volume>";
+              label-volume = "VOL %percentage%%";
+              label-muted = "(muted)";
+              ramp-volume-0 = "▁";
+              ramp-volume-1 = "▂";
+              ramp-volume-2 = "▃";
+              ramp-volume-3 = "▄";
+              ramp-volume-4 = "▅";
+              ramp-volume-5 = "▆";
+              ramp-volume-6 = "▇";
+              ramp-volume-7 = "█";
+              ramp-headphones-0 = "○";
+              ramp-headphones-1 = "◉";
+            };
             "bar/top" = {
               monitor = monitors.main.name;
               modules-right = "date";
