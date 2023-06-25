@@ -42,23 +42,24 @@ in
           xkbOptions = "caps:escape";
           libinput = { enable = true; };
           displayManager = {
-            defaultSession = "none+i3";
+            defaultSession = "gdm+gnome";
+            # defaultSession = "none+i3";
             # defaultSession = "none+leftwm";
             sddm = {
-              enable = true;
+              enable = false;
               theme = "nord";
             };
             lightdm = {
               enable = false;
             };
             gdm = {
-              enable = false;
+              enable = true;
               wayland = false;
             };
           };
           desktopManager = {
             gnome = {
-              enable = false;
+              enable = true;
             };
             xterm = {
               enable = false;
