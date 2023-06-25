@@ -42,7 +42,7 @@ in
           xkbOptions = "caps:escape";
           libinput = { enable = true; };
           displayManager = {
-            defaultSession = "gdm+gnome";
+            defaultSession = "gnome";
             # defaultSession = "none+i3";
             # defaultSession = "none+leftwm";
             sddm = {
