@@ -58,6 +58,7 @@ in
           tree
           lazydocker
           nixopsUnstable
+          postgresql_15
           lazygit
           twitch-tui
           wiki-tui
