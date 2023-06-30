@@ -5,6 +5,16 @@ let
   inherit (pkgs.stdenv.hostPlatform) isLinux isDarwin;
 
   #############################################################################
+  # postgres
+  #############################################################################
+
+  postgres_with_libpq = pkgs.postgresql_15.overrideAttrs (oldAttrs: {
+    enableSystemd = false;
+  });
+
+  # end postgres
+
+  #############################################################################
   # docker compose custom build
   #############################################################################
 
@@ -58,7 +68,7 @@ in
           tree
           lazydocker
           nixopsUnstable
-          postgresql_15
+          postgres_with_libpq
           lazygit
           twitch-tui
           wiki-tui
