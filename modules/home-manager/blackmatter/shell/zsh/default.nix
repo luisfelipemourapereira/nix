@@ -23,6 +23,7 @@ in
       	home.packages = [ cfg.shell.zsh.package ];
   	xdg.configFile."shellz/rbenv/main.sh".source = ./rbenv/main.sh;
   	xdg.configFile."shellz/direnv/main.sh".source = ./direnv/main.sh;
+  	home.file.".direnvrc".source = ./direnv/direnvrc.sh;
   	xdg.configFile."shellz/path/main.sh".source = ./path/main.sh;
   	xdg.configFile."shellz/history/main.sh".source = ./history/main.sh;
   	xdg.configFile."shellz/sheldon/main.sh".source = ./sheldon/main.sh;
