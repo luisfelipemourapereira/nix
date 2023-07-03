@@ -25,7 +25,7 @@ in
         in
         [ openasar ];
 
-      xdg.configFile."discord/settings.json".text = "{\"SKIP_HOST_UPDATE\": true }";
+      xdg.configFile."discordcanary/settings.json".text = "{\"SKIP_HOST_UPDATE\": true }";
       # end discord
 
       home.packages = with pkgs;[
