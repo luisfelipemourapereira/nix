@@ -11,6 +11,10 @@ in
   };
   config = mkMerge [
     (mkIf cfg.desktop.packages.enable {
+      #########################################################################
+      # discord
+      #########################################################################
+
       # overlay the discord-canary package
       # to install openasar https://openasar.dev/
       nixpkgs.overlays =
@@ -20,6 +24,9 @@ in
           };
         in
         [ openasar ];
+
+      xdg.configFile."discord/settings.json".text = "{\"SKIP_HOST_UPDATE\": true }";
+      # end discord
 
       home.packages = with pkgs;[
         gnome3.gnome-tweaks
