@@ -39,7 +39,10 @@ in
 
       # makes it so rbenv install succeeds
       xdg.configFile."shellz/hooks/main.sh".text =
-        "export CPATH=\"${pkgs.zlib.dev}/include:$CPATH\"";
+        "export CPATH=\"${pkgs.zlib.dev}/include:$CPATH\"" +
+        "export LDFLAGS=\"-L${pkgs.zlib.out}/lib -L${pkgs.openssl.out}/lib\"" +
+        "export CPPFLAGS=\"-I${pkgs.zlib.dev}/include -I${pkgs.openssl.dev}/include\""
+      ;
 
       # end ruby deps shell hook
 
@@ -98,6 +101,5 @@ in
     })
   ];
 }
+
 # end shell packages
-
-
