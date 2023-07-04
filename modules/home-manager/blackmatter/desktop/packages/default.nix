@@ -1,3 +1,7 @@
+###############################################################################
+# shell packages
+# packages that have nothing to do with a gui or desktop setup
+###############################################################################
 { pkgs, lib, config, ... }:
 with lib;
 let
@@ -25,10 +29,41 @@ in
         in
         [ openasar ];
 
-      xdg.configFile."discordcanary/settings.json".text = "{\"SKIP_HOST_UPDATE\": true }";
+      xdg.configFile."discordcanary/settings.json".text =
+        "{\"SKIP_HOST_UPDATE\": true }";
       # end discord
 
       home.packages = with pkgs;[
+        #######################################################################
+        # ruby deps
+        # required for building rubies
+        #######################################################################
+
+        openssl
+        zlib
+        readline
+        autoconf
+        bash
+        bashInteractive
+        binutils
+        coreutils
+        diffutils
+        findutils
+        gdbm
+        gnugrep
+        gnused
+        libffi
+        libiconv
+        libtool
+        libyaml
+        ncurses
+        openssl.dev
+        pkg-config
+        which
+        zlib.dev
+
+        # end ruby deps
+
         gnome3.gnome-tweaks
         _1password-gui-beta
         _1password
@@ -52,3 +87,4 @@ in
     })
   ];
 }
+# end shell packages
