@@ -33,58 +33,71 @@ in
         "{\"SKIP_HOST_UPDATE\": true }";
       # end discord
 
-      home.packages = with pkgs;[
-        #######################################################################
-        # ruby deps
-        # required for building rubies
-        #######################################################################
+      #########################################################################
+      # ruby deps shell hook
+      #########################################################################
 
-        openssl
-        zlib
-        readline
-        autoconf
-        bash
-        bashInteractive
-        binutils
-        coreutils
-        diffutils
-        findutils
-        gdbm
-        gnugrep
-        gnused
-        libffi
-        libiconv
-        libtool
-        libyaml
-        ncurses
-        openssl.dev
-        pkg-config
-        which
-        zlib.dev
+      # makes it so rbenv install succeeds
+      xdg.configFile."shellz/hooks/main.sh".text =
+        "export CPATH=\"${pkgs.zlib.dev}/include:$CPATH\"";
 
-        # end ruby deps
+      # end ruby deps shell hook
 
-        gnome3.gnome-tweaks
-        _1password-gui-beta
-        _1password
-        fractal
-        blender
-        spotify
-        leftwm
-        slack
-        zoom-us
-        kitty
-        discord-canary
-        webcamoid
-        # exists but build is broken
-        # it may be fixed later
-        # retroshare
-        obsidian
-        xdotool
-        xtitle
-        freecad
-      ];
+      home.packages = with pkgs;
+        [
+          #######################################################################
+          # ruby deps
+          # required for building rubies
+          #######################################################################
+
+          openssl
+          zlib
+          readline
+          autoconf
+          bash
+          bashInteractive
+          binutils
+          coreutils
+          diffutils
+          findutils
+          gdbm
+          gnugrep
+          gnused
+          libffi
+          libiconv
+          libtool
+          libyaml
+          ncurses
+          openssl.dev
+          pkg-config
+          which
+          zlib.dev
+
+          # end ruby deps
+
+          gnome3.gnome-tweaks
+          _1password-gui-beta
+          _1password
+          fractal
+          blender
+          spotify
+          leftwm
+          slack
+          zoom-us
+          kitty
+          discord-canary
+          webcamoid
+          # exists but build is broken
+          # it may be fixed later
+          # retroshare
+          obsidian
+          xdotool
+          xtitle
+          freecad
+        ];
     })
   ];
 }
 # end shell packages
+
+
