@@ -1,6 +1,9 @@
 { outputs, ... }:
 {
   imports = [ outputs.nixosModules.blackmatter ];
+
+  nixpkgs.config.allowUnfree = true;
+
   blackmatter.host = "rai";
   blackmatter.dns.enable = true;
   blackmatter.sops.enable = true;
