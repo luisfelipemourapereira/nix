@@ -1,3 +1,7 @@
+###############################################################################
+# zsh config
+###############################################################################
+
 ! [ -d ~/.config/shellz ] && mkdir -p ~/.config/shellz
 
 # put this nix hack in so that in macos
@@ -28,7 +32,8 @@ for m in "${shellz_mods[@]}"; do
 done
 
 # load gh token from sops-nix location if exists
-[ -e ~/.config/gh/env/GH_TOKEN ] && export GH_TOKEN=$(cat ~/.config/gh/env/GH_TOKEN)
+[ -e ~/.config/gh/env/GH_TOKEN ] &&
+	export GH_TOKEN=$(cat ~/.config/gh/env/GH_TOKEN)
 
 # some aliases
 alias grep=rg
@@ -39,3 +44,12 @@ alias cd=z
 eval "$(zoxide init zsh)"
 #
 [ -d ~/.rbenv/bin ] && eval "$(~/.rbenv/bin/rbenv init - zsh)"
+
+###############################################################################
+# shellhooks
+###############################################################################
+
+[ -d ~/.config/shellz/hooks ] && mkdir -p ~/.config/shellz/hooks
+[ -f ~/.config/shellz/hooks/main.sh ] && source ~/.config/shellz/hooks/main.sh
+
+# end zsh config
