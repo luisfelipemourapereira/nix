@@ -8,8 +8,9 @@ local M = {}
 M["enabled_languages"] = {
 	-- "docker-compose-language-server",
 	"rust_analyzer",
-	"tsserver",
 	"terraformls",
+	"ansiblels",
+	"tsserver",
 	"dockerls",
 	"groovyls",
 	"neocmake",
