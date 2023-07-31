@@ -77,6 +77,7 @@ in
           saml2aws
           tuifeed
           kompose
+          shellcheck
           podman-compose
           # TODO: install later when macos build issue is over
           # tree
