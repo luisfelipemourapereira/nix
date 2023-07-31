@@ -11,8 +11,8 @@
   blackmatter.users.enable = true;
   blackmatter.fonts.enable = true;
   blackmatter.global.enable = true;
-  blackmatter.xserver.enable = true;
-  blackmatter.display.enable = true;
+  blackmatter.xserver.enable = false;
+  blackmatter.display.enable = false;
   blackmatter.pipewire.enable = true;
   blackmatter.services.enable = true;
   blackmatter.packages.enable = true;
