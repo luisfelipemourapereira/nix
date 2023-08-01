@@ -14,10 +14,10 @@ function M.setup()
 		nls.builtins.formatting.terraform_fmt.with({
 			filetypes = { "terraform", "tf", "hcl" },
 		}),
-		nls.builtins.diagnostics.shellcheck.with({
-			extra_args = { "--format=json" },
-			diagnostics_format = "#{message}",
-		}),
+		-- nls.builtins.diagnostics.shellcheck.with({
+		-- 	extra_args = { "--format=json" },
+		-- 	diagnostics_format = "#{message}",
+		-- }),
 		nls.builtins.formatting.shfmt.with({
 			extra_args = { "-i", "2", "-sr" },
 		}),
