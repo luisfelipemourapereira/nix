@@ -24,6 +24,9 @@ ani:
 cid:
 	darwin-rebuild switch --flake ".#cid"
 
+burgundy:
+	home-manager switch --flake ".#burgundy"
+
 node:
 	build
 
