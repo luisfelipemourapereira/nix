@@ -117,6 +117,9 @@
           #####################################################################
 
           home.configurations = {
+            # amazon-linux 2 box for MBG
+            "root@burgundy" =
+              mkHomeConfiguration "root" "burgundy" pkgs extraSpecialArgs;
             "luis@rai" =
               mkHomeConfiguration "luis" "rai" pkgs extraSpecialArgs;
             "luis@plo" =
