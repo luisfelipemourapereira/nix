@@ -79,7 +79,7 @@ in
           kompose
           gcc
           cargo
-          dotnet-sdk-3_1
+          dotnet-sdk
           shellcheck
           podman-compose
           tree
