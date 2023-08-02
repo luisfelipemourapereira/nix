@@ -80,6 +80,7 @@ in
           gcc
           cargo
           dotnet-sdk
+          rg
           shellcheck
           podman-compose
           tree
