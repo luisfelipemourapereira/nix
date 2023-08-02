@@ -79,10 +79,10 @@ in
           kompose
           gcc
           cargo
-          # shellcheck
+          dotnet-sdk-3_1
+          shellcheck
           podman-compose
-          # TODO: install later when macos build issue is over
-          # tree
+          tree
         ]
         ++ import ./kubernetes pkgs
         ++ import ./javascript pkgs
