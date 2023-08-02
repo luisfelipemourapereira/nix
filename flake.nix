@@ -126,7 +126,7 @@
               mkHomeConfiguration "root" "tupa" pkgs extraSpecialArgs;
 
             "tupa-ssm-user" =
-              mkHomeConfiguration "root" "tupa" pkgs extraSpecialArgs;
+              mkHomeConfiguration "ssm-user" "tupa" pkgs extraSpecialArgs;
 
             # end PGR AML2
 
