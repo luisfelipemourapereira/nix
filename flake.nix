@@ -117,9 +117,18 @@
           #####################################################################
 
           home.configurations = {
+            ###################################################################
+            # PGR AML2
             # my personal amazon-linux 2 box for PGR
+            ###################################################################
+
             "tupa" =
               mkHomeConfiguration "root" "tupa" pkgs extraSpecialArgs;
+
+            "tupa-ssm-user" =
+              mkHomeConfiguration "root" "tupa" pkgs extraSpecialArgs;
+
+            # end PGR AML2
 
             # amazon-linux 2 box for MBG
             "burgundy" =

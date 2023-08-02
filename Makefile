@@ -29,6 +29,7 @@ burgundy:
 
 tupa:
 	home-manager switch --flake ".#tupa"
+	home-manager switch --flake ".#tupa-ssm-user"
 
 node:
 	build
