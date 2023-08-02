@@ -117,9 +117,14 @@
           #####################################################################
 
           home.configurations = {
+            # my personal amazon-linux 2 box for PGR
+            "tupa" =
+              mkHomeConfiguration "root" "tupa" pkgs extraSpecialArgs;
+
             # amazon-linux 2 box for MBG
             "burgundy" =
               mkHomeConfiguration "root" "burgundy" pkgs extraSpecialArgs;
+
             "luis@rai" =
               mkHomeConfiguration "luis" "rai" pkgs extraSpecialArgs;
             "luis@plo" =
