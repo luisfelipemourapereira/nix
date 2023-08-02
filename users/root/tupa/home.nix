@@ -6,6 +6,7 @@ in
 {
   imports = [
     outputs.homeManagerModules.blackmatter
+    ../../common/global
   ];
 
   home.username = user;
