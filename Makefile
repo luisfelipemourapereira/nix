@@ -27,6 +27,9 @@ cid:
 burgundy:
 	home-manager switch --flake ".#burgundy"
 
+tupa:
+	home-manager switch --flake ".#tupa"
+
 node:
 	build
 
