@@ -78,6 +78,7 @@ in
           tuifeed
           kompose
           gcc
+          cargo
           # shellcheck
           podman-compose
           # TODO: install later when macos build issue is over
