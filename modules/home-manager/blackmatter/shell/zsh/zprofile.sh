@@ -59,3 +59,4 @@ export PERL_MB_OPT="--install_base /root/perl5"
 export PERL_MM_OPT="INSTALL_BASE=/root/perl5"
 export PERL5LIB="/root/perl5/lib/perl5:$PERL5LIB"
 export PATH="/root/perl5/bin:$PATH"
+export C_INCLUDE_PATH=/usr/include:$C_INCLUDE_PATH
