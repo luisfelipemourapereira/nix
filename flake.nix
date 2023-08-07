@@ -136,8 +136,10 @@
 
             "luis@rai" =
               mkHomeConfiguration "luis" "rai" pkgs extraSpecialArgs;
+
             "luis@plo" =
               mkHomeConfiguration "luis" "plo" pkgs extraSpecialArgs;
+
             "t3rro@rai" =
               mkHomeConfiguration "t3rro" "rai" pkgs extraSpecialArgs;
             "t3rro@plo" =
