@@ -53,5 +53,5 @@ Metrics/BlockLength:
 Naming/AccessorMethodName:
   Enabled: false
 
-LeadingCommentSpace:
+Layout/LeadingCommentSpace:
   Enabled: false
