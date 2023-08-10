@@ -6,6 +6,7 @@ function M.setup()
 	local nlssources = {
 		nls.builtins.formatting.black,
 		nls.builtins.formatting.prettier,
+		-- commenting out rubocop so solargraph can take over
 		-- nls.builtins.formatting.rubocop,
 		nls.builtins.code_actions.gitsigns,
 		nls.builtins.code_actions.eslint_d,
