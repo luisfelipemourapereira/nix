@@ -6,7 +6,7 @@ function M.setup()
 	local nlssources = {
 		nls.builtins.formatting.black,
 		nls.builtins.formatting.prettier,
-		nls.builtins.formatting.rubocop,
+		-- nls.builtins.formatting.rubocop,
 		nls.builtins.code_actions.gitsigns,
 		nls.builtins.code_actions.eslint_d,
 		nls.builtins.code_actions.gitrebase,
