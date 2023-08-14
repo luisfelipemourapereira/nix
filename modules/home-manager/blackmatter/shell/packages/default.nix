@@ -81,7 +81,7 @@ in
           cargo
           dotnet-sdk
           ripgrep
-          shellcheck
+          # shellcheck
           podman-compose
           tree
         ]
