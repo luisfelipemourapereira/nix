@@ -135,16 +135,17 @@ end
 
 --[[
 -- completion sources
+-- 
+-- { name = 'treesitter' },
+-- { name = 'buffer' },
+-- { name = 'cmdline' },
 --]]
 function M.getCmpSources()
 	return {
 		{ name = 'nvim_lsp' },
 		{ name = 'copilot' },
-		{ name = 'treesitter' },
 		{ name = 'luasnip' },
-		{ name = 'buffer' },
 		{ name = 'path' },
-		{ name = 'cmdline' },
 	}
 end
 
