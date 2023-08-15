@@ -13,8 +13,10 @@ in
         builtins.fetchGit {
           url = "https://github.com/williamboman/mason.nvim";
           ref = "main";
-          rev = "add6d1d63d8b86af951ba64b4157fe6b0af173d4";
+          # rev = "add6d1d63d8b86af951ba64b4157fe6b0af173d4";
+          rev = "74eac861b013786bf231b204b4ba9a7d380f4bd9";
         };
+
 
       # TODO: move this hack to a more reasonable location
       # mason manages language servers.  Some of the binaries
