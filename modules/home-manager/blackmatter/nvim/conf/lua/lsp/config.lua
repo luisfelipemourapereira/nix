@@ -6,7 +6,7 @@ local M = {}
 
 -- control what languages are on
 M["enabled_languages"] = {
-	"yaml-language-server",
+	"yaml_language_server",
 	-- "docker-compose-language-server",
 	"rust_analyzer",
 	"terraformls",
