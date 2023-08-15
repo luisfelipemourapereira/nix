@@ -3,14 +3,14 @@ local M = {}
 function M.setup(opts)
 	local lsputils = require("lsp.utils")
 
-	-- override yamlls
-	local yamlls_opts = lsputils.merge(
+	-- override yaml-language-server
+	local yaml_language_server_opts = lsputils.merge(
 		{},
 		opts
 	)
 
-	-- enable yamlls
-	require("lspconfig").bashls.setup(yamlls_opts)
+	-- enable yaml-language-server
+	require("lspconfig").yaml_language_server.setup(yaml_lanugage_server_opts)
 end
 
 return M
