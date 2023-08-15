@@ -3,13 +3,13 @@ local M = {}
 function M.setup(opts)
 	local lsputils = require("lsp.utils")
 
-	-- override bashls
+	-- override yamlls
 	local yamlls_opts = lsputils.merge(
 		{},
 		opts
 	)
 
-	-- enable bashls
+	-- enable yamlls
 	require("lspconfig").bashls.setup(yamlls_opts)
 end
 
