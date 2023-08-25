@@ -82,6 +82,7 @@ in
           dotnet-sdk
           ripgrep
           podman-compose
+          usbutils
           tree
         ]
         ++ import ./kubernetes pkgs
