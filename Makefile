@@ -16,7 +16,7 @@ plo:
 
 rai:
 	# sudo nixos-rebuild switch --flake ".#rai"
-	home-manager switch --flake ".#rai"
+	home-manager switch --flake ".#$USER@rai"
 
 ani:
 	darwin-rebuild switch --flake ".#ani"
