@@ -15,7 +15,8 @@ plo:
 	sudo nixos-rebuild switch --flake ".#plo"
 
 rai:
-	sudo nixos-rebuild switch --flake ".#rai"
+	# sudo nixos-rebuild switch --flake ".#rai"
+	home-manager switch --flake ".#rai"
 
 ani:
 	darwin-rebuild switch --flake ".#ani"
