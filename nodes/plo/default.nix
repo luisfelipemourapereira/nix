@@ -29,8 +29,8 @@
   blackmatter.virtualization.enable = true;
 
   # GUI
-  blackmatter.xserver.enable = false;
-  blackmatter.display.enable = false;
+  blackmatter.xserver.enable = true;
+  blackmatter.display.enable = true;
 
   antimatter.services.consul.enable = true;
   antimatter.services.nomad.enable = true;
