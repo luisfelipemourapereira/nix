@@ -16,7 +16,8 @@ in
       programs = {
         tmux = {
           enable = true;
-          terminal = "alacritty";
+          # terminal = "alacritty";
+          terminal = "screen-256color";
           aggressiveResize = false;
           baseIndex = 1;
           clock24 = false;
