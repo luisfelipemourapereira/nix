@@ -12,6 +12,9 @@ function M.setup()
 	-- by default make gitblame on line off
 	vim.cmd [[ let g:gitblame_enabled = 0 ]]
 
+	-- recognize prisma files
+	vim.cmd([[ au BufNewFile,BufRead *.prisma set filetype=prisma ]])
+
 	-- load all language specific configs
 	utils.load_files('~/.config/nvim/lua/config/langs')
 
