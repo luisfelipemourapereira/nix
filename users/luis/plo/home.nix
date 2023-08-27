@@ -8,7 +8,7 @@
   blackmatter.programs.nvim.enable = true;
   blackmatter.shell.enable = true;
   blackmatter.desktop.enable = false;
-  blackmatter.desktop.alacritty.enable = false;
+  blackmatter.desktop.alacritty.enable = true;
   blackmatter.desktop.monitors = {
     main = {
       name = "DP-2";
