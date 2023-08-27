@@ -66,6 +66,7 @@ in
           docker
           delve
           tree
+          yarn
           lazydocker
           nixopsUnstable
           postgres_with_libpq
