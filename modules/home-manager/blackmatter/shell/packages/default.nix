@@ -84,7 +84,6 @@ in
           dotnet-sdk
           ripgrep
           podman-compose
-          usbutils
           tree
         ]
         ++ import ./kubernetes pkgs
@@ -125,6 +124,7 @@ in
           traceroute
           iproute2
           s-tui
+          usbutils
           sheldon
           julia
         ];
