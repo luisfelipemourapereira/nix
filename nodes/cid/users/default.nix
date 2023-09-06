@@ -23,6 +23,7 @@
       # blackmatter.programs.nvim.package = outputs.packages.aarch64-darwin.drzln-neovim;
       blackmatter.shell.enable = true;
       blackmatter.desktop.alacritty.enable = true;
+      blackmatter.desktop.alacritty.config.enable = true;
       blackmatter.envrc.enable = true;
 
       # stop a dumb bug
