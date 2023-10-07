@@ -57,7 +57,16 @@ let
       nanotee.nvim-lua-guide.enable = false;
       niuiic."divider.nvim".enable = false;
       NTBBloodbath."galaxyline.nvim".enable = false;
+
+      # markdown
+
       nfrid.markdown-togglecheck.enable = false;
+      plasticboy.vim-markdown.enable = false;
+      iamcco.markdown-preview.nvim = false;
+
+
+      # end markdown
+
       MunifTanjim."nui.nvim".enable = false;
       LudoPinelli."comment-box.nvim".enable = false;
       madskjeldgaard.reaper-nvim.enable = false;
