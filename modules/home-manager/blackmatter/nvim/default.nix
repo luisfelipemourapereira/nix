@@ -63,7 +63,7 @@ let
       nfrid.markdown-togglecheck.enable = false;
       godlygeek.tabular.enable = true;
       preservim.vim-markdown.enable = true;
-      # iamcco.markdown-preview.nvim = false;
+      iamcco."markdown-preview.nvim".enable = false;
 
 
       # end markdown
@@ -310,6 +310,7 @@ in
       ./plugins/rafamadriz/friendly-snippets
       ./plugins/preservim/vim-markdown
       ./plugins/godlygeek/tabular
+      ./plugins/iamcco/markdown-preview.nvim
     ];
 
   options = {
