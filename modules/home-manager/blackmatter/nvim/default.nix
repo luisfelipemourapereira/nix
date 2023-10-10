@@ -61,8 +61,8 @@ let
       # markdown
 
       nfrid.markdown-togglecheck.enable = false;
-      plasticboy.vim-markdown.enable = false;
-      iamcco.markdown-preview.nvim = false;
+      # preservim.vim-markdown.enable = true;
+      # iamcco.markdown-preview.nvim = false;
 
 
       # end markdown
@@ -307,6 +307,7 @@ in
       ./plugins/unblevable/quick-scope
       ./plugins/L3MON4D3/LuaSnip
       ./plugins/rafamadriz/friendly-snippets
+      ./plugins/preservim/vim-markdown
     ];
 
   options = {
