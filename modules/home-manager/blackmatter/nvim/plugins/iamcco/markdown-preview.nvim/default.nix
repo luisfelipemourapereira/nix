@@ -18,10 +18,10 @@ in
       home.file."${plugPath}".source =
         builtins.fetchGit { inherit ref rev url; };
 
-      # home.activation.${name} = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
-      #   cd ${config.home.homeDirectory}/${plugPath}/app
-      #   npm install
-      # '';
+      home.activation.${name} = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
+        cd ${config.home.homeDirectory}/${plugPath}/app
+        npm install
+      '';
     })
   ];
 }
