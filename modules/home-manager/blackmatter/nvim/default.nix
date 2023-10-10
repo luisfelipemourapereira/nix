@@ -61,7 +61,8 @@ let
       # markdown
 
       nfrid.markdown-togglecheck.enable = false;
-      # preservim.vim-markdown.enable = true;
+      godlygeek.tabular.enable = true;
+      preservim.vim-markdown.enable = true;
       # iamcco.markdown-preview.nvim = false;
 
 
@@ -308,6 +309,7 @@ in
       ./plugins/L3MON4D3/LuaSnip
       ./plugins/rafamadriz/friendly-snippets
       ./plugins/preservim/vim-markdown
+      ./plugins/godlygeek/tabular
     ];
 
   options = {
