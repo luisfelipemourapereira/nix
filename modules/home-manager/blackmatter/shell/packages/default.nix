@@ -60,6 +60,7 @@ in
 
       home.packages = with pkgs;
         [
+          mysql
           tfsec
           golint
           duckdb
