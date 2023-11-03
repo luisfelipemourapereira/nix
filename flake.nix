@@ -122,6 +122,11 @@
             # my personal amazon-linux 2 box for PGR
             ###################################################################
 
+            # lucas pereira popos support
+
+            "LILU" =
+              mkHomeConfiguration "lucas" "LILU" pkgs extraSpecialArgs;
+
             "tupa" =
               mkHomeConfiguration "root" "tupa" pkgs extraSpecialArgs;
 

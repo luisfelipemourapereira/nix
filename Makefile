@@ -31,6 +31,10 @@ burgundy:
 tupa:
 	home-manager switch --flake ".#tupa"
 
+# lucas pereira laptop
+LILU:
+	home-manager switch --flake ".#LILU"
+
 node:
 	build
 
