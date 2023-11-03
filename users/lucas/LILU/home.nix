@@ -10,11 +10,4 @@
   blackmatter.desktop.enable = false;
   # blackmatter.desktop.alacritty.enable = false;
   blackmatter.desktop.alacritty.config.enable = true;
-  blackmatter.desktop.monitors = {
-    main = {
-      name = "DP-2";
-      mode = "1920x1080";
-      rate = "360";
-    };
-  };
 }
