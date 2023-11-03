@@ -7,7 +7,7 @@
   ];
   blackmatter.programs.nvim.enable = true;
   blackmatter.shell.enable = true;
-  blackmatter.desktop.enable = false;
+  blackmatter.desktop.enable = true;
   # blackmatter.desktop.alacritty.enable = false;
   blackmatter.desktop.alacritty.config.enable = true;
 }
