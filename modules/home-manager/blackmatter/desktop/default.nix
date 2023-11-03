@@ -108,7 +108,7 @@ in
       #########################################################################
       # playin wit some chrome real quick
       #########################################################################
-      programs.chromium.enable = true;
+      programs.chromium.enable = false;
       programs.chromium.package = pkgs.chromium.overrideAttrs (oldAttrs: {
         postInstall = ''
           echo '$(echo $preferences | jq -c .)' | tr -d '\n' > $out/Preferences
