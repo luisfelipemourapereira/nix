@@ -12,11 +12,10 @@ h:
 	@echo " show: show details on this flake"
 
 plo:
-	sudo nixos-rebuild switch --flake ".#plo"
+	home-manager switch --flake ".#luis@plo"
 
-# rai:
-	# sudo nixos-rebuild switch --flake ".#rai"
-	# home-manager switch --flake ".#$USER@rai"
+rai:
+	home-manager switch --flake ".#luis@rai"
 
 ani:
 	darwin-rebuild switch --flake ".#ani"
