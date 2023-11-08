@@ -62,6 +62,7 @@ in
         [
           mysql
           tfsec
+          tfplugindocs
           golint
           duckdb
           docker
