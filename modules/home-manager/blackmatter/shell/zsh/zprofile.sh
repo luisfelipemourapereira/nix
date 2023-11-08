@@ -11,11 +11,9 @@ export PATH=/etc/profiles/per-user/$USER/bin:$PATH
 export PATH=~/bin:$PATH
 
 function load_shellz_mod() {
-  [ -d ~/.config/shellz/$1 ] && source ~/.config/shellz/$1/main.sh
+  [ -d ~/.config/shellz/"$1" ] && source ~/.config/shellz/$1/main.sh
 }
 
-# disabled sections of zsh configuration
-# rbenv
 declare -a shellz_mods=(
   direnv
   path
@@ -43,7 +41,6 @@ alias cd=z
 # integrate zoxide
 eval "$(zoxide init zsh)"
 #
-[ -d ~/.rbenv/bin ] && eval "$(~/.rbenv/bin/rbenv init - zsh)"
 
 ###############################################################################
 # shellhooks
@@ -61,3 +58,6 @@ export PERL5LIB="/usr/share/perl/5.34.0/:$PERL5LIB"
 export PATH="$PERL5LIB/bin:$PATH"
 export C_INCLUDE_PATH=/usr/include:$C_INCLUDE_PATH
 export CPATH=$CPATH:/usr/include
+
+# PATH up rbenv at the end
+[ -d ~/.rbenv/bin ] && eval "$(~/.rbenv/bin/rbenv init - zsh)"
