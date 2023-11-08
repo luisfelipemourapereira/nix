@@ -1,7 +1,7 @@
 { ... }:
 let
   user = "lucas";
-  email = "lucas@pleme.io";
+  email = "lucaspereirasousa11@gmail.com";
 in
 {
   imports = [ ../../common/global ];
