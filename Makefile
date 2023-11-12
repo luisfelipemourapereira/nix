@@ -15,7 +15,7 @@ plo:
 	home-manager switch --flake ".#luis@plo"
 
 rai:
-	home-manager switch --flake ".#luis@rai"
+	home-manager switch --flake ".#ldesiqueira@rai"
 
 ani:
 	darwin-rebuild switch --flake ".#ani"
