@@ -60,6 +60,8 @@ in
 
       home.packages = with pkgs;
         [
+          yq-go
+          # yq
           mysql
           tfsec
           tfplugindocs
