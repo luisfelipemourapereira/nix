@@ -55,7 +55,7 @@ in
         perl = { disabled = true; };
         php = { disabled = true; };
         purescript = { disabled = true; };
-        python = { disabled = true; };
+        python = { disabled = false; };
         red = { disabled = true; };
         ruby = { disabled = true; };
         rust = { disabled = true; };
