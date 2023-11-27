@@ -77,6 +77,7 @@ in
           nixopsUnstable
           postgres_with_libpq
           lazygit
+          packer
           twitch-tui
           wiki-tui
           tuir
