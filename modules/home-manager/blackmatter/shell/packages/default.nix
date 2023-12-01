@@ -82,6 +82,7 @@ in
           wiki-tui
           tuir
           dig
+          nmap
           spotify-tui
           saml2aws
           tuifeed
