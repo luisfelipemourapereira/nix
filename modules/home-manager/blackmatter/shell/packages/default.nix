@@ -81,6 +81,7 @@ in
           twitch-tui
           wiki-tui
           tuir
+          dig
           spotify-tui
           saml2aws
           tuifeed
