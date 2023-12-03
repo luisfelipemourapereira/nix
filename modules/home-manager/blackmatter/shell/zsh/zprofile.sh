@@ -53,7 +53,7 @@ export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_STUDIO/bin
 export PATH=$PATH:/bin
-export PATH=$PATH:/opt/cmdline-tools/bin
+export PATH=$PATH:/opt/cmdline-tools/latest/bin
 
 ###############################################################################
 # shellhooks
