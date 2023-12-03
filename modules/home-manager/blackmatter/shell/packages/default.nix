@@ -93,6 +93,7 @@ in
           tuifeed
           kompose
           gcc
+          jdk
           cargo
           dotnet-sdk
           ripgrep
