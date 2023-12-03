@@ -65,7 +65,6 @@ in
           adbfs-rootless
           gnirehtet
           autoadb
-          androidenv.androidPkgs_9_0.sdk
           yq-go
           # yq
           mysql
