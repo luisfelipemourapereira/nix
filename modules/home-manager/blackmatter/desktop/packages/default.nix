@@ -96,6 +96,7 @@ in
           # it may be fixed later
           # retroshare
           obsidian
+          android-studio
           xdotool
           xtitle
           freecad

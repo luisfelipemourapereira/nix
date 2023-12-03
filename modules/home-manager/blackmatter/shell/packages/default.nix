@@ -62,6 +62,9 @@ in
         [
           android-tools
           adb-sync
+          adbfs-rootless
+          gnirehtet
+          autoadb
           yq-go
           # yq
           mysql
