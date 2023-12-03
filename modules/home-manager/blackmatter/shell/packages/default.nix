@@ -60,6 +60,8 @@ in
 
       home.packages = with pkgs;
         [
+          android-tools
+          adb-sync
           yq-go
           # yq
           mysql
