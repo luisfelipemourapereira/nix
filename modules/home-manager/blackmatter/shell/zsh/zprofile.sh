@@ -45,7 +45,7 @@ eval "$(zoxide init zsh)"
 # android
 ###############################################################################
 
-export ANDROID_HOME=/usr/lib/android-sdk
+export ANDROID_HOME=~/Android/Sdk
 export ANDROID_STUDIO=/opt/android-studio
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 export PATH=$PATH:$ANDROID_HOME/emulator
@@ -53,7 +53,7 @@ export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_STUDIO/bin
 export PATH=$PATH:/bin
-export PATH=$PATH:/opt/cmdline-tools/bin
+export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin
 export JAVA_HOME=/usr/lib/jvm/java-1.17.0-openjdk-amd64
 export PATH=$JAVA_HOME/bin:$PATH
 
