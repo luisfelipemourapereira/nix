@@ -133,6 +133,9 @@ let
       tjdevries."vlog.nvim".enable = false;
       ellisonleao."glow.nvim".enable = false;
 
+      # KittyCAD
+      "kcl-lang"."kcl.nvim".enable = true;
+
 
       # this is a less compatible nord with tree-sitter
       shaunsingh.nord.enable = false;
