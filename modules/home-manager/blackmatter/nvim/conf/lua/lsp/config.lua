@@ -24,6 +24,7 @@ M["enabled_languages"] = {
 	"jdtls",
 	"gopls",
 	"rnix",
+	"kcl",
 }
 
 -- languages that exist but are not automatically installed
