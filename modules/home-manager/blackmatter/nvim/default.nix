@@ -311,6 +311,7 @@ in
       ./plugins/preservim/vim-markdown
       ./plugins/godlygeek/tabular
       ./plugins/iamcco/markdown-preview.nvim
+      ./plugins/kcl-lang/vim-kcl
     ];
 
   options = {
