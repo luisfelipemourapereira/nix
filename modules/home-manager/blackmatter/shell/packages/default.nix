@@ -61,10 +61,7 @@ in
       home.packages = with pkgs;
         [
           android-tools
-          adb-sync
-          adbfs-rootless
           gnirehtet
-          autoadb
           yq-go
           # yq
           mysql
@@ -119,21 +116,22 @@ in
         ++ import ./php pkgs
         ++ lib.optionals isDarwin [
           xhyve
-          (zulu.overrideAttrs (_:
-            {
-              # hack the jdk package because of a dumb bug on macos
-              # https://github.com/LnL7/nix-darwin/issues/320
-              postPatch = ''
-                rm -rf share/man
-                rm -rf man
-                mkdir -p share
-                ln -s ../zulu-11.jdk/Contents/Home/man/ share
-
-              '';
-            }
-          ))
+          # (zulu.overrideAttrs (_:
+          #   {
+          #     # hack the jdk package because of a dumb bug on macos
+          #     # https://github.com/LnL7/nix-darwin/issues/320
+          #     postPatch = ''
+          #       rm -rf share/man
+          #       rm -rf man
+          #       mkdir -p share
+          #       ln -s ../zulu-11.jdk/Contents/Home/man/ share
+          #
+          #     '';
+          #   }
+          # ))
         ]
         ++ lib.optionals isLinux [
+          # adbfs-rootless
           docker-compose-alternative
           traceroute
           iproute2
@@ -141,6 +139,8 @@ in
           usbutils
           sheldon
           julia
+          adb-sync
+          autoadb
         ];
     })
   ];
