@@ -7,7 +7,7 @@ pkgs: with pkgs; [
   xorg.xrandr
   tig
   grex
-  exa
+  eza
   skim
   stig
   gdb

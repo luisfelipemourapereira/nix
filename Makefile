@@ -12,6 +12,7 @@ h:
 	@echo " show: show details on this flake"
 
 plo:
+	export NIXPKGS_ALLOW_INSECURE=1 
 	home-manager switch --flake ".#luis@plo"
 
 rai:

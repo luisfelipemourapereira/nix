@@ -3,9 +3,16 @@
   imports = [
     outputs.nixosModules.blackmatter
     outputs.nixosModules.antimatter
+    ./insecure
   ];
 
   nixpkgs.config.allowUnfree = true;
+  nixpkgs.config.allowBroken = true;
+  nixpkgs.config.permittedInsecurePackages =
+    [
+      "python2.7-pyjwt-1.7.1"
+      "electron-25.9.0"
+    ];
 
   blackmatter.host = "plo";
   blackmatter.dns.enable = true;
