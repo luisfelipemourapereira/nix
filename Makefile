@@ -13,7 +13,7 @@ h:
 
 plo:
 	export NIXPKGS_ALLOW_INSECURE=1 
-	home-manager switch --flake ".#luis@plo"
+	home-manager switch --flake ".#luis@plo" --show-trace
 
 rai:
 	home-manager switch --flake ".#ldesiqueira@rai" -b backup

@@ -18,7 +18,7 @@ in
           with inputs;
           [
             globalprotect-openconnect
-            fcitx5-configtool
+            # fcitx5-configtool
             # docker-client
             traceroute
             # use tfswitch to load terraform binary
@@ -36,7 +36,7 @@ in
             weechat
             gnumake
             openssh
-            fcitx5
+            # fcitx5
             nodejs
             # TODO: poetry is flagged as insecure
             # poetry

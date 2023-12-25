@@ -53,53 +53,53 @@ in
           # required for building rubies
           #######################################################################
 
-          openssl
-          zlib
-          readline
-          autoconf
-          bash
-          bashInteractive
-          binutils
-          coreutils
-          diffutils
-          findutils
-          gdbm
-          gnugrep
-          gnused
-          libffi
-          libiconv
-          libtool
-          libyaml
-          ncurses
-          openssl.dev
-          pkg-config
-          which
-          zlib.dev
+          # openssl
+          # zlib
+          # readline
+          # autoconf
+          # bash
+          # bashInteractive
+          # binutils
+          # coreutils
+          # diffutils
+          # findutils
+          # gdbm
+          # gnugrep
+          # gnused
+          # libffi
+          # libiconv
+          # libtool
+          # libyaml
+          # ncurses
+          # openssl.dev
+          # pkg-config
+          # which
+          # zlib.dev
 
           # end ruby deps
 
-          globalprotect-openconnect
+          # globalprotect-openconnect
 
-          gnome3.gnome-tweaks
-          _1password-gui-beta
-          _1password
-          fractal
-          blender
-          spotify
-          leftwm
-          slack
-          zoom-us
-          kitty
-          discord-canary
-          webcamoid
+          # gnome3.gnome-tweaks
+          # _1password-gui-beta
+          # _1password
+          # fractal
+          # blender
+          # spotify
+          # leftwm
+          # slack
+          # zoom-us
+          # kitty
+          # discord-canary
+          # webcamoid
           # exists but build is broken
           # it may be fixed later
           # retroshare
-          obsidian
-          android-studio
-          xdotool
-          xtitle
-          freecad
+          # obsidian
+          # android-studio
+          # xdotool
+          # xtitle
+          # freecad
         ];
     })
   ];

@@ -64,63 +64,63 @@ in
           # LLMS
           #####################################################################
 
-          ollama
+          # ollama
 
           # end LLMS
-          android-tools
-          gnirehtet
-          yq-go
+          # android-tools
+          # gnirehtet
+          # yq-go
           # yq
-          mysql
-          tfsec
-          tfplugindocs
-          tfswitch
-          golint
-          duckdb
-          docker
-          delve
-          tree
-          yarn
-          typescript
-          lazydocker
-          nixopsUnstable
-          postgres_with_libpq
-          lazygit
-          packer
-          twitch-tui
-          wiki-tui
-          tuir
-          dig
-          nmap
-          spotify-tui
-          saml2aws
-          tuifeed
-          kompose
-          gcc
-          jdk
-          cargo
-          dotnet-sdk
-          ripgrep
-          podman-compose
-          tree
+          # mysql
+          # tfsec
+          # tfplugindocs
+          # tfswitch
+          # golint
+          # duckdb
+          # docker
+          # delve
+          # tree
+          # yarn
+          # typescript
+          # lazydocker
+          # nixopsUnstable
+          # postgres_with_libpq
+          # lazygit
+          # packer
+          # twitch-tui
+          # wiki-tui
+          # tuir
+          # dig
+          # nmap
+          # spotify-tui
+          # saml2aws
+          # tuifeed
+          # kompose
+          # gcc
+          # jdk
+          # cargo
+          # dotnet-sdk
+          # ripgrep
+          # podman-compose
+          # tree
         ]
-        ++ import ./kubernetes pkgs
-        ++ import ./javascript pkgs
-        ++ import ./hashicorp pkgs
-        ++ import ./utilities pkgs
-        ++ import ./rustlang pkgs
-        ++ import ./secrets pkgs
-        ++ import ./arduino pkgs
-        ++ import ./python pkgs
-        ++ import ./golang pkgs
-        ++ import ./redis pkgs
-        ++ import ./ruby pkgs
-        ++ import ./shell pkgs
-        ++ import ./aws pkgs
-        ++ import ./nix pkgs
-        ++ import ./asm pkgs
-        ++ import ./lua pkgs
-        ++ import ./php pkgs
+        # ++ import ./kubernetes pkgs
+        # ++ import ./javascript pkgs
+        # ++ import ./hashicorp pkgs
+        # ++ import ./utilities pkgs
+        # ++ import ./rustlang pkgs
+        # ++ import ./secrets pkgs
+        # ++ import ./arduino pkgs
+        # ++ import ./python pkgs
+        # ++ import ./golang pkgs
+        # ++ import ./redis pkgs
+        # ++ import ./ruby pkgs
+        # ++ import ./shell pkgs
+        # ++ import ./aws pkgs
+        # ++ import ./nix pkgs
+        # ++ import ./asm pkgs
+        # ++ import ./lua pkgs
+        # ++ import ./php pkgs
         ++ lib.optionals isDarwin [
           xhyve
           # (zulu.overrideAttrs (_:
@@ -139,15 +139,15 @@ in
         ]
         ++ lib.optionals isLinux [
           # adbfs-rootless
-          docker-compose-alternative
-          traceroute
-          iproute2
-          s-tui
-          usbutils
-          sheldon
-          julia
-          adb-sync
-          autoadb
+          # docker-compose-alternative
+          # traceroute
+          # iproute2
+          # s-tui
+          # usbutils
+          # sheldon
+          # julia
+          # adb-sync
+          # autoadb
         ];
     })
   ];

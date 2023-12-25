@@ -13,10 +13,10 @@ in
     AWS_DEFAULT_REGION = "us-east-1";
     AWS_PROFILE = "pinger-organization";
   };
-  blackmatter = {
-    gitconfig = {
-      inherit user email;
-      enable = true;
-    };
-  };
+  # blackmatter = {
+  #   gitconfig = {
+  #     inherit user email;
+  #     enable = true;
+  #   };
+  # };
 }

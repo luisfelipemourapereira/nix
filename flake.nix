@@ -7,26 +7,28 @@
   #############################################################################
 
   inputs = {
-    dream2nix.url = github:nix-community/dream2nix?branch=main;
-    nixpkgs.url = github:NixOS/nixpkgs?branch=release-23.11;
-    home-manager.url = github:drzln/home-manager?branch=release-23.11;
-    flake-utils.url = github:numtide/flake-utils?branch=master;
-    nix-darwin.url = github:LnL7/nix-darwin?branch=master;
-    pythonix.url = github:Mic92/pythonix?branch=master;
-    sops-nix.url = github:Mic92/sops-nix;
-    nix-funcs.url = github:t3rro/nix-funcs;
-    bundix = {
-      url = github:nix-community/bundix?branch=master;
-      flake = false;
-    };
-    hydra.url = github:NixOS/hydra?branch=master;
-    arion.url = github:hercules-ci/arion?branch=master;
-    stitches.url = github:drzln/stitches?ref=main;
-    nixt = {
-      url = github:nix-community/nixt?branch=master;
-      flake = false;
-    };
-    nur.url = github:nix-community/nur;
+    # dream2nix.url = github:nix-community/dream2nix?branch=main;
+    # nixpkgs.url = github:NixOS/nixpkgs?branch=release-23.11;
+    # home-manager.url = github:drzln/home-manager?branch=release-23.11;
+    nixpkgs.url = github:NixOS/nixpkgs?branch=master;
+    home-manager.url = github:drzln/home-manager?branch=master;
+    # flake-utils.url = github:numtide/flake-utils?branch=master;
+    # nix-darwin.url = github:LnL7/nix-darwin?branch=master;
+    # pythonix.url = github:Mic92/pythonix?branch=master;
+    # sops-nix.url = github:Mic92/sops-nix;
+    # nix-funcs.url = github:t3rro/nix-funcs;
+    # bundix = {
+    #   url = github:nix-community/bundix?branch=master;
+    #   flake = false;
+    # };
+    # hydra.url = github:NixOS/hydra?branch=master;
+    # arion.url = github:hercules-ci/arion?branch=master;
+    # stitches.url = github:drzln/stitches?ref=main;
+    # nixt = {
+    #   url = github:nix-community/nixt?branch=master;
+    #   flake = false;
+    # };
+    # nur.url = github:nix-community/nur;
   };
 
   # end inputs
@@ -39,18 +41,18 @@
     { home-manager
     , flake-utils
     , nix-darwin
-    , dream2nix
-    , nix-funcs
-    , pythonix
+      # , dream2nix
+      # , nix-funcs
+      # , pythonix
     , sops-nix
-    , stitches
+      # , stitches
     , nixpkgs
-    , bundix
-    , hydra
-    , arion
-    , nixt
+      # , bundix
+      # , hydra
+      # , arion
+      # , nixt
     , self
-    , nur
+      # , nur
     }@inputs:
     let
       systems =
@@ -67,7 +69,7 @@
           node.modules = import ./modules/nixos;
           specialArgs = { inherit inputs outputs stdenv; };
           extraSpecialArgs = specialArgs // { inherit pkgs; };
-          localPackages = import ./pkgs extraSpecialArgs;
+          # localPackages = import ./pkgs extraSpecialArgs;
 
           # end imports
 
@@ -95,8 +97,8 @@
           pkgs = legacyPackages.${system};
           legacyPackages = nixpkgs.lib.genAttrs [
             "x86_64-linux"
-            "x86_64-darwin"
-            "aarch64-darwin"
+            # "x86_64-darwin"
+            # "aarch64-darwin"
           ]
             (system:
               import inputs.nixpkgs {
@@ -106,6 +108,7 @@
                 # (https://nixos.org/manual/nixpkgs/stable/#idm140737322551056)
 
                 config.allowUnfree = true;
+                # permittedInsecurePackages = [ "electron-25.9.0" ];
               }
             );
 
@@ -145,8 +148,14 @@
             "ldesiqueira@rai" =
               mkHomeConfiguration "ldesiqueira" "rai" pkgs extraSpecialArgs;
 
-            "luis@plo" =
-              mkHomeConfiguration "luis" "plo" pkgs extraSpecialArgs;
+            # "luis@plo" =
+            #   mkHomeConfiguration "luis" "plo" pkgs extraSpecialArgs;
+            "luis@plo" = home-manager.lib.homeManagerConfiguration {
+              pkgs = import nixpkgs {
+                inherit system;
+              };
+              modules = [ users/luis/plo/home.nix ];
+            };
 
             "t3rro@rai" =
               mkHomeConfiguration "t3rro" "rai" pkgs extraSpecialArgs;
@@ -199,11 +208,11 @@
 
             # TODO: module to add stitches, consider
             # TODO: making more concise
-            cidStitchesMod = { ... }: {
-              environment.systemPackages = [
-                stitches.packages.aarch64-darwin.default
-              ];
-            };
+            # cidStitchesMod = { ... }: {
+            #   environment.systemPackages = [
+            #     stitches.packages.aarch64-darwin.default
+            #   ];
+            # };
 
             # work macos laptop
             cid = nix-darwin.lib.darwinSystem {
@@ -231,18 +240,18 @@
           # access with: outputs.packages.${system}.${pname}
           #####################################################################
 
-          packages =
-            {
-              x86_64-darwin =
-                flake-utils.lib.flattenTree
-                  localPackages;
-              x86_64-linux =
-                flake-utils.lib.flattenTree
-                  localPackages;
-              aarch64-darwin =
-                flake-utils.lib.flattenTree
-                  localPackages;
-            };
+          # packages =
+          #   {
+          #     x86_64-darwin =
+          #       flake-utils.lib.flattenTree
+          #         localPackages;
+          #     x86_64-linux =
+          #       flake-utils.lib.flattenTree
+          #         localPackages;
+          #     aarch64-darwin =
+          #       flake-utils.lib.flattenTree
+          #         localPackages;
+          #   };
 
           # end packages
 
