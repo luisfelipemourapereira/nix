@@ -10,7 +10,7 @@
     { ... }: {
       imports = [ ../../../modules/home-manager/blackmatter ];
 
-      home.stateVersion = "21.11";
+      home.stateVersion = "23.05";
       home.sessionVariables = {
         EDITOR = "vim";
         AWS_REGION = "us-west-2";

@@ -8,8 +8,11 @@
 
   inputs = {
     dream2nix.url = github:nix-community/dream2nix?branch=main;
-    nixpkgs.url = github:NixOS/nixpkgs?branch=release-22.11;
-    home-manager.url = github:drzln/home-manager?branch=release-22.11;
+    nixpkgs.url = github:NixOS/nixpkgs?branch=release-23.05;
+    home-manager = {
+      url = github:drzln/home-manager?branch=release-23.05;
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     flake-utils.url = github:numtide/flake-utils?branch=master;
     nix-darwin.url = github:LnL7/nix-darwin?branch=master;
     pythonix.url = github:Mic92/pythonix?branch=master;
@@ -105,7 +108,17 @@
                 # Instead, you should set nixpkgs configs here
                 # (https://nixos.org/manual/nixpkgs/stable/#idm140737322551056)
                 overlays = import ./overlays;
-                config.allowUnfree = true;
+                config = {
+                  allowUnfree = true;
+                  permittedInsecurePackages = [
+                    "electron-25.9.0"
+                  ];
+                };
+                # config.allowUnfree = true;
+                # config.allowUnfreePredicate = pkg: builtins.elem (nixpkgs.lib.getName pkg) [
+                #   "1password-8.10.22-21.BETA"
+                # ];
+
               }
             );
 

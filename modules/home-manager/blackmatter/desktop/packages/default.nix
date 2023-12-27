@@ -95,7 +95,7 @@ in
           # exists but build is broken
           # it may be fixed later
           # retroshare
-          obsidian
+          # obsidian
           android-studio
           xdotool
           xtitle

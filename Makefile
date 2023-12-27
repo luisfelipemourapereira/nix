@@ -12,7 +12,7 @@ h:
 	@echo " show: show details on this flake"
 
 plo:
-	home-manager switch --flake ".#luis@plo"
+	home-manager switch --flake ".#luis@plo" --show-trace
 
 rai:
 	home-manager switch --flake ".#ldesiqueira@rai" -b backup
