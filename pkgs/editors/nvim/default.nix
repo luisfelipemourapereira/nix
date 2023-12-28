@@ -10,7 +10,7 @@ let
   name = "neovim";
   owner = "neovim";
   repo = "neovim";
-  rev = "master";
+  rev = "v0.9.4";
   sha256 = "sha256-Z1zCXRybBumaH/JmlNp+V7Lmhf/wEYLnsd6f7B5Fmi0=";
 
   # grab the source
@@ -29,6 +29,8 @@ stdenv.mkDerivation {
     lua
     cmake
     luajit
+    luajitPackages.libluv
+    # luajitPackages.luv
     msgpack
     pkg-config
     unibilium
