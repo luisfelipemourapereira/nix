@@ -11,7 +11,7 @@ let
   owner = "neovim";
   repo = "neovim";
   rev = "master";
-  sha256 = "1pzlrwz9c3hf79hhzfhmz5wh2kbypb4dxn4ajg6pi9n3yq0vh6iz";
+  sha256 = "sha256-Z1zCXRybBumaH/JmlNp+V7Lmhf/wEYLnsd6f7B5Fmi0=";
 
   # grab the source
   src = pkgs.fetchFromGitHub { inherit owner repo rev sha256; };
@@ -27,6 +27,7 @@ stdenv.mkDerivation {
     xorg.libSM
     xorg.libICE
     lua
+    cmake
     luajit
     msgpack
     pkg-config
