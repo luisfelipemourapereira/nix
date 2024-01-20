@@ -7,23 +7,23 @@
   #############################################################################
 
   inputs = {
-    dream2nix.url = github:nix-community/dream2nix?branch=main;
-    nixpkgs.url = github:NixOS/nixpkgs?branch=main;
-    home-manager.url = github:drzln/home-manager?branch=main;
-    flake-utils.url = github:numtide/flake-utils?branch=master;
-    nix-darwin.url = github:LnL7/nix-darwin?branch=master;
-    pythonix.url = github:Mic92/pythonix?branch=master;
+    dream2nix.url = github:nix-community/dream2nix;
+    nixpkgs.url = github:NixOS/nixpkgs;
+    home-manager.url = github:drzln/home-manager;
+    flake-utils.url = github:numtide/flake-utils;
+    nix-darwin.url = github:LnL7/nix-darwin;
+    pythonix.url = github:Mic92/pythonix;
     sops-nix.url = github:Mic92/sops-nix;
     nix-funcs.url = github:t3rro/nix-funcs;
     bundix = {
-      url = github:nix-community/bundix?branch=master;
+      url = github:nix-community/bundix;
       flake = false;
     };
-    hydra.url = github:NixOS/hydra?branch=master;
-    arion.url = github:hercules-ci/arion?branch=master;
-    stitches.url = github:drzln/stitches?ref=main;
+    hydra.url = github:NixOS/hydra;
+    arion.url = github:hercules-ci/arion;
+    stitches.url = github:drzln/stitches;
     nixt = {
-      url = github:nix-community/nixt?branch=master;
+      url = github:nix-community/nixt;
       flake = false;
     };
     nur.url = github:nix-community/nur;
