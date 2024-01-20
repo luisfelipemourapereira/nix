@@ -2,6 +2,7 @@
 { configs, pkgs, inputs, ... }: {
   nixpkgs.config.allowUnfree = true;
   nixpkgs.config.allowBroken = true;
+  nixpkgs.config.allowUnsupportedSystem = true;
   nixpkgs.config.permittedInsecurePackages =
     [
       "python2.7-pyjwt-1.7.1"
