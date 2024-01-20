@@ -8,8 +8,8 @@
 
   inputs = {
     dream2nix.url = github:nix-community/dream2nix?branch=main;
-    nixpkgs.url = github:NixOS/nixpkgs?branch=release-22.11;
-    home-manager.url = github:drzln/home-manager?branch=release-22.11;
+    nixpkgs.url = github:NixOS/nixpkgs?branch=main;
+    home-manager.url = github:drzln/home-manager?branch=main;
     flake-utils.url = github:numtide/flake-utils?branch=master;
     nix-darwin.url = github:LnL7/nix-darwin?branch=master;
     pythonix.url = github:Mic92/pythonix?branch=master;
@@ -188,7 +188,7 @@
             # personal macos laptop
             ani = nix-darwin.lib.darwinSystem {
               specialArgs = {
-                inherit outputs;
+                inherit outputs inputs;
               };
               system = "x86_64-darwin";
               modules = [
@@ -208,7 +208,7 @@
             # work macos laptop
             cid = nix-darwin.lib.darwinSystem {
               specialArgs = {
-                inherit outputs;
+                inherit outputs inputs;
               };
               system = "x86_64-darwin";
               modules = [

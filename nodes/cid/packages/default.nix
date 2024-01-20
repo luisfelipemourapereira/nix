@@ -1,7 +1,7 @@
-{ config, pkgs, inputs, ... }: {
+{ config, pkgs, ... }: {
   environment.systemPackages =
     with pkgs;
-    with inputs;
+    # with inputs;
     [
       docker-client
       docker
