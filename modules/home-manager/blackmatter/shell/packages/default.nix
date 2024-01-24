@@ -96,6 +96,7 @@ in
           ripgrep
           podman-compose
           tree
+          sshfs
         ]
         ++ import ./kubernetes pkgs
         ++ import ./javascript pkgs
