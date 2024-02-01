@@ -23,6 +23,7 @@ M["enabled_languages"] = {
 	"cmake",
 	"jdtls",
 	"gopls",
+	"psalm",
 	"rnix",
 	"kcl",
 }
