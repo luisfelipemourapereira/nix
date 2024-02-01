@@ -97,6 +97,7 @@ in
           podman-compose
           tree
           sshfs
+          php81Packages.composer
         ]
         ++ import ./kubernetes pkgs
         ++ import ./javascript pkgs
