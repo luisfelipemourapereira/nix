@@ -98,6 +98,7 @@ in
           tree
           sshfs
           php81Packages.composer
+          php81Packages.php-cs-fixer
         ]
         ++ import ./kubernetes pkgs
         ++ import ./javascript pkgs
