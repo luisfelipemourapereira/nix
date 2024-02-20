@@ -9,6 +9,7 @@ M["enabled_languages"] = {
 	"yamlls",
 	-- "docker-compose-language-server",
 	"rust_analyzer",
+	"xmlformatter",
 	"terraformls",
 	"solargraph",
 	"ansiblels",
