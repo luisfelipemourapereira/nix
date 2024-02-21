@@ -27,6 +27,7 @@ let
     {
       # enabled plugins
       NvChad."nvim-colorizer.lua".enable = true;
+      jay-babu."mason-null-ls.nvim".enable = true;
       nvim-lualine.lualine.enable = true;
       nvim-tree.nvim-web-devicons.enable = true;
       # tree-sitter for nix is bugged with OOM
@@ -315,6 +316,7 @@ in
       ./plugins/godlygeek/tabular
       ./plugins/iamcco/markdown-preview.nvim
       ./plugins/kcl-lang/vim-kcl
+      ./plugins/jay-babu/mason-null-ls.nvim
     ];
 
   options = {
