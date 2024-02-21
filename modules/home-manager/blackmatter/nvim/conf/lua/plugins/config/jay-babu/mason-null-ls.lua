@@ -37,6 +37,7 @@ function M.setup()
   require("mason-null-ls").setup(
     mergeTables(
       {
+        ensure_installed = nil,
         automatic_installation = true
       },
       DEFAULT_SETTINGS
