@@ -61,6 +61,7 @@ in
       home.packages = with pkgs;
         [
           android-tools
+          coreutils-prefixed
           gnirehtet
           yq-go
           # yq
