@@ -63,6 +63,7 @@ in
           android-tools
           coreutils-prefixed
           gnirehtet
+          jellyfin-ffmpeg
           yq-go
           # yq
           mysql
