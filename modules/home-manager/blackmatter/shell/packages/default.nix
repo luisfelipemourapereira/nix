@@ -101,6 +101,7 @@ in
           sshfs
           php81Packages.composer
           php81Packages.php-cs-fixer
+          xorriso
         ]
         ++ import ./kubernetes pkgs
         ++ import ./javascript pkgs
