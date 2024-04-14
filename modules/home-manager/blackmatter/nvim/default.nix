@@ -25,6 +25,7 @@ let
 
   plugins.toggles =
     {
+      jpmcb."nvim-llama".enable = true;
       # enabled plugins
       NvChad."nvim-colorizer.lua".enable = true;
       jay-babu."mason-null-ls.nvim".enable = true;
@@ -317,6 +318,7 @@ in
       ./plugins/iamcco/markdown-preview.nvim
       ./plugins/kcl-lang/vim-kcl
       ./plugins/jay-babu/mason-null-ls.nvim
+      ./plugins/jpmcb/nvim-llama
     ];
 
   options = {
