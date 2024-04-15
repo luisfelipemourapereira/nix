@@ -74,8 +74,8 @@ export PATH="$PERL5LIB/bin:$PATH"
 export C_INCLUDE_PATH=/usr/include:$C_INCLUDE_PATH
 export CPATH=$CPATH:/usr/include
 
-
 # load these before anything in nix
+export PATH="$HOME/.cargo/bin:$PATH"
 export PATH=/usr/local/bin:$PATH
 
 # help cargo find libiconv
