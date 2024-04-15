@@ -74,13 +74,12 @@ export PATH="$PERL5LIB/bin:$PATH"
 export C_INCLUDE_PATH=/usr/include:$C_INCLUDE_PATH
 export CPATH=$CPATH:/usr/include
 
-###############################################################################
-# load these before anything in nix
-###############################################################################
 
+# load these before anything in nix
 export PATH=/usr/local/bin:$PATH
 
-# end load these before anything in nix
+# help cargo find libiconv
+export PATH="/usr/local/opt/libiconv/bin:$PATH"
 
 # PATH up rbenv at the end
 [ -d ~/.rbenv/bin ] && eval "$(~/.rbenv/bin/rbenv init - zsh)"
