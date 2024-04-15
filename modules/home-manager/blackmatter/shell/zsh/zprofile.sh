@@ -57,7 +57,6 @@ export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin
 export JAVA_HOME=/usr/lib/jvm/java-1.17.0-openjdk-amd64
 export PATH=$JAVA_HOME/bin:$PATH
 
-
 ###############################################################################
 # shellhooks
 ###############################################################################
@@ -74,6 +73,14 @@ export PERL5LIB="/usr/share/perl/5.34.0/:$PERL5LIB"
 export PATH="$PERL5LIB/bin:$PATH"
 export C_INCLUDE_PATH=/usr/include:$C_INCLUDE_PATH
 export CPATH=$CPATH:/usr/include
+
+###############################################################################
+# load these before anything in nix
+###############################################################################
+
+export PATH=/usr/local/bin:$PATH
+
+# end load these before anything in nix
 
 # PATH up rbenv at the end
 [ -d ~/.rbenv/bin ] && eval "$(~/.rbenv/bin/rbenv init - zsh)"
