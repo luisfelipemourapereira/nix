@@ -1,16 +1,21 @@
 local M = {}
 
 function M.setup(opts)
-	local lsputils = require("lsp.utils")
+  local lspconfig = require("lspconfig")
 
-	-- override bashls
-	local rust_analyzer_opts = lsputils.merge(
-		{},
-		opts
-	)
+  -- Override bashls
+  local rust_analyzer_opts = vim.tbl_extend("force", {
+    settings = {
+      ["rust-analyzer"] = {
+        diagnostics = {
+          disabled = { "unresolved-proc-macro" }
+        }
+      }
+    }
+  }, opts)
 
-	-- enable rust_analyzer
-	require("lspconfig").rust_analyzer.setup(rust_analyzer_opts)
+  -- Enable rust_analyzer
+  lspconfig.rust_analyzer.setup(rust_analyzer_opts)
 end
 
 return M
