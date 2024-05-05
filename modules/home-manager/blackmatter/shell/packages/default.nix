@@ -102,6 +102,7 @@ in
           php81Packages.composer
           php81Packages.php-cs-fixer
           xorriso
+          exa
         ]
         ++ import ./kubernetes pkgs
         ++ import ./javascript pkgs
@@ -139,6 +140,7 @@ in
         ++ lib.optionals isLinux [
           # adbfs-rootless
           docker-compose-alternative
+          eza
           traceroute
           iproute2
           s-tui
