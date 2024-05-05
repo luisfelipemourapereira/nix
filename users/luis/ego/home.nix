@@ -5,6 +5,10 @@
     ../../luis/common
     ../common
   ];
+  nix = {
+    package = pkgs.nix;
+    settings.experimental-features = [ "nix-command" "flakes" ];
+  };
   blackmatter.programs.nvim.enable = true;
   blackmatter.shell.enable = true;
   blackmatter.desktop.enable = true;
