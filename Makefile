@@ -12,10 +12,10 @@ h:
 	@echo " show: show details on this flake"
 
 plo:
-	home-manager switch --flake ".#luis@plo"
+	home-manager switch --flake ".#luis@plo" --experimental-features 'nix-command flakes'
 
 ego:
-	home-manager switch --flake ".#luis@ego"
+	home-manager switch --flake ".#luis@ego" --experimental-features 'nix-command flakes'
 
 rai:
 	home-manager switch --flake ".#ldesiqueira@rai" -b backup
