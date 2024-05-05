@@ -14,6 +14,9 @@ h:
 plo:
 	home-manager switch --flake ".#luis@plo"
 
+ego:
+	home-manager switch --flake ".#luis@ego"
+
 rai:
 	home-manager switch --flake ".#ldesiqueira@rai" -b backup
 
