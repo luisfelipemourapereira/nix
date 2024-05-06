@@ -2,6 +2,7 @@
 {
   home.stateVersion = "22.11";
   home.username = "luis";
+  home.homeDirectory = "/home/luis";
   # imports = [
   #   outputs.homeManagerModules.blackmatter
   #   ../../luis/common
