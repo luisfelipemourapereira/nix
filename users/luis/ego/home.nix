@@ -1,4 +1,4 @@
-{ outputs, ... }:
+{ outputs, pkgs, ... }:
 {
   imports = [
     outputs.homeManagerModules.blackmatter
