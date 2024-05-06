@@ -8,9 +8,11 @@
 
   inputs = {
     dream2nix.url = github:nix-community/dream2nix?branch=main;
-    nixpkgs.url = github:NixOS/nixpkgs?branch=release-23.11;
+    # nixpkgs.url = github:NixOS/nixpkgs?branch=release-23.11;
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     home-manager = {
-      url = github:drzln/home-manager?branch=release-23.11;
+      # url = github:drzln/home-manager?branch=release-23.11;
+      url = "github:nix-community/home-manager/master";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     flake-utils.url = github:numtide/flake-utils?branch=master;
