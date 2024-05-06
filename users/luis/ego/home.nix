@@ -1,6 +1,7 @@
 { outputs, pkgs, ... }:
 {
   home.stateVersion = "22.11";
+  home.username = "luis";
   # imports = [
   #   outputs.homeManagerModules.blackmatter
   #   ../../luis/common
