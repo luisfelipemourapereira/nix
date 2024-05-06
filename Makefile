@@ -15,7 +15,7 @@ plo:
 	home-manager switch --flake ".#luis@plo" --experimental-features 'nix-command flakes'
 
 ego:
-	home-manager switch --flake ".#luis@ego" --experimental-features 'nix-command flakes'
+	export LC_ALL=en_US.UTF-8 home-manager switch --flake ".#luis@ego" --experimental-features 'nix-command flakes'
 
 rai:
 	home-manager switch --flake ".#ldesiqueira@rai" -b backup
