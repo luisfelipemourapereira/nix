@@ -1,15 +1,15 @@
 { outputs, pkgs, ... }:
 {
-  imports = [
-    outputs.homeManagerModules.blackmatter
-    ../../luis/common
-    ../common
-  ];
-  nixpkgs.overlays = [
-    (self: super: {
-      fcitx-engines = self.fcitx5;
-    })
-  ];
+  # imports = [
+  #   outputs.homeManagerModules.blackmatter
+  #   ../../luis/common
+  #   ../common
+  # ];
+  # nixpkgs.overlays = [
+  #   (self: super: {
+  #     fcitx-engines = self.fcitx5;
+  #   })
+  # ];
   # blackmatter.programs.nvim.enable = true;
   # blackmatter.shell.enable = true;
   # blackmatter.desktop.enable = false;
