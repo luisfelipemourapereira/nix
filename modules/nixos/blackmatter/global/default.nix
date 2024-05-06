@@ -37,11 +37,12 @@ in
         i18n.defaultLocale = "en_US.UTF-8";
         console = { font = "Lat2-Terminus16"; keyMap = "us"; };
         time.timeZone = "US/Pacific";
-        # nixpkgs.config.permittedInsecurePackages = [
-        #   "python2.7-pyjwt-1.7.1"
-        #   "python-2.7.18.6"
-        #   "python2.7-certifi-2021.10.8"
-        # ];
+        nixpkgs.config.permittedInsecurePackages = [
+          "python2.7-pyjwt-1.7.1"
+          "python-2.7.18.6"
+          "python2.7-certifi-2021.10.8"
+          "electron-25.9.0"
+        ];
         # should stop random suspensions
         # https://github.com/NixOS/nixpkgs/issues/130947
         services.logind.lidSwitch = "ignore";
