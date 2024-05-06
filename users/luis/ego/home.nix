@@ -1,5 +1,6 @@
 { outputs, pkgs, ... }:
 {
+  home.stateVersion = "22.11";
   # imports = [
   #   outputs.homeManagerModules.blackmatter
   #   ../../luis/common
