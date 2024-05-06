@@ -1,6 +1,6 @@
 { outputs, pkgs, ... }:
 {
-  home.stateVersion = "23.11";
+  home.stateVersion = "23.05";
   home.username = "luis";
   home.homeDirectory = "/home/luis";
   # imports = [
