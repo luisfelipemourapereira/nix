@@ -7,7 +7,7 @@
   ];
   nixpkgs.overlays = [
     (self: super: {
-      fcitx-engines = fcitx5;
+      fcitx-engines = pkgs.fcitx5;
     })
   ];
   # blackmatter.programs.nvim.enable = true;
