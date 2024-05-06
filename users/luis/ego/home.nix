@@ -12,6 +12,6 @@
   nixpkgs.config.allowUnfree = true;
   nixpkgs.config.allowBroken = true;
   nixpkgs.config.permittedInsecurePackages = [
-    "electron_25_9_0"
+    "electron-25.9.0"
   ];
 }
