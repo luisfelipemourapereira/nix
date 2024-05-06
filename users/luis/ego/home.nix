@@ -10,7 +10,8 @@
   blackmatter.desktop.enable = true;
   # blackmatter.desktop.alacritty.config.enable = true;
   nixpkgs.config.allowUnfree = true;
+  nixpkgs.config.allowBroken = true;
   nixpkgs.config.permittedInsecurePackages = [
-    "electron.25.9.0"
+    "electron_25_9_0"
   ];
 }
