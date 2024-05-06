@@ -12,23 +12,23 @@
     enable = true;
 
     # Configure the addons and other settings according to your needs
-    addons = with pkgs.fcitx5-addons; [
-      mozc
-      # Add additional addons as needed
-    ];
+    # addons = with pkgs.fcitx5-addons; [
+    #   mozc
+    #   # Add additional addons as needed
+    # ];
 
     # Set environment variables necessary for `fcitx5` integration
-    environment = {
-      GTK_IM_MODULE = "fcitx";
-      QT_IM_MODULE = "fcitx";
-      XMODIFIERS = "@im=fcitx";
-    };
+    # environment = {
+    #   GTK_IM_MODULE = "fcitx";
+    #   QT_IM_MODULE = "fcitx";
+    #   XMODIFIERS = "@im=fcitx";
+    # };
 
     # Optional: Specify additional configuration
-    config = ''
-      [Addon]
-      PreeditEnhance=True
-    '';
+    # config = ''
+    #   [Addon]
+    #   PreeditEnhance=True
+    # '';
   };
   # blackmatter.desktop.alacritty.config.enable = true;
   # nixpkgs.config.allowUnfree = true;
