@@ -26,7 +26,7 @@ ani:
 	brew bundle install
 
 cid:
-	darwin-rebuild switch --flake ".#cid"
+	darwin-rebuild switch --flake ".#cid" --show-trace
 
 burgundy:
 	home-manager switch --flake ".#burgundy"
