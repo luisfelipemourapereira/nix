@@ -9,7 +9,10 @@
   inputs = {
     dream2nix.url = github:nix-community/dream2nix?branch=main;
     nixpkgs.url = github:NixOS/nixpkgs?branch=release-23.11;
-    home-manager.url = github:drzln/home-manager?branch=release-23.11;
+    home-manager = {
+      url = github:drzln/home-manager?branch=release-23.11;
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     flake-utils.url = github:numtide/flake-utils?branch=master;
     nix-darwin.url = github:LnL7/nix-darwin?branch=master;
     pythonix.url = github:Mic92/pythonix?branch=master;
