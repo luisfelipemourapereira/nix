@@ -5,6 +5,11 @@
     ../../luis/common
     ../common
   ];
+  nixpkgs.overlays = [
+    (self: super: {
+      fcitx-engines = fcitx5;
+    })
+  ];
   # blackmatter.programs.nvim.enable = true;
   # blackmatter.shell.enable = true;
   # blackmatter.desktop.enable = false;
