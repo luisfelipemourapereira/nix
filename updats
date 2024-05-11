@@ -1,0 +1,134 @@
+> nix flake update
+warning: Git tree '/Users/ldesiqueira/nix' is dirty
+warning: updating lock file '/Users/ldesiqueira/nix/flake.lock':
+• Updated input 'arion':
+    'github:hercules-ci/arion/09ef2d13771ec1309536bbf97720767f90a5afa7' (2023-01-13)
+  → 'github:hercules-ci/arion/e9945eb6cdaf5c946bacd5a330e7b5ac7b3b2fdd' (2024-05-05)
+• Updated input 'arion/flake-parts':
+    'github:hercules-ci/flake-parts/7930f5b1c356270cec420d4f4cb43f4907206640' (2023-01-05)
+  → 'github:hercules-ci/flake-parts/e5d10a24b66c3ea8f150e47dfdb0416ab7c3390e' (2024-05-02)
+• Updated input 'arion/haskell-flake':
+    'github:srid/haskell-flake/4fc511d93a55fedf815c1647ad146c26d7a2054e' (2022-11-11)
+  → 'github:srid/haskell-flake/c2cafce9d57bfca41794dc3b99c593155006c71e' (2023-02-02)
+• Added input 'arion/hercules-ci-effects':
+    'github:hercules-ci/hercules-ci-effects/c0302ec12d569532a6b6bd218f698bc402e93adc' (2024-04-23)
+• Added input 'arion/hercules-ci-effects/flake-parts':
+    'github:hercules-ci/flake-parts/9126214d0a59633752a136528f5f3b9aa8565b7d' (2024-04-01)
+• Added input 'arion/hercules-ci-effects/flake-parts/nixpkgs-lib':
+    follows 'arion/hercules-ci-effects/nixpkgs'
+• Added input 'arion/hercules-ci-effects/nixpkgs':
+    follows 'arion/nixpkgs'
+• Updated input 'arion/nixpkgs':
+    'github:NixOS/nixpkgs/6c8644fc37b6e141cbfa6c7dc8d98846c4ff0c2e' (2023-01-11)
+  → 'github:NixOS/nixpkgs/63c3a29ca82437c87573e4c6919b09a24ea61b0f' (2024-05-02)
+• Updated input 'bundix':
+    'github:nix-community/bundix/3d7820efdd77281234182a9b813c2895ef49ae1f' (2022-06-23)
+  → 'github:nix-community/bundix/1b7df693f9660b4c27b16770b096094954c4aa9b' (2023-11-08)
+• Updated input 'dream2nix':
+    'github:nix-community/dream2nix/34a80ab215f1f24068ea9c76f3a7e5bc19478653' (2023-04-04)
+  → 'github:nix-community/dream2nix/07bd44a3365efdbf4d17a14190636667e5fd3d48' (2024-05-03)
+• Removed input 'dream2nix/all-cabal-json'
+• Removed input 'dream2nix/crane'
+• Removed input 'dream2nix/devshell'
+• Removed input 'dream2nix/drv-parts'
+• Removed input 'dream2nix/drv-parts/flake-compat'
+• Removed input 'dream2nix/drv-parts/flake-parts'
+• Removed input 'dream2nix/drv-parts/nixpkgs'
+• Removed input 'dream2nix/flake-compat'
+• Removed input 'dream2nix/flake-parts'
+• Removed input 'dream2nix/flake-parts/nixpkgs-lib'
+• Removed input 'dream2nix/flake-utils-pre-commit'
+• Removed input 'dream2nix/ghc-utils'
+• Removed input 'dream2nix/gomod2nix'
+• Removed input 'dream2nix/mach-nix'
+• Removed input 'dream2nix/nix-pypi-fetcher'
+• Updated input 'dream2nix/nixpkgs':
+    'github:NixOS/nixpkgs/f634d427b0224a5f531ea5aa10c3960ba6ec5f0f' (2022-10-12)
+  → 'github:NixOS/nixpkgs/94035b482d181af0a0f8f77823a790b256b7c3cc' (2024-05-02)
+• Removed input 'dream2nix/nixpkgsV1'
+• Removed input 'dream2nix/poetry2nix'
+• Removed input 'dream2nix/pre-commit-hooks'
+• Removed input 'dream2nix/pre-commit-hooks/flake-utils'
+• Removed input 'dream2nix/pre-commit-hooks/nixpkgs'
+• Removed input 'dream2nix/pruned-racket-catalog'
+• Added input 'dream2nix/purescript-overlay':
+    'github:thomashoneyman/purescript-overlay/047c7933abd6da8aa239904422e22d190ce55ead' (2023-09-29)
+• Added input 'dream2nix/purescript-overlay/nixpkgs':
+    follows 'dream2nix/nixpkgs'
+• Added input 'dream2nix/purescript-overlay/slimlock':
+    'github:thomashoneyman/slimlock/b5c6cdcaf636ebbebd0a1f32520929394493f1a6' (2023-07-06)
+• Added input 'dream2nix/purescript-overlay/slimlock/nixpkgs':
+    follows 'dream2nix/purescript-overlay/nixpkgs'
+• Added input 'dream2nix/pyproject-nix':
+    'github:davhau/pyproject.nix/5a06a2697b228c04dd2f35659b4b659ca74f7aeb' (2023-12-13)
+• Updated input 'flake-utils':
+    'github:numtide/flake-utils/3db36a8b464d0c4532ba1c7dda728f4576d6d073' (2023-02-13)
+  → 'github:numtide/flake-utils/b1d9ab70662946ef0850d488da1c9019f3a9752a' (2024-03-11)
+• Added input 'flake-utils/systems':
+    'github:nix-systems/default/da67096a3b9bf56a91d16901293e51ba5b49a27e' (2023-04-09)
+• Updated input 'hydra':
+    'github:NixOS/hydra/f48f00ee6d5727ae3e488cbf9ce157460853fea8' (2022-12-23)
+  → 'github:NixOS/hydra/998df1657e7e9bd3c2d54f8106eae5a325e17e02' (2024-05-08)
+• Updated input 'hydra/nix':
+    'github:NixOS/nix/11e45768b34fdafdcf019ddbd337afa16127ff0f' (2022-08-27)
+  → 'github:NixOS/nix/1c8150ac312b5f9ba1b3f6768ff43b09867e5883' (2024-04-23)
+• Added input 'hydra/nix/flake-compat':
+    'github:edolstra/flake-compat/35bb57c0c8d8b62bbfd284272c928ceb64ddbde9' (2023-01-17)
+• Added input 'hydra/nix/flake-parts':
+    'github:hercules-ci/flake-parts/9126214d0a59633752a136528f5f3b9aa8565b7d' (2024-04-01)
+• Added input 'hydra/nix/flake-parts/nixpkgs-lib':
+    follows 'hydra/nix/nixpkgs'
+• Added input 'hydra/nix/libgit2':
+    'github:libgit2/libgit2/45fd9ed7ae1a9b74b957ef4f337bc3c8b3df01b5' (2023-10-18)
+• Removed input 'hydra/nix/lowdown-src'
+• Updated input 'hydra/nix/nixpkgs':
+    'github:NixOS/nixpkgs/365e1b3a859281cf11b94f87231adeabbdd878a2' (2022-07-13)
+  → follows 'hydra/nixpkgs'
+• Added input 'hydra/nix/pre-commit-hooks':
+    'github:cachix/pre-commit-hooks.nix/40e6053ecb65fcbf12863338a6dcefb3f55f1bf8' (2024-04-12)
+• Added input 'hydra/nix/pre-commit-hooks/flake-compat':
+    follows 'hydra/nix'
+• Added input 'hydra/nix/pre-commit-hooks/flake-utils':
+    'github:numtide/flake-utils/5aed5285a952e0b949eb3ba02c12fa4fcfef535f' (2022-11-02)
+• Added input 'hydra/nix/pre-commit-hooks/gitignore':
+    follows 'hydra/nix'
+• Added input 'hydra/nix/pre-commit-hooks/nixpkgs':
+    follows 'hydra/nix/nixpkgs'
+• Added input 'hydra/nix/pre-commit-hooks/nixpkgs-stable':
+    follows 'hydra/nix/nixpkgs'
+• Updated input 'hydra/nixpkgs':
+    follows 'hydra/nix/nixpkgs'
+  → 'github:NixOS/nixpkgs/1d6a23f11e44d0fb64b3237569b87658a9eb5643' (2024-04-11)
+• Updated input 'nix-darwin':
+    'github:LnL7/nix-darwin/252541bd05a7f55f3704a3d014ad1badc1e3360d' (2023-05-10)
+  → 'github:LnL7/nix-darwin/230a197063de9287128e2c68a7a4b0cd7d0b50a7' (2024-04-24)
+• Updated input 'nix-darwin/nixpkgs':
+    'github:NixOS/nixpkgs/3a86856a13c88c8c64ea32082a851fefc79aa700' (2022-11-17)
+  → 'path:/nix/store/22qgs3skscd9bmrxv9xv4q5d4wwm5ppx-source?lastModified=1687274257&narHash=sha256-TutzPriQcZ8FghDhEolnHcYU2oHIG5XWF+%2fSUBNnAOE=&rev=2c9ecd1f0400076a4d6b2193ad468ff0a7e7fdc5' (2023-06-20)
+• Updated input 'nix-funcs':
+    'github:t3rro/nix-funcs/1a55a1a80e6e83ec21e5e8e0722a667c42160af6' (2023-02-22)
+  → 'github:t3rro/nix-funcs/7633980f64b45e8937a66d59d709e46eda9611d3' (2023-03-26)
+• Added input 'nix-funcs/nixpkgs':
+    'github:NixOS/nixpkgs/fa7e3d197327a46f21040f053d9dd13695b5698a' (2023-03-26)
+• Updated input 'nixpkgs':
+    'github:NixOS/nixpkgs/7d09d935abca8f82ba0f78412183c4499dc51906' (2024-01-20)
+  → 'github:NixOS/nixpkgs/25779289f6be9e8f29eb1af314ad179a059e5536' (2024-05-11)
+• Updated input 'nixt':
+    'github:nix-community/nixt/02a1f3c32b01ac0c097d6d67f6f5836277d3bcdc' (2023-01-08)
+  → 'github:nix-community/nixt/a948b1afc08031f640ff9e09640c53493ea0fca1' (2023-05-17)
+• Updated input 'nur':
+    'github:nix-community/nur/d2d70316f27384cf53e0f3c6cf2fd73e4744555a' (2023-02-17)
+  → 'github:nix-community/nur/9cca173c6e452532d367a8dc06ad0fa48d17921b' (2024-05-11)
+• Updated input 'sops-nix':
+    'github:Mic92/sops-nix/c5dab21d8706afc7ceb05c23d4244dcb48d6aade' (2023-02-12)
+  → 'github:Mic92/sops-nix/0dc50257c00ee3c65fef3a255f6564cfbfe6eb7f' (2024-05-09)
+• Updated input 'sops-nix/nixpkgs':
+    'github:NixOS/nixpkgs/6ccc4a59c3f1b56d039d93da52696633e641bc71' (2023-02-09)
+  → 'github:NixOS/nixpkgs/d32560238207b8e26d88b265207b216ee46b8450' (2024-05-04)
+• Updated input 'sops-nix/nixpkgs-stable':
+    'github:NixOS/nixpkgs/d863ca850a06d91365c01620dcac342574ecf46f' (2023-02-12)
+  → 'github:NixOS/nixpkgs/b980b91038fc4b09067ef97bbe5ad07eecca1e76' (2024-05-04)
+warning: Git tree '/Users/ldesiqueira/nix' is dirty
+<cid> nix on  updates [!]
+>
+

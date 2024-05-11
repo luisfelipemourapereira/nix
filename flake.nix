@@ -7,12 +7,30 @@
   #############################################################################
 
   inputs = {
-    dream2nix.url = github:nix-community/dream2nix?branch=main;
-    nixpkgs.url = github:NixOS/nixpkgs?branch=release-24.05;
-    home-manager.url = github:drzln/home-manager?branch=release-24.05;
-    flake-utils.url = github:numtide/flake-utils?branch=master;
-    nix-darwin.url = github:LnL7/nix-darwin?branch=master;
-    pythonix.url = github:Mic92/pythonix?branch=master;
+    dream2nix = {
+      url = github:nix-community/dream2nix;
+      rev = "34a80ab215f1f24068ea9c76f3a7e5bc19478653";
+    };
+    nixpkgs = {
+      url = github:NixOS/nixpkgs;
+      rev = "6c8644fc37b6e141cbfa6c7dc8d98846c4ff0c2e";
+    };
+    home-manager = {
+      url = github:drzln/home-manager;
+      rev = "b372d7f8d5518aaba8a4058a453957460481afbc";
+    };
+    flake-utils = {
+      url = github:numtide/flake-utils;
+      rev = "3db36a8b464d0c4532ba1c7dda728f4576d6d073";
+    };
+    nix-darwin = {
+      url = github:LnL7/nix-darwin?branch=master;
+      rev = "252541bd05a7f55f3704a3d014ad1badc1e3360d";
+    };
+    pythonix = {
+      url = github:Mic92/pythonix;
+      rev = "fbc84900b5dcdde558c68d98ab746d76e7884ded";
+    };
     sops-nix.url = github:Mic92/sops-nix;
     nix-funcs.url = github:t3rro/nix-funcs;
     bundix = {
